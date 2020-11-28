@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+js/send_flower/leetcode/twosum/1.js
+
+js/send_flower/shop/readme.md
+source_code/weui/demo.html
