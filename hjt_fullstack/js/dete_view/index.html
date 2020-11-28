@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <table class="table table-striped" id="root">
+        <thead>
+            <tr>
+                <td>
+                    序号
+                </td>
+                <td>
+                    姓名
+                </td>
+                <td>
+                    化名
+                </td>
+                <td>
+                    年龄
+                </td>
+                <td>
+                    家乡
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        const students = [{
+            name:'demo',
+            age:'21',
+            hometown:'赣州',
+            nickName:'淦饭人'
+        },
+        {
+            name : '邹振于',
+            age : 21,
+            hometown : '赣州',
+            nickName : '东理'
+        },
+        {
+            name:'hy',
+            age:99,
+            hometown:'赣州',
+            nickName:'钟俊超'
+        },
+        {
+            name:'水果鱼',
+            age:'19',
+            hometown:'景德镇',
+            nickname:'fruitfish'
+        },
+        {
+            name:'吴珏莹',
+            age:18,
+            hometown:'南昌',
+            nickName:'ying'
+        },
+        {
+            name: '杨帆',
+            age: 18,
+            hometown: '抚州',
+            nickName: '爪巴'
+        },
+        
+        ]
+        const tBodyEle = document.querySelector('#root tbody');
+        students.forEach((student,index) =>{
+           tBodyEle.innerHTML +=`
+           <tr>
+               <td>${index +1}</td>
+               <td>${student.name}</td>
+               <td>${student.nickName}</td>
+               <td>${student.age}</td>
+               <td>${student.hometown}</td>
+           </tr>`
+       })
+    </script>
+</body>
+</html>
