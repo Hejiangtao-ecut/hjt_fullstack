@@ -1,0 +1,8 @@
+- git bash 是个Linux最小化战场
+    - grep Linux查找命令
+    - grep -v 查找反向条件
+    - grep -c 符合条件的条数
+    - grep -i 大小写忽略
+    - grep -n 行号
+    - ^ 匹配一行的开始
+    - $ 匹配一行的结尾 
