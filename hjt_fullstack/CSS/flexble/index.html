@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            /* height: 100%; */
+        }
+        .box{
+            width: 100vw;
+            height: 100vh;
+            background-color: green;
+            /* position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; */
+            font-size: 0;/*解决inline-block的间隔问题*/
+        }
+        .col{
+            width: 10%;
+            height: 100%;
+            background-color: yellowgreen;
+            /* float: left; */
+            display: inline-block;
+            font-size: 14px;
+            overflow: hidden;
+            
+            
+        }
+        .col:nth-child(2n){
+            background-color: rebeccapurple;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="col">dddddddddddd</div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+    
+</body>
+</html>
