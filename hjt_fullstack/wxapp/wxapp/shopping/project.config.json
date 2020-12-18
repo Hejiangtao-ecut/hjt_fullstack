@@ -41,7 +41,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.14.1",
   "appid": "wx6764288479e186db",
-  "projectname": "learn_english",
+  "projectname": "miniprogram-2",
   "debugOptions": {
     "hidedInDevtools": []
   },

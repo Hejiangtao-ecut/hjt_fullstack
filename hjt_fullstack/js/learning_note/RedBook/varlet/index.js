@@ -13,5 +13,5 @@ let name3 = "tao";
 
 let addName = name1 + "jiang" + name3;//传统插值
 console.log(addName);
-let addName2 = `${name1}jiang${name3}`;//模板字面量 插值，会保留空格
+let addName2 = `${name1}jiang${name3}`;//模板字面量  插值，会保留空格
 console.log(addName2);

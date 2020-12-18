@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //显示数据
+        // 1.json-server应用  端口：3000
+        // 2.静态网页服务应用  端口：8080
+        // fetch("http://127.0.0.1:3000/posts")
+        //     .then(data => data.json())
+        //     .then(data =>{
+        //         console.log(data);
+        //     })
+        // fetch("https://www.runoob.com/try/ajax/jsonp.php")//不被允许，跨域
+        //     .then(data => data.json())
+        //     .then(data =>{
+        //         console.log(data);
+        //     })
+        window.callbackFunction = (data) => {
+            console.log(data);
+        }
+        const script = document.createElement('script');
+        document.body.appendChild(script);
+        script.src = "https://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction";
+        
+        
+    </script>
+    <a href="author.html">author</a>
+</body>
+</html>
