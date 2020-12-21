@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@vant/weapp": "^1.6.4",
+    "apifm-wxapi": "^3.22.0"
+  }
+}
