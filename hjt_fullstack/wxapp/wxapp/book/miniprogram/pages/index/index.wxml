@@ -1,0 +1,12 @@
+<view class="" wx:for="{{phone_list}}" wx:for-item="phone" 
+  data-if="{{phone._id}}"  
+ >
+  <van-card
+    thumb= "{{phone.image}}"
+    title= "{{phone.title}}"
+    price= "{{phone.price}}"
+    bind:cilck="viewItem"
+
+     >
+  </van-card>
+</view>
