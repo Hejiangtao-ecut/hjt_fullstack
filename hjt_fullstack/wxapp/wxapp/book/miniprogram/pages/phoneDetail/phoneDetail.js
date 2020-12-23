@@ -1,10 +1,13 @@
 // miniprogram/pages/phoneDetail/phoneDetail.js
+const db = wx.cloud.database();//连接云端数据库
 Page({
+
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
+		phone:{}
 
 	},
 
@@ -12,7 +15,17 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		console.log(options.id);
+		const id = 'demo';
+		db
+			.collection('produce')
+			.doc(id)
+			.get({
+				success:res =>{
+					this.setData({
+						phone: res.data
+					})
+				}
+			})
 
 	},
 

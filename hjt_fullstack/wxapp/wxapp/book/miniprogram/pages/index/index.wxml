@@ -1,5 +1,5 @@
-<view class="" wx:for="{{phone_list}}" wx:for-item="phone" 
-  data-if="{{phone._id}}"  
+<!-- <view class="" wx:for="{{phone_list}}" wx:for-item="phone" 
+  data-id="{{phone._id}}"  
  >
   <van-card
     thumb= "{{phone.image}}"
@@ -9,4 +9,18 @@
 
      >
   </van-card>
+</view> -->
+
+<!-- block 在小程序有指令 -->
+<block wx:for="{{userList}}" wx:key="index">
+  <text>{{index}}</text>
+</block>
+<view class='floatBtn'>
+  <button 
+    size="mini" 
+    bindtap='navigatTo' 
+    type="primary"
+    open-type="getUserInfo"
+    bindgetuserinfo="getUserInfo"
+    >+</button>
 </view>

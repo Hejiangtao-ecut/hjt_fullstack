@@ -1,28 +1,52 @@
-//使用云端数据
-const db = wx.cloud.database();//连接云端数据库
-const phoneTable = db.collection("produce");//使用db的数据
+// 云数据库
+const db = wx.cloud.database()
+// Info 表
+const userInfo = db.collection('userInfo')
+
 Page({
-  data:{
-    phone_list:[]
+  data :{
+    userList:[]
   },
-  onLoad(){
-    //加载数据
-    db
-      .collection("produce")
-      .get({
-        success: res => {
-          // console.log(res);
-          this.setData({
-            phone_list:res.data
-          })
-        }
-      })
-    
+  navigatTo(){
+
   },
-  viewItem(e){
-    var id = e.currentTarget.dataSet.id;
-    wx.navigateto({
-      url:'../phoneDetail/phoneDetail?id='+ id
+  getUserInfo(result){
+
+    // 登录
+    // 一切的云开发都是从调用一个函数开始
+    wx.cloud.callFunction({
+      name: 'getOpenId',
+      // 回调函数，res为返回结果
+      complete: res => {
+		  console.log(res)
+		//   where mysql 条件查询
+		  userInfo.where({
+			//   去云端就是为了拿openId，相当于身份证
+			//   用户的openId是唯一的，用来识别用户
+			_openid:res.result.openId
+		  }).count().then( res =>{
+			//   console.log(res);
+			// 新用户
+			if (res.total == 0){
+				// 插入用户
+				// Insert 插入
+				userInfo.add({
+					data: result.detail.userInfo
+				  }).then(res => {
+					wx.navigateTo({
+					  url: '../add/add',
+					})
+				  }).catch(err => {
+					console.error(err)
+				  })
+	  
+			}else{
+				wx.navigateTo({
+					url: '../add/add',
+				  })
+			}
+		  })
+      }
     })
   }
 })
