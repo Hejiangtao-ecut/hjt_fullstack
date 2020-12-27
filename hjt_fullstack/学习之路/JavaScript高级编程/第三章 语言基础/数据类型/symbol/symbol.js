@@ -13,3 +13,10 @@ let fooGlobalSymbol = Symbol.for('foo');//创建新符号
 let reFooGolbalSymbol = Symbol.for('foo');
 console.log(fooGlobalSymbol == reFooGolbalSymbol) //ture
 console.log(fooGlobalSymbol == fooSymbol) //false 未使用Symbol.for函数
+
+//Symbol.keyFor()
+let s = Symbol.for('foo');
+console.log(Symbol.keyFor(s));//foo  返回对应的字符串键
+console.log(Symbol.keyFor(sym));//undefined  普通符号
+//如果传送非符号则返回TypeError
+// console.log(Symbol.keyFor(123));//TypeError: 123 is not a symbol
