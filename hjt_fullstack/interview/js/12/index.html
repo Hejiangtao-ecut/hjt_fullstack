@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="b1"></div>
+    <div class="box" name="b2" >
+        <p></p>
+    </div>
+    <div class="box"></div>
+    <script>
+        // 1.找出所有的.box 元素有什么方法？
+        console.log(document.querySelectorAll('.box'));
+        console.log(document.getElementsByTagName('div'));
+        console.log(document.getElementsByClassName('box'));
+        // 查找第一个#b1 有哪些方法
+        console.log(document.getElementById('b1'));
+        console.log(document.querySelector('#b1')); //根据属性名查找
+        console.log(document.getElementsByClassName('box')[0],'---')
+        // 查找p元素
+        console.log(document.getElementsByTagName('p'));
+        console.log(document.getElementsByClassName('box')[1]);
+        // console.log(1)
+        console.log(document.querySelector('p')); //根据选择器查找
+        console.log(document.getElementsByName('b2')[0]);
+        console.log(document.getElementsByName('b2')[0].children);
+        console.log(document.getElementsByName('b2')[0].getElementsByTagName('p'));
+    </script>
+</body>
+</html>

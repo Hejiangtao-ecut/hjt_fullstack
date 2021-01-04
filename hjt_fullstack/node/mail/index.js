@@ -66,4 +66,3 @@ let i = 0;
 //         sendMail(res.data)
 //     })
 // })
-    
