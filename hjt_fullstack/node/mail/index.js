@@ -18,7 +18,7 @@ function getWords(){
 async function sendMail(words){
     let user = "1471867575@qq.com";
     let pass = "cjchjtjqmpxdhbhj"; //授权码
-    let to = "1048613437@qq.com"
+    let to = "1604125861@qq.com"
     let transporter = nodemailer.createTransport({
         host:"smtp.qq.com",
         port:587,
@@ -29,30 +29,30 @@ async function sendMail(words){
         }
     })
     let info = await transporter.sendMail({
-        from: `涛涛<${user}>`, // sender address
-        to: `怡宝<${to}>`,
-        subject: "给怡宝的一封信",
+        from: `<${user}>`, // sender address
+        to: `<${to}>`,
+        subject: "",
         text: words
       })
       console.log("发送成功");
 }
+
 function infoout(words){
         // console.log("第",i+1,"封邮件")
         console.log("内容为：",words)
     }
-let i = 0;
+
 // for(;i<200;i++){
     
     
-     getWords()
-    .then(res =>{
-        // console.log("第"+(i+1)+"封邮件")
-        infoout(res.data)
-        sendMail(res.data)
-        // setTimeout(infoout(res.data,i) ,10000);
+    //  getWords()
+    // .then(res =>{
+    //     // console.log("第"+(i+1)+"封邮件")
+    //     infoout(res.data)
+    //     sendMail(res.data)
     //     // console.log(res.data)
           
-    }) 
+    // }) 
 // }
    
 
@@ -66,3 +66,20 @@ let i = 0;
 //         sendMail(res.data)
 //     })
 // })
+function timesend(){
+    getWords()
+    .then(res =>{
+        // console.log("第"+(i+1)+"封邮件")
+        infoout(res.data)
+        sendMail(res.data)
+    }) 
+}
+// setInterval(timesend(),1000)
+setInterval(() => {
+    getWords()
+    .then(res =>{
+        infoout(res.data);
+        sendMail(res.data);
+    }) 
+    
+}, 10000);
