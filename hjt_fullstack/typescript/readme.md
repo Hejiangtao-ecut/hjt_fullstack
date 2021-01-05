@@ -1,0 +1,9 @@
+- vscode 是用typescript 写出来的
+- js 超集 弱类型
+    - Java的静态编译能力，先编译，后运行
+- 在阿里 大型项目用ts 代替JS
+    - 给JS加上类型约定
+- 写的是ts,运行的是js
+- HTML 不再是HTML，字符串模板``,
+- css 不再是css, stylus/sass/less
+- js ts rsc -w *.ts

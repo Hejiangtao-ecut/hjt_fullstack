@@ -18,7 +18,7 @@ function getWords(){
 async function sendMail(words){
     let user = "1471867575@qq.com";
     let pass = "cjchjtjqmpxdhbhj"; //授权码
-    let to = "2727079972@qq.com"
+    let to = "1239701476@qq.com"
     let transporter = nodemailer.createTransport({
         host:"smtp.qq.com",
         port:587,
@@ -78,8 +78,9 @@ function timesend(){
 setInterval(() => {
     getWords()
     .then(res =>{
+        let str = "草泥马草泥马草泥马草泥马"
         infoout(res.data);
-        sendMail(res.data);
+        sendMail(str);
     }) 
     
 }, 10000);
