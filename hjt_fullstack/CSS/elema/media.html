@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+        @media screen and (max-device-width :780px){
+            .box{
+                background-color:yellowgreen;
+            }
+        }
+        @media screen and (max-device-width :500px){
+            .box{
+                background-color:yellow;
+            }
+        }
+        @media screen and (max-device-width :375px){
+            .box{
+                background-color:royalblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

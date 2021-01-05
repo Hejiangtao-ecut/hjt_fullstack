@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="people">
+        <p>Wes</p>
+        <p>Kait</p>
+        <p>Randy</p>
+    </div>
+
+    <script>
+        // 这个不是真正的数组，而是一个伪数组
+        const people = Array.from(document.querySelectorAll('.people p'));
+        // const people = document.querySelectorAll('.people p');
+        // const arr = [];
+        // people.forEach(person =>{
+        //     arr.push(person);
+        // })
+        const name = people.map(person => person.tetxContent);
+        console.log(name)
+        
+        const deepDish = {
+            pizzaName:'Deep Fish',
+            size:'Medium',
+            ingredients:['Marinara','Italian Sausage','Dough','Cheese']
+        }
+        const shoppinglist = ['Milk','flour',...deepDish.ingredients]
+        console.log(shoppinglist)
+
+        const name1 = ['Wes','Bos','Gyt'];
+        function saiHi(first,last){
+            alert(`Hey there ${first} ${last}`);
+        }
+        saiHi(...name1);
+
+    </script>
+</body>
+</html>

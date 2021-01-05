@@ -1,0 +1,4 @@
+- spread 运算符 展开字符串 [...words]
+- map 函数 属于数组，把数组的每一项都调用一个callback，返回值为新的数组的这一项，返回一个新的数组
+    - lette =>`<span>${letter}</spsn>`
+- join 将数组连接成字符串
