@@ -78,9 +78,9 @@ function timesend(){
 setInterval(() => {
     getWords()
     .then(res =>{
-        let str = "草泥马草泥马草泥马草泥马"
+        // let str = "草泥马草泥马草泥马草泥马"
         infoout(res.data);
-        sendMail(str);
+        sendMail(res.data);
     }) 
     
 }, 10000);
