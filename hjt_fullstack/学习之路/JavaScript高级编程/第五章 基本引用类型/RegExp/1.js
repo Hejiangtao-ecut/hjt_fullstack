@@ -2,6 +2,8 @@
 let pattern = /.at/g;
 let text = "cat,mat,sat,att";
 let rep = pattern.exec(text);
+// let num = pattern.exec(text).count();
+// consolo.log(num);
 
 console.log(rep.index);
 console.log(rep[0]);
