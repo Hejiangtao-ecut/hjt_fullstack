@@ -1,0 +1,21 @@
+/* 
+  全局引入的css 当然可以全局访问 自己选择
+  样式框架 weui-cell
+  colorful 色彩和界面
+  -app-system 苹果字体
+*/
+@import "weui/weui/weui.wxss";
+@import "colorui/colorui/main.wxss";
+@import "colorui/colorui/icon.wxss";
+@import "colorui/colorui/animation.wxss";
+page {
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: -apple-system,'Helvetica Neue';
+
+}
+.page{
+  widows: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}

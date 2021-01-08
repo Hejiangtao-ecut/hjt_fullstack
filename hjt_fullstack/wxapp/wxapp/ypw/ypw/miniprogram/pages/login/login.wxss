@@ -1,0 +1,10 @@
+/* miniprogram/pages/login/login.wxss */
+.bg-img{
+    background-image:url("https://686a-hjtwxapp-4g2fkowbb9335eab-1304585141.tcb.qcloud.la/~0ONI~X%60SHQJ%24OVQM7B62%5BE.jpg?sign=375a1e0e784a5412ca0ff1d8c2da37fe&t=1610107405") ;
+}
+.mt200{
+    margin-top: 200rpx;
+}
+.mt200 image{
+    width: 20%;
+}
