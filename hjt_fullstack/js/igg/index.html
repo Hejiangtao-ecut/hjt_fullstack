@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 最新布局方案 Grid Flex的兄弟</title>
+    <style>
+        .container{
+            height: 100Vh;
+            /* 启动网格布局 九宫格 */
+            display: grid; 
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+        }
+        /* .box{
+            /* margin: 2px; */
+            background-color: greenyellow;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 二维布局,row column -->
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <script>
+        const box = document.querySelectorAll('.box');
+        // JS可以操作一切的CSS
+        // html document.createElment
+        // CSS ele.style
+        let i = 1;
+        for (const item of box) {
+            i++;
+            item.style.bgc = `rgba(${i*20},${i*20},${i*20})`
+        }
+    </script>
+</body>
+</html>

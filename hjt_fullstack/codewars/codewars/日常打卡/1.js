@@ -21,6 +21,17 @@
 //     return nums;
 // }
 
-let n = [1,2,3,4,5];
-console.log(n.length())
-// console.log(arr(n,2));
+// function nb(m){
+//     let spend=0,n = 1;
+//     while(spend<m){
+//         spend += n**3;
+//         if(spend==m){
+//             return n;
+//         }
+//         n++;
+//     }
+//     return -1
+// }
+
+// console.log(nb(4183059834009))
+
