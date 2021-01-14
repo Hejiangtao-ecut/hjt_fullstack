@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "辉辉家的脐橙店",
+  "usingComponents": {
+    "my-search":"/components/search/search",
+    "index-swiper":"/components/swiper/swiper"
+
+  
+  }
+}
