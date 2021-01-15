@@ -1,4 +1,4 @@
 page{
-  height: 100 vh;
+  height: 100vh;
   background-color: rgb(245,249,253);
 }
