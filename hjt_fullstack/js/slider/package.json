@@ -1,0 +1,18 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "1. 初级阶段的开发流程\r     - live-server http 静态服务\r     - stylus stylus 编译",
+  "main": "common.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.8"
+  }
+}
