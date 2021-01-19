@@ -1,0 +1,16 @@
+{
+  "name": "big-data",
+  "version": "1.0.0",
+  "description": "1. 10000条数据展示\r     - scorll 分页",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^1.12.4",
+    "stylus": "^0.54.8"
+  }
+}
