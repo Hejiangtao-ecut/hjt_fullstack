@@ -13,6 +13,8 @@
       width: 300px;
       height: 500px;
       margin-right: 10px;
+      border: 1px solid yellowgreen;
+      text-align: center;
       /* background-color: green; */
     }
     .right {
@@ -27,7 +29,6 @@
       border: 1px solid gray;
       margin: 1px;
       padding: 5px;
-      cursor: move;
     }
   </style>
 </head>
@@ -35,7 +36,7 @@
   <!-- html5 语议化标签 主体内容 -->
   <main class="main">
     <div class="left" id="left">
-      <div class="txt-show">左边区域</div>
+      <div class="txt-show">源对象</div>
       <div class="dargable txt" draggable="true" id="txt1">可移动的文字一</div>
       <div class="dargable txt" draggable="true" id="txt2">可移动的文字二</div>
       <div class="dargable txt" draggable="true" id="txt3">可移动的文字三</div>
@@ -43,7 +44,7 @@
       <div class="dargable txt" draggable="true" id="txt5">可移动的文字五</div>
     </div>
     <div class="right" id="right">
-      <div class="txt-show">右边区域</div>
+      <div class="txt-show">目的对象</div>
     </div>
   </main>
   <script>
@@ -59,8 +60,6 @@
   // })
   let left = document.getElementById('left')
   let target = document.getElementById('right')
-
-  let center = document.getElementById('center')
 
   left.addEventListener('dragstart', (event) => {
     // console.log(event);
@@ -96,17 +95,6 @@
     // console.log(returnObj);
     target.appendChild(document.getElementById(dragid))
     console.log('拖拽元素离开原位置，来到目的地')
-  })
-
-  target.addEventListener('dragstart', (event) => {event.dataTransfer.setData('Text',event.target.id)})
-  left.addEventListener('dragenter', (event) => {event.preventDefault();})
-  left.addEventListener('dragover', (event) => {event.preventDefault();})
-  left.addEventListener('dragleave', (event) =>{event.preventDefault();})
-  left.addEventListener('drop', (event) => {
-    event.preventDefault();
-    let dragid = event.dataTransfer.getData('Text');
-    left.appendChild(document.getElementById(dragid))
-    document.scrollingElement
   })
   
   </script>

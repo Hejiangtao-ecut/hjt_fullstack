@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="1.js"></script>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box" id="demo"></div>
+    <form>
+        <select name="colorcheck">
+        <option value="green" style="color: green;">green</option>
+        <option value="greenyellow" style="color:greenyellow;">greenyellow</option>
+        <option value="grey" style="color:grey;">grey</option>
+        <option value="lightcyan" style="color:lightcyan;">lightcyan</option>
+        </select><br>
+        <button type="button" onclick="changeColor(colorcheck.value)">click</button>
+    </form>
+</body>
+</html>
