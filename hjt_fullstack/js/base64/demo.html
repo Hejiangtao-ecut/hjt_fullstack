@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js启动新的线程</title>
+</head>
+<body>
+    
+    <script>
+        // h5 新特性  webworker  优化JS
+        // 一部分工作交给 worker 线程去做
+        let worker = new Worker('work.js'); //启动一个新的JS 线程
+        // 线程通信
+        worker.postMessage('hello');
+        worker.addEventListener('message', e =>{
+            console.log(e);
+        })
+    </script>
+</body>
+</html>
