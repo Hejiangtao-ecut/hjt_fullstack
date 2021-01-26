@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "name": "react",
+  "description": "前端三个最重要的知识点\r 1. es6\r 2. webpack\r     @5.17.0\r     npm i -g webpack\r     npm i -g webpackcli\r 3. react\r     - webpack 处理的入口,js 文件\r     - 写代码的时候在 src/index.js 上线的dist/main.js\r         webpack 有着掌控力,",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2"
+  },
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

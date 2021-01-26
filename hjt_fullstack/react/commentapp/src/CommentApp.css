@@ -1,0 +1,8 @@
+.wrapper{
+    widows: 500px;
+    margin: 10 auto;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid yellowgreen;
+    padding: 20px;
+}
