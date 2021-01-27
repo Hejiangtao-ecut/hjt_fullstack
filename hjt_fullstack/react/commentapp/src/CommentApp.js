@@ -17,7 +17,6 @@ class CommentApp extends React.Component { // 通过继承快速创建类
             // HTML 也叫XML 用于网页标签的XML叫HTML
             // react 中有种JSX 来放模板
             <div className="wrapper">
-                {this.state.name}
                 <CommentForm />
                 <CommentList />
             </div>

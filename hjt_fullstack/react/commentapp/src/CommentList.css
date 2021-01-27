@@ -1,0 +1,14 @@
+.text-show{
+    margin: 10px auto;
+    padding: 20px;
+}
+.text-item{
+    margin: 10px auto;
+    padding: 5px;
+    text-align: left;
+    font-size: 18px;
+}
+.name{
+    color: blue;
+    font-weight: 500;
+}

@@ -8,10 +8,6 @@
     </block>
   </view>
   <view class="usermotto">
-  <center>
-    <text class="user-motto">{{motto}}</text> 
-  </center>
-
+    <text class="user-motto">{{motto}}</text>
   </view>
 </view>
-
