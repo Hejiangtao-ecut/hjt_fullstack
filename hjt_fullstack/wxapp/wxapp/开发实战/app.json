@@ -1,14 +1,13 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "第一个小程序实战",
-    "navigationBarTextStyle":"black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+	"pages": [
+		"pages/index/index",
+		"pages/myInfo/myInfo"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "ONLY 官方购物网站",
+		"navigationBarTextStyle": "black"
+	},
+	"sitemapLocation": "sitemap.json"
 }
