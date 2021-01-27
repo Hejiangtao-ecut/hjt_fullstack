@@ -1,2 +1,3 @@
 <!--pages/myInfo/demo.wxml-->
-<text>pages/myInfo/demo.wxml</text>
+<view >{{msg}}</view>
+<view wx:for="{{demo}}">{{item}}</view>

@@ -1,0 +1,70 @@
+<view>
+  <!-- 搜索框 -->
+  <van-search value="{{ value }}" placeholder="搜索商品" />
+</view>
+<view>
+  <!-- 导航栏 -->
+  <van-tabbar fixed="{{false}}">
+    <van-tabbar-item>
+      <view>
+        <van-icon class="icon" name="apps-o" size="24px" />
+      </view>
+      <view class="text">全部商品</view>
+    </van-tabbar-item>
+    <van-tabbar-item>
+      <view>
+        <van-icon class="icon" name="star-o" size="24px" color="yellow" />
+      </view>
+      <view class="text">精选专区</view>
+    </van-tabbar-item>
+    <van-tabbar-item>
+      <view>
+        <van-icon class="icon" name="fire-o" size="24px" color="red" />
+      </view>
+      <view class="text">火爆新品</view>
+    </van-tabbar-item>
+    <van-tabbar-item>
+      <view>
+        <van-icon class="icon" name="diamond-o" size="24px" color="blue" />
+      </view>
+      <view class="text">会员权益</view>
+    </van-tabbar-item>
+  </van-tabbar>
+</view>
+<view>
+  <!-- swiper -->
+  <swiper class="swiper" autoplay="{{true}}" interval="2000" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="rgba(240, 190, 25, 0.986)" style="width:100vw;height:126.75vw;">
+    <swiper-item wx:for="{{picPath}}">
+      <image src="{{item}}" style="width:100%;height:100%" />
+    </swiper-item>
+  </swiper>
+</view>
+<view>
+  <!-- 底部导航栏 -->
+  <van-tabbar>
+    <van-tabbar-item>
+      <view class="icon">
+        <van-icon name="wap-home-o" size="24px" />
+      </view>
+      <view class="text">首页</view>
+    </van-tabbar-item>
+    <van-tabbar-item>
+      <view class="icon">
+        <van-icon name="apps-o" size="24px" />
+      </view>
+      <view class="text">分类</view>
+    </van-tabbar-item>
+    <van-tabbar-item>
+      <view class="icon">
+        <van-icon name="cart-o" size="24px" />
+      </view>
+      <view class="text">购物车</view>
+    </van-tabbar-item>
+    <van-tabbar-item>
+      <view class="icon">
+        <van-icon name="user-o" size="24px" />
+      </view>
+      <view class="text">我的</view>
+    </van-tabbar-item>
+  </van-tabbar>
+</view>

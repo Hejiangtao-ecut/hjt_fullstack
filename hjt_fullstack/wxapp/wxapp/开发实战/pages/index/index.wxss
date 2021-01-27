@@ -8,6 +8,3 @@
   justify-content: center;
   margin: 5px;
 }
-.swiper{
-  background-color: green;
-}

@@ -1,0 +1,10 @@
+.icon{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.text{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}

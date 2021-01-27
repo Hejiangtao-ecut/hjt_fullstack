@@ -6,7 +6,7 @@
 <view>
   <!-- 导航栏 -->
   <van-tabbar  fixed="{{false}}">
-    <van-tabbar-item>
+    <van-tabbar-item bind:tap="demo">
       <view ><van-icon class="icon" name="apps-o" size="24px" /></view>
       <view class="text" >全部商品</view>
     </van-tabbar-item>
@@ -27,11 +27,8 @@
 
 <view >
   <!-- swiper -->
-  <swiper class="swiper" autoplay="{{true}}" interval="2000" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="rgba(240, 190, 25, 0.986)" style="width:100vw;height:126.75vw;" >
-    <swiper-item ><image src="./img/1.jpg"  style="width:100%;height:100%" /></swiper-item>
-    <swiper-item ><image src="./img/2.jpg"  style="width:100%;height:100%"/></swiper-item>
-    <swiper-item ><image src="./img/3.jpg"  style="width:100%;height:100%"/></swiper-item>
-    <swiper-item ><image src="./img/4.jpg"  style="width:100%;height:100%"/></swiper-item>
+  <swiper  class="swiper" autoplay="{{true}}" interval="2000" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="rgba(240, 190, 25, 0.986)" style="width:100vw;height:126.75vw;" circular="{{true}}" >
+    <swiper-item wx:for="{{picPath}}"><image src="{{item}}"  style="width:100%;height:100%" /></swiper-item>
   </swiper>
 </view>
 
