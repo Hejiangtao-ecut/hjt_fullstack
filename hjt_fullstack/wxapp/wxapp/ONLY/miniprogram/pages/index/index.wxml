@@ -34,7 +34,7 @@
 <view>
   <!-- swiper -->
   <swiper class="swiper" autoplay="{{true}}" interval="2000" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="rgba(240, 190, 25, 0.986)" style="width:100vw;height:126.75vw;">
-    <swiper-item wx:for="{{picPath}}">
+    <swiper-item wx:for="{{picPath}}" wx:key="*this">
       <image src="{{item}}" style="width:100%;height:100%" />
     </swiper-item>
   </swiper>
