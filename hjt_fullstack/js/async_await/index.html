@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 多个异步请求，保证顺序执行
+        // 1 传统的callback 回调地狱
+        // 2 promise thenable
+        // 3 Generator 生成器函数
+        // 4 async-await
+        // ajax 函数 xhr
+
+        // 回调地狱
+        // function ajax(url,fn){
+        //     let xhr = new XMLHttpRequest();
+        //     xhr.open('GET',url);
+        //     xhr.onreadystatechange = function(){
+        //         if (xhr.readyState === 4 &&  xhr.status == 200){
+        //             fn(JSON.parse(xhr.responseText));
+        //         }
+        //     }
+        //     xhr.send();
+        // }
+        // ajax('http://api.github.com/users/wesbos',function(result){
+        //     console.log(result,'---wesbos---');
+        //     ajax('http://api.react.beer/v2/search?q=hops&type=beer', function (result){
+        //         console.log(result,'---beer---');
+        //         ajax('http://api.discogs.comm/artists/51988', function (result) {
+        //             console.log(result, '---discogs---')
+        //         })   
+        //     })
+        // })
+
+        // 假如有一个函数，不止执行一次，把异步变成同步
+        // 生成器函数
+        // function* foo(x){
+        //     console.log('1')
+        //     yield x+1; //返回 记录下执行状态 并交出执行权
+        //     console.log('2');
+        //     yield x + 2;
+        //     console.log('3');
+        //     return x + 3;
+        // }
+
+        // // 执行完所有的yield
+        // let steps = foo(1);
+        // for (const x of steps) {
+        //     console.log(x);
+        // }
+
+        function ajax(url){
+            fetch(url)  //promise  二进制流
+            .then(data => data.json())  //json化
+            .then(data => date.next(data))
+        }
+
+        function* steps(){ //生成器函数
+            console.log("fetch beers");
+            const beers = yield ajax('http://api.react.beer/v2/search?q=hops&type=beer'); //yield promise
+            console.log(beers);
+            const wesbos = yield ajax('http://api.github.com/users/wesbos');
+            console.log(wesbos);
+            const discogs = yield ajax('http://api.discogs.com/artists/51988');
+            console.log(discogs);
+        }
+
+        const date = steps(); //迭代器
+        date.next();
+
+    </script>
+</body>
+</html>
