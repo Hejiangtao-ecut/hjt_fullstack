@@ -1,0 +1,7 @@
+<view class="panel">
+    <view class="chart-with-img" s-for="charts">
+        <image src="../../img/{{item.id}}.png" bindtap="showChart"
+        data-id="{{item.id}}"/>
+        {{item.name}}
+    </view>
+</view>

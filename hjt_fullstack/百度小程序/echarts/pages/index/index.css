@@ -1,0 +1,18 @@
+.panel{
+    display: block;
+    margin-top: 10px;
+}
+.panel .chart-with-img{
+    display: inline-block;
+    text-align: center;
+    margin: 0 4% 20px 4%;
+    width: 25%;
+}
+.chart-with-img image{
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+    display: block;
+    margin: 0 auto;
+}

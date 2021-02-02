@@ -1,0 +1,19 @@
+{
+    "pages": [
+        "pages/pie/pie",
+        "pages/bar/bar",
+        "pages/index/index"
+
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "echarts数据可视化",
+        "backgroundTextStyle": "light"
+    },
+    "dynamicLib": {
+        "echartsLib": {
+            "provider": "echarts_4_7_0"
+        }
+    }
+}
