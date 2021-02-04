@@ -1,7 +1,10 @@
 {
 	"pages": [
+		"pages/test/test",
 		"pages/index/index",
-		"pages/myInfo/myInfo"
+		"pages/myInfo/myInfo",
+		"pages/demo1/demo1"
+		
 	],
 	"window": {
 		"backgroundTextStyle": "light",
