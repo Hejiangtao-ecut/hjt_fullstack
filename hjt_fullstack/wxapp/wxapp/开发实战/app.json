@@ -3,8 +3,8 @@
 		"pages/test/test",
 		"pages/index/index",
 		"pages/myInfo/myInfo",
-		"pages/demo1/demo1"
-		
+		"pages/demo1/demo1",
+		"pages/demo2/demo2"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
