@@ -6,13 +6,16 @@
 		"pages/demo1/demo1",
 		"pages/demo2/demo2",
 		"pages/demo4/demo4",
+		"pages/demo5/demo5",
 		"pages/demo3/demo3"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
 		"navigationBarTitleText": "ONLY 官方购物网站",
-		"navigationBarTextStyle": "black"
+		"navigationBarTextStyle": "black",
+		"backgroundColor": "#0057ff",
+		"enablePullDownRefresh": true
 	},
 	"sitemapLocation": "sitemap.json"
 }
