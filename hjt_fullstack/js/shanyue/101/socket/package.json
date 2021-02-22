@@ -1,0 +1,15 @@
+{
+  "name": "101",
+  "version": "1.0.0",
+  "description": "1. 200状态码 成功\r 2. 101状态码 switching Protocols 切换协议",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

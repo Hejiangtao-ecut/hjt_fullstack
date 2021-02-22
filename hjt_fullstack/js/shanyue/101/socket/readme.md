@@ -1,0 +1,12 @@
+1. 安装node 的开发框架 express MVC
+    - 引入express require('express')
+    - app = express() 中小应用使用node
+    - http服务 简单 传输完成就断开 简单协议
+    - app.get
+    - 101 协议的跳转 比较复杂 聊天室 websocket
+        - 聊天室是http无法实现的
+        - 保持长时间连接，websocket
+    - http.listen(:port) 端口号
+    - 101 在ws 应用场景下，服务器用socket.io(封装了websocket的实现)，客户端申请切换协议101
+    - socket.io 在服务器启动后，他会提供/socket.io/socket.io.js
+    - 客户端n:1 io()；
