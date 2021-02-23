@@ -62,7 +62,8 @@
     </p> -->
     <ul id="messages"></ul>
     <form id="form" action="" name="msgForm">
-        <input id="input" autocomplete="off" autofocus=true /><button>Send</button>
+        <input id="input" autocomplete="off" autofocus=true />
+        <button type="submit">Send</button>
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
@@ -78,13 +79,14 @@
             // 再由服务器发给所有人
             if(input.value){
                 // 发送一个消息 message 消息的名字 内容
-                socket.emit('message',input.value)
+                socket.emit('message',input.value);
             }
         })
         socket.on('message', function (msg) {
                 var item = document.createElement('li');
                 item.textContent = msg;
                 messages.appendChild(item);
+                input.value = ''; //清空输入框的内容
             })
     </script>
 </body>
