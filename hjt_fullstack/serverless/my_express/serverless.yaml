@@ -1,0 +1,6 @@
+component: express 
+serviec: helloword
+name: my_express
+express:
+  inputs:
+    region: ap-shanghai
