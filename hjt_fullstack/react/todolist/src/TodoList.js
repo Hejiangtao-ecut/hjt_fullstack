@@ -1,40 +1,71 @@
-import React from 'react'; 
+import React, { Component, Fragment } from 'react'; 
+import TodoItem from './TodoItem';
 
-class TodoList extends React.Component{
+class TodoList extends Component{
 
   constructor(props) {
     super(props);
     this.state = {
-      list: []
+      list: [],
+      inputValue:''
     }
+
+    // this指向优化，在construct里面完成指向指定，使得下面的代码更加简洁，同时提升代码的性能
+    this.inputChange = this.inputChange.bind(this);
+    this.btnClick = this.btnClick.bind(this);
+    this.itemClick = this.itemClick.bind(this);
+
   }
 
   btnClick() {
-    this.setState({
-      list: [...this.state.list, "demo"],
+    if(this.state.inputValue !== ''){
+      this.setState({
+      list: [...this.state.list, this.state.inputValue],
       inputValue:''
+      })
+    }
+  }
+
+  inputChange(e) {
+    this.setState({
+      inputValue: e.target.value
+    });
+    // console.log(e.target.value);
+  }
+
+  itemClick(index) {
+    const list = [...this.state.list];
+    list.splice(index, 1);
+    this.setState({
+      list:list
     })
   }
 
-  inputChange() {
-    
+  getTodoItems() {
+    return (
+      this.state.list.map((item, index) => {
+        return (
+          <TodoItem itemClick={this.itemClick}
+            key={index}
+            item={item}
+            index={index}
+          />
+        )
+        // return <li key={ index } onClick={ this.itemClick.bind(this, index) }>{ item }</li>
+      })
+    )
   }
 
   render() {
     return (
-      <div>
+      // React.Fragment 解决外层div的占位问题，方便CSS渲染
+      <Fragment>
         <div>
-          <input onChange={ this.inputChange.bind(this) } />
-          <button onClick={ this.btnClick.bind(this) }>add</button>
+          <input value={this.state.inputValue} onChange={this.inputChange} autoFocus={true} />
+          <button className="btn" onClick={ this.btnClick} >add</button>
         </div>
-        <ul>
-          {
-            this.state.list.map((item,index) => {
-              return <li key = { index }>{ item }</li>
-            })
-          }
-        </ul>
-      </div>
+        <ul>{this.getTodoItems()}</ul>
+      </Fragment>
     )
   }
 

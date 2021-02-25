@@ -34,3 +34,9 @@ webpack-cli  4.0 版本 与webpack 5兼容问题
 2. react react-dom
     - ts + react 阿里
     - npm i @types/react @types/react-dom
+
+3. - index.tsx 入口文件
+    - react 16后，可以直接在函数中使用状态，全面拥抱函数式编程
+        - useState 超级函数
+            1. 创建了name状态
+            2. setname 修改了状态
