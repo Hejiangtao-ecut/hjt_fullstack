@@ -8,12 +8,24 @@ var basePath = __dirname;
 module.exports = {
   context: path.join(basePath, "src"),
   resolve: {
-    extensions: [".js", ".ts", ".tsx"]
+    extensions: [".js", ".ts", ".tsx", ".css"]
   },
-  entry: ["@babel/polyfill", "./index.tsx"],
+  // entry: ["@babel/polyfill", "./index.tsx"],
+  entry: {
+    app: './index.tsx',
+    vendor: [
+      'react',
+      'react-dom',
+      'react-router-dom'
+    ],
+    vendorStyles: [
+      '../node_modules/bootstrap/dist/css/bootstrap.css'
+    ]
+  },
   output: {
     path: path.join(basePath, "dist"),
-    filename: "bundle.js"
+    filename: "[name].js"
+    // filename: "bundle.js"
   },
   devtool: "source-map",
   devServer: {

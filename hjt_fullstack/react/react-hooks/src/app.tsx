@@ -17,17 +17,21 @@ import { NameEditComponent } from './nameEdit';
 
 // StatelessComponent
 export const App = () => {
-    // React hooks name 状态的名字， setName 修改状态用setName 
-    const [name, setName] = React.useState('defaultUserName') // state 
-    // react hooks 
-    // 函数式组件可以借助一些魔法函数来实现状态 
-    const setUsernameState = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setName(event.target.value)
-    }
-    return (
-        <>
-            <HelloComponent userName={name} />
-            <NameEditComponent userName={name} onChange={setUsernameState} />
-        </>
-    )
+  // React hooks name 状态的名字， setName 修改状态用setName 
+//   class bind.this 是最高级别
+  const [name, setName] = React.useState('defaultUserName') // state 
+  // react hooks 
+  // 函数式组件可以借助一些魔法函数来实现状态 
+//   const setUsernameState = (event: React.ChangeEvent<HTMLInputElement>) => {
+//     setName(event.target.value)
+//   }
+    setTimeout(()=>{
+        setName('aaaa')
+    },3000)
+  return (
+    <>
+        <HelloComponent userName={name} />
+        <NameEditComponent userName={name} onChange={setUsernameState}/>   
+    </>
+  )
 }
