@@ -1,0 +1,16 @@
+# 服务器
+- IP 
+    - 124.71.172.242 
+    - 浏览器通过域名或者IP进行访问，http/https协议
+    - centos 7.6  web服务器
+    - Nginx 是一个高性能的HTTP和反向代理的web服务器
+    - putty 远程SSH 链接 华为云服务器
+        - root password
+    - web服务 Nginx 安装
+        - yum -y install gcc  gcc-c++ autoconf pcre-devel make automake
+        - yum -y install wget httpd-tools vim
+        - yum list 列举出yum可安装的包
+        - yum list | yum nginx  管道 以前面的输出为结果从中选择包安装
+        - yum nginx 拿到服务器第一步，配置一个nginx
+        - nginx -v 查看版本号
+        - nginx 启动nginx
