@@ -60,11 +60,12 @@ class TodoList extends Component{
     return (
       // React.Fragment 解决外层div的占位问题，方便CSS渲染
       <Fragment>
-        <div>
-          <input value={this.state.inputValue} onChange={this.inputChange} autoFocus={true} />
+        <div className="textarea"><span>TODOLIST</span></div>
+        <div className="inputarea">
+          <input className="inputbox" value={this.state.inputValue} onChange={this.inputChange} autoFocus={true} />
           <button className="btn" onClick={ this.btnClick} >add</button>
         </div>
-        <ul>{this.getTodoItems()}</ul>
+        <ul className="todoarea">{this.getTodoItems()}</ul>
       </Fragment>
     )
   }
