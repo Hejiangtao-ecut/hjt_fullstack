@@ -62,14 +62,18 @@ class TodoList extends Component{
       <Fragment>
         <div className="textarea">
           <div className="container">
-            <span>TODOLIST</span>
-            <div>
+            <span>ToDoList</span>
+            <div className="inputarea">
               <input className="inputbox" value={this.state.inputValue} onChange={this.inputChange} autoFocus={true} placeholder="添加ToDo" />
-              <button className="btn" onClick={ this.btnClick} >add</button>
+              <button className="btn" onClick={ this.btnClick} >Add</button>
             </div>
           </div>
         </div>
-        <ul className="todoarea">{this.getTodoItems()}</ul>
+        <div className="container">
+          <p>待办事项</p>
+          <ul className="todoarea">{this.getTodoItems()}</ul>
+        </div>
+        
       </Fragment>
     )
   }
