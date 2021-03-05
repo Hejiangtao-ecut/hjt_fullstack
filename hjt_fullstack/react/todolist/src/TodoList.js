@@ -69,11 +69,15 @@ class TodoList extends Component{
             </div>
           </div>
         </div>
-        <div className="container">
-          <p>待办事项</p>
-          <ul className="todoarea">{this.getTodoItems()}</ul>
+        <div className="listarea">
+          <div className="content">
+            <ul>
+              <li><span>待办事项</span></li>
+              <ul className="todoarea">{this.getTodoItems()}</ul>
+            </ul>
+            
+          </div>
         </div>
-        
       </Fragment>
     )
   }

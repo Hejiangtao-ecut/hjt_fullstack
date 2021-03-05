@@ -1,19 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    float: center;
 }
 body{
     background-color: rgba(131, 126, 126, 0.527);
-    float: center;
+    display: flex;
+    justify-content: center;
 }
 .textarea{
-    display: flex;
     width: 100vw;
     height: 50px;
     background-color: rgb(34, 32, 32);
     display: flex;
     justify-content: center;
-    display: flex;
     align-items:center;
 }
 .container{
@@ -22,9 +22,9 @@ body{
 }
 .container span{
     display: flex;
-    color: aquamarine;
+    color: rgb(230, 238, 233);
     float: left;
-    font-size: 20px;
+    font-size: 24px;
 }
 .inputarea{
     float: right;
@@ -44,4 +44,29 @@ body{
 .btn{
     height: 24px;
     font-weight: bolder;
+}
+.listarea{
+    display: flex;
+    justify-content: center;
+}
+.content{
+    width: 40%;
+    margin-top: 20px;
+}
+ul{
+    list-style-type: none;
+}
+li span{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.todoarea{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.todoarea li{
+    background: rgb(252, 244, 244);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
 }
