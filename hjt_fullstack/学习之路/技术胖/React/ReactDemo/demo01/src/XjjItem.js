@@ -10,10 +10,8 @@ class XjjItem extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
         if (nextProps.content !== this.props.content) {
-            console.log(true);
             return true;
         } else {
-            console.log(false);
             return false;
         }
     }

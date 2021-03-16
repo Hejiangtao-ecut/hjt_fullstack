@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
 import XjjItem from './XjjItem';
+import './style.css';
+import Boss from './Boss';
 
 class Xjj extends Component{
     constructor(props) {
@@ -18,6 +21,15 @@ class Xjj extends Component{
     // componentDidMount() {
     //     console.log("componentDidMount,挂载完成");
     // }
+    componentDidMount() {
+        // axios   .post('https://baidu.com')
+        //     .then((res) => {
+        //     console.log('axios success!')
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        // })
+    }
 
     render() {
         // 挂载中
@@ -25,10 +37,10 @@ class Xjj extends Component{
         return (
             <>
                 <div>
-                    <input value={this.state.inputValue} onChange={this.inputChange.bind(this)} ref={(input)=>{this.input=input}} />
+                    <input className="input" value={this.state.inputValue} onChange={this.inputChange.bind(this)} ref={(input)=>{this.input=input}} />
                     <button onClick={this.addList.bind(this)}>add</button>
                 </div>
-                <ul>
+                <ul className="show">
 
                     {
                         this.state.list.map((item, index) => {
@@ -37,6 +49,7 @@ class Xjj extends Component{
                         })
                     }
                 </ul>
+                <Boss/>
             </>
         )
     }

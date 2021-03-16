@@ -1,0 +1,55 @@
+.input{
+    border:3px solid blanchedalmond;
+}
+
+/* 入场动画 */
+.boss-test-enter{
+    opacity: 0;
+}
+/* 入场到结束动画 */
+.boss-test-enter-active{
+    opacity: 1;
+    transition: opacity 2000ms;
+}
+/* 入场结束 */
+.boss-test-enter-done{
+    opacity: 1;
+}
+/* 出场 */
+.boss-test-exit{
+    opacity: 1;
+}
+/* 出场到结束 */
+.boss-test-exit-active{
+    opacity: 0;
+    transition: opacity 2000ms;
+}
+/* 出场结束 */
+.boss-test-exit-done{
+    opacity: 0;
+}
+
+/* .show{
+    opacity: 1;
+    transition: all 1.5s ease-in;
+}
+.hide{
+    opacity: 0;
+    transition: all 1.5s ease-in;
+    animation: hide-item 2s ease-in forwards    ;
+}
+
+@keyframes hide-item{
+    0%{
+        opacity: 1;
+        color: yellow;
+    }
+    50%{
+        opacity: 0.5;
+        color: red;
+    }
+    100%{
+        opacity: 0;
+        color: green;
+    }
+} */
