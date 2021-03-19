@@ -1,0 +1,17 @@
+{
+  "name": "ali",
+  "version": "1.0.0",
+  "description": "- flex\r     - 分割线打理的专业度\r     - flex 布局\r         - display：inline-flex  子元素布局由flex接管\r         - divder border-right\r         - min-width 更加灵活",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0"
+  }
+}
