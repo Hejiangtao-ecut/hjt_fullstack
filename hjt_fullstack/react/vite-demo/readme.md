@@ -16,7 +16,19 @@ nvm 一台电脑node 多版本 作业
     2. store action getBannerList
         - 调用axios 
     3. 组件
+        - 将单一状态树引入组件开发流程
         - 安装
             - redux-thunk 是支持异步action操作的中间件
-        - 目录
-            
+        - 目录 store
+            - export default store
+            - createStore(reducer)
+            - reducer 比较复杂的，可以是模块化的
+            - applyMiddlewares 中间件服务 redux-thunk redux-log...
+    4. reducer 业务
+        - 形式
+            - 纯函数  返回状态
+        - 放哪里
+            - /store
+    
+    store 提供给 Provider  -> App 组件  connect({state,dispatch})(Component) HOC
+    c

@@ -1,16 +1,15 @@
-import { axiosInstance } from './config';
-// 所有请求在这统一管理
-// banner页
-export const getBannerRequest = () => {
+import {axiosInstance} from './config'
+//所有的请求都在这里统一管理
+//axios 
+//url 改了怎么办
+//首页
+export const getBannerRequest=()=>{
     return axiosInstance.get('/banner')
 }
-
-// 日推
-export const getRecommendListQuest = () => {
-    return axiosInstance.get('/personalized')
+export const getRecommendListQuest=()=>{
+    return axiosInstance.get('/personlized')
 }
-
-// singers
-// export const getSingerListRequest = () => {
-//     return axiosInstance.get('/')
+//singers
+// export const getSingleListRequest=()=>{
+//     return axiosInstance.get('./personalized')
 // }

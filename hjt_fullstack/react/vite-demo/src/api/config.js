@@ -1,13 +1,13 @@
+// fetch 
 // ajax 请求的封装
-import axios from 'axios';
-// 完成api的引入 
-// 设置统一地址前缀
-export const baseUrl = 'http://localhost:3000';
-
+import axios from 'axios' ;
+// 1. 设置统一的地址前缀 
+export const baseUrl = 'http://localhost:3001';
+// 2. 返回axios 实例
 const axiosInstance = axios.create({
-    baseURL:baseUrl
+  baseURL:baseUrl
 })
 
 export {
-    axiosInstance
+  axiosInstance
 }
