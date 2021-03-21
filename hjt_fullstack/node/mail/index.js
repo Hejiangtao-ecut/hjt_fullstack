@@ -16,9 +16,9 @@ function getWords(){
 }
 // 发邮件
 async function sendMail(words){
-    let user = "1471867575@qq.com";
-    let pass = "cjchjtjqmpxdhbhj"; //授权码
-    let to = "1604125861@qq.com"
+    let user = "2737988958@qq.com";
+    let pass = "jrbklzbcpcjvdhbd"; //授权码
+    let xiaohei = "1282170299@qq.com"
     let transporter = nodemailer.createTransport({
         host:"smtp.qq.com",
         port:587,
@@ -29,9 +29,9 @@ async function sendMail(words){
         }
     })
     let info = await transporter.sendMail({
-        from: `你可爱的爹<${user}>`, // sender address
-        to: `亲爱的儿子<${to}>`,
-        subject: "给儿子的一封信",
+        from: `智启哥哥的迷妹<${user}>`, // sender address
+        to: `亲爱的智启哥哥<${to}>`,
+        subject: "给智启哥哥的一封信",
         text: words
       })
       console.log("发送成功");
