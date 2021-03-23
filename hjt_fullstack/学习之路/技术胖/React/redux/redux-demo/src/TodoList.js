@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import 'antd/dist/antd.css';
-import { Input, Button, List } from 'antd';
+import TodoListUi from './TodoListUi';
 import store from './store'
+import { changeInputAction, addItemAction, deleteItemAction } from './store/actionCreators';
 
 class TodoList extends Component {
 
@@ -11,48 +11,36 @@ class TodoList extends Component {
         this.changeInputValue = this.changeInputValue.bind(this);
         this.storeChange = this.storeChange.bind(this);
         this.clickBtn = this.clickBtn.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
         store.subscribe(this.storeChange);
     }
 
     render() { 
         return ( 
-            <div style={{margin:'10px'}}>
-                <div >
-                    <Input placeholder={this.state.inputValue}
-                        style={{ width: '250px', marginRight: '10px ' }}
-                        onChange={this.changeInputValue}
-                        value={this.state.inputValue}
-                    />
-                    <Button type="primary" onClick={this.clickBtn}>
-                        增加
-                    </Button>
-                </div>
-                <div style={{ margin: '10px', width: '300px' }}>
-                    <List bordered dataSource={this.state.list}
-                        renderItem={item => (<List.Item>{item}</List.Item>)}
-                    />
-                </div>
-            </div>
+            <TodoListUi
+                inputValue={this.state.inputValue}
+                changeInputValue={this.changeInputValue}
+                clickBtn={this.clickBtn}
+                list={this.state.list}
+                deleteItem={this.deleteItem}
+            />
          );
     }
 
     changeInputValue(e) {
-        // console.log(e.target.value)
-        const action = {
-            type: 'changeInput',
-            value:e.target.value
-        }
+        const action = changeInputAction(e.target.value)
         store.dispatch(action)
     }   
     storeChange() {
         this.setState(store.getState());
     }
     clickBtn() {
-        // console.log("----------")
-        const action = {
-            type: 'addItem'
-        }
+        const action = addItemAction();
         store.dispatch(action);
+    }
+    deleteItem(index) {
+        const action = deleteItemAction(index);
+        store.dispatch(action)
     }
 
 }
