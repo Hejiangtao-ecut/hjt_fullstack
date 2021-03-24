@@ -5,22 +5,16 @@ export default defineConfig({
   },
   routes: [
     {
-      name: '空白页面',
-      path: '/demo1',
-      component: './Demo1',
-    },
-    {
-      name: '注册页',
-      path: '/userregister',
-      component: './UserRegister',
-    },
-    {
       path: '/',
       component: '@/pages/index',
     },
     {
       path: '/about',
       component: '@/pages/about',
+    },
+    {
+      path: '/login',
+      component: '@/pages/login',
     },
   ],
   fastRefresh: {},
