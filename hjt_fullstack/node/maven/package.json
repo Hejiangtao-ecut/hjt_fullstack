@@ -1,0 +1,19 @@
+{
+  "name": "maven",
+  "version": "1.0.0",
+  "description": "- 数据库\r     - 端口通信，3306(默认端口) -> 3000\r         - 像node fs http模块，比较复杂",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess \"node dist/main.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^4.2.3"
+  }
+}
