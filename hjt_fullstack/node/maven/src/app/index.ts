@@ -1,21 +1,20 @@
-// app 的创建以及基本配置
+// app创建以及基本配置  中间件
+// es6 module typescript=> => js  
 import express from 'express';
-import postRouter from '../post/post.router'
-import * as postController from '../post/post.controller';
-
-
-const app = express();
-// app 处于侍服状态
-// 中间件打理 函数
-// body处理要加中间件 bodyParser
 const bodyParser = require('body-parser');
+import postRouter from '../post/post.router'
+import { defaultErrorHandler } from './app.middleware';
+const app = express();
 app.use(bodyParser.urlencoded());
-// 所有的路由都在这汇集
+//app 处于伺服状态 eventEmitter 
+//body 加中间件 bodyParser
+//中间件来处理 函数
+//所有的路由都在这里汇总
 app.use(
-    // 文章模块的路由
-    // 增删改查
+    //文章模块的路由
     postRouter,
-    postController.store
+    //用户路由
 )
-
+//处理各种错误
+// app.use(defaultErrorHandler);
 export default app;
