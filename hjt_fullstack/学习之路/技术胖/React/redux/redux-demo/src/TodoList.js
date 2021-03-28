@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TodoListUi from './TodoListUi';
-import store from './store'
+import store from './store';
+import axios from 'axios';
 import { changeInputAction, addItemAction, deleteItemAction } from './store/actionCreators';
 
 class TodoList extends Component {
@@ -27,6 +28,12 @@ class TodoList extends Component {
          );
     }
 
+    componentDidMount() {
+        axios.get('/data')
+            .then((res) => {
+                console.log(res);
+        })
+    }
     changeInputValue(e) {
         const action = changeInputAction(e.target.value)
         store.dispatch(action)
