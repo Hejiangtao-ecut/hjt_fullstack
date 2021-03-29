@@ -1,5 +1,5 @@
 // 仓库管理文件
-import { createStore,applyMiddleware,compose } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import reducer from './reducer'
 import thunk from 'redux-thunk';
 // 增强函数,同时使用两个中间件

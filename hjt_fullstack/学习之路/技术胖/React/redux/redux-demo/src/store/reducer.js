@@ -1,7 +1,7 @@
-import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM } from './actionTypes';
+import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM,GET_LIST } from './actionTypes';
 const defaultStore = {
-    inputValue: 'Write Something',
-    list: ['demo1', 'demo2', 'demo3'],
+    inputValue: '',
+    list: [],
 }
 
 function reducer(state = defaultStore, action){
@@ -26,6 +26,12 @@ function reducer(state = defaultStore, action){
         newState.list.splice(action.index, 1);
         return newState;
     }
+    if (action.type === GET_LIST) {
+        let newState = JSON.parse(JSON.stringify(state));
+        newState.list = action.value;
+        return newState;
+    }
+
         
     return state;
 }
