@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,Redirect } from 'react-router-dom';
 
 // 首页
 class Index extends Component {
@@ -16,6 +16,7 @@ class Index extends Component {
     render() { 
         return ( 
             <>
+                <Redirect to="/home/" />
                 Index
                 <ul>
                     {
