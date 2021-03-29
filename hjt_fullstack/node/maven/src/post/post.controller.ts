@@ -1,11 +1,12 @@
-import { Request, Response } from 'express';  // 来自@types/express
+import { Request, Response } from 'express'; // @types/express
 import { createPost } from './post.service';
-
-export const store = async (req: Request, res: Response) => {
-    // console.log(req.body, '---------------------'); 
-    // 解构
-    const { name, nickname } = req.body;
-    // console.log(name);
-    const data = await createPost({ name, nickname })
-    res.status(201).send('保存成功');
+export const store = async(
+  request:Request,
+  response: Response
+) => {
+  console.log(request.body, '/////////////');
+  const { title, content } = request.body
+  // 存  -> 数据存储服务service
+  const data = await createPost({title, content})
+  response.status(201).send('保存成功')
 }

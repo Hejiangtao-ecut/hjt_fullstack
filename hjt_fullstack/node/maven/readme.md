@@ -28,3 +28,12 @@ CREATE TABLE `post` (
 
 - mysql 先建表 再操作
     - mongodb 可以先操作，再建表 nosql 存json
+
+- user 业务
+    1. 用user.router.ts 入口 设置POST 
+    2. user.controller.ts 用户名或者密码不为空，否则会带来问题数据
+        - 用户端管理数据库
+        - view层数据是自由的 modul层是核心数据
+    3. user.service.ts存数据
+    4. user.middleware.ts 检测是否有存在的用户名？ 注册
+        - POST/register 
