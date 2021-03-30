@@ -1,0 +1,134 @@
+/* 头部样式 */
+.header{
+    width: 100%;;
+    height: 300px;;
+    background-color: rgba(243, 242, 242, 0.952);
+    margin-bottom: 30px;
+}
+/* 头部样式 */
+.navArea{
+    width: 100%;
+    height: 100px;
+}
+.navbar{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.navbar button{
+    margin: 0 20px 0 20px;
+    border: 0;
+    min-width: 30px;
+    font-size: 20px;
+    font-weight:200;
+    background-color: rgba(255, 255, 255, 0);  
+}
+.navbar button a{
+    color: rgba(187, 182, 177, 0.842);
+}
+.navbar button a:focus{
+    outline: 0;
+}
+.navbar button a:hover{
+    color: black;
+}
+.divder{
+    border-left: 1px solid rgba(77, 75, 72, 0.452);
+}
+
+.iconBar{
+    /* background-color: burlywood; */
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+.icon{
+    margin: auto;
+}
+.searchBar{
+    width: 100%;
+    height: 100px;
+    /* background-color: blue; */
+}
+.search{
+    text-align: center;
+}
+.search input{
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    border: 0;
+    padding-left: 45px;
+    background-image: url('./icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 10px;
+}
+.search input:focus{
+    outline: 0;
+    border: 0;
+}
+
+/* book css */
+.bookShelf{
+    /* background-color: rgb(92, 212, 88); */
+    border: 1 solid salmon;
+    height: 40vh;
+}
+.bookShelf_text{
+    font-weight: 300;
+    height: 5vh;
+
+}
+.bookShelf_text h2{
+    font-family: serif;
+    float: left;
+    margin-left: 2vw;
+}
+.bookShelf_text span{
+    font-size: 14px;
+    float: right;
+    margin-right: 3.2vw;
+}
+
+.myBookCard{
+    width: 18vw;
+    background-color: rgba(221, 220, 220, 0.562);
+    height: 9.7vw;
+    float: left;
+    margin: 2vw;
+    display: flex;
+}
+.myBookCard:hover{
+    background-color: rgb(221, 220, 220);
+}
+.myBookCard_body{
+    margin: auto;
+    width: 15vw;
+    height: 8vw;
+    /* background-color: rgb(64, 54, 148); */
+    display: flex;
+}
+.myBookCard_body img{
+    width: 100%;
+    height: 100%;
+}
+.myBookCard_body_img{
+    max-height: 8vw;
+    max-width:5.4vw;
+}
+.myBookCard_body_info{
+    /* background-color: #fff; */
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1vw;
+    width: 10vw;
+    padding: 0;
+}
+.myBookCard_body_info_title{
+    word-wrap: normal;
+    font-weight: bolder;
+    font-family: Impact;
+    font-size: 18px;
+}
