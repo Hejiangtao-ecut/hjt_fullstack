@@ -19,25 +19,6 @@ const list = [{
 ]
 
 function myBookCard() {
-    const list = [{
-        'title': '无拘无束的关系',
-        'author': '克里斯多福',
-        'img': "https://wfqqreader-1252317822.image.myqcloud.com/cover/545/22689545/t6_22689545.jpg"
-    }, {
-        'title': '无拘无束的关系',
-        'author': '克里斯多福',
-        'img': "https://wfqqreader-1252317822.image.myqcloud.com/cover/545/22689545/t6_22689545.jpg"
-    }, {
-        'title': '无拘无束的关系',
-        'author': '克里斯多福',
-        'img': "https://wfqqreader-1252317822.image.myqcloud.com/cover/545/22689545/t6_22689545.jpg"
-    }, {
-        'title': '无拘无束的关系',
-        'author': '克里斯多福',
-        'img': "https://wfqqreader-1252317822.image.myqcloud.com/cover/545/22689545/t6_22689545.jpg"
-        }]
-    
-    console.log('------------');
     return (
         <>
             {list.map(item => {

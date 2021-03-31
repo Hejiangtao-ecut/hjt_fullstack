@@ -11,7 +11,7 @@ class Boss extends Component {
     render() { 
         return ( 
             <div>
-                <CSSTransition in={this.state.isShow} timeout={2000} classNames="boss-test" unmountOnExit> 
+                <CSSTransition in={this.state.isShow} timeout={2000} classNmes="baoss-test" unmountOnExit> 
                     <div>Boss----牛魔王</div>
                 </CSSTransition>
                 

@@ -2,16 +2,21 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
 function Header() {
+    function btnClick() {
+        return (
+            alert("小哥哥正在开中哦！")
+        )
+    }
     return (
         <div className="header">
             {/* 顶部功能列表 */}
             <div className="navArea">
                 <div className="navbar">
-                    <button><Link to={'/'} >传书到手机</Link></button>
+                    <button onClick={btnClick}><Link to={'/'} >传书到手机</Link></button>
                     <span className="divder"></span>
-                    <button><Link to={'/'} >水墨屏版</Link></button>
+                    <button onClick={btnClick}><Link to={'/'} >水墨屏版</Link></button>
                     <span className="divder"></span>
-                    <button><Link to={'/'} >手机版</Link></button>
+                    <button onClick={btnClick}><Link to={'/'} >手机版</Link></button>
                     <span className="divder"></span>
                     {/* 登录和头像根据用户登陆状态来选择显式 */}
                     <button><Link to={'/load/'}>登录</Link></button>

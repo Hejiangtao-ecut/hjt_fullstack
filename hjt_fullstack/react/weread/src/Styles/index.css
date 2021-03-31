@@ -2,8 +2,8 @@
 .header{
     width: 100%;;
     height: 300px;;
-    background-color: rgba(243, 242, 242, 0.952);
-    margin-bottom: 30px;
+    background-color: #F6F7F9;
+    margin-bottom: 10vh;
 }
 /* 头部样式 */
 .navArea{
@@ -32,6 +32,7 @@
 .navbar button a:hover{
     color: black;
 }
+/* 分割线 */
 .divder{
     border-left: 1px solid rgba(77, 75, 72, 0.452);
 }
@@ -64,6 +65,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: 10px;
+    box-shadow:0 0 10px rgb(34, 59, 83);
 }
 .search input:focus{
     outline: 0;
@@ -73,8 +75,8 @@
 /* book css */
 .bookShelf{
     /* background-color: rgb(92, 212, 88); */
-    border: 1 solid salmon;
     height: 40vh;
+    border-bottom: 10vh;
 }
 .bookShelf_text{
     font-weight: 300;
@@ -94,14 +96,15 @@
 
 .myBookCard{
     width: 18vw;
-    background-color: rgba(221, 220, 220, 0.562);
+    background-color: #F6F7F9;
     height: 9.7vw;
     float: left;
     margin: 2vw;
     display: flex;
+    border-radius: 5px;
 }
 .myBookCard:hover{
-    background-color: rgb(221, 220, 220);
+    background-color: #EDEEEF;
 }
 .myBookCard_body{
     margin: auto;
@@ -131,4 +134,118 @@
     font-weight: bolder;
     font-family: Impact;
     font-size: 18px;
+}
+
+/* 推荐卡片 */
+.recommend{
+    widows: 100%;
+    height: 75vh;
+}
+.tuiCard{
+    width: 18vw;
+    background-color: #F6F7F9;
+    float: left;
+    margin: 2vw;
+    display: flex;
+    border-radius: 5px;
+    border-bottom: 0vh;
+}
+.tuiCard:hover{
+    background-color: #EDEEEF;
+}
+.tuiCard_body_img{
+    width: 18vw;
+    height: 16vw;
+    display: flex;
+}
+.tuiCard_body img{
+    width: 8vw;
+    height: 12vw;
+    margin: auto;
+}
+.tuiCard_body_info{
+    height: 8vw;
+}
+.tuiCard_body_info_title{
+    width: 100%;
+    height: 2vw;
+    text-align: center;
+    font-weight: bolder;
+}
+.tuiCard_body_info_author{
+    width: 100%;
+    height: 2vw;
+    text-align: center;
+}
+.tuiCard_body_info_reason{
+    width: 100%;
+    height: 2vw;
+    text-align: center;
+}
+
+.rankContainer{
+    width: 100%;
+    height: 175vh;
+    /* background-color: blueviolet; */
+}
+.weeklist{
+    width: 40vw;
+    height: 80vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    /* background-color: rgb(39, 184, 46); */
+    margin-bottom: 10vh;
+    float: left;
+}
+.weeklist_header{
+    width: 100%;
+    height: 12vh;
+    border-bottom: 1px solid #EDEEEF ;
+    
+}
+.weeklist_header_banner{
+    height: 6vh;
+}
+.weeklist_header_banner img{
+    height: 100%;
+}
+.weeklist_header_title{
+    color: #FA93BC;
+}
+.weeklist_body{
+    width: 100%;
+    height: 60vh;
+    background-color: #fff;
+}
+.weekCard_body{
+    width: 46%;
+    height: 20vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #F6F7F9;
+    float: left;
+    border-bottom: 1px solid #EDEEEF;
+
+}
+.weekCard_body:hover{
+    background-image: linear-gradient(to right, #f66,#fff);
+}
+.weekCard_body_img{
+    width: 40%;
+    height: 100%;
+    display: flex;
+}
+.weekCard_body_img img{
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
+.weekCard_body_info{
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+.weeklist_footer{
+    height: 8vh;
+    color: #A4A8AE;
 }
