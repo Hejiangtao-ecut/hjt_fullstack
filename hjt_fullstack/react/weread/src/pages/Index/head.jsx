@@ -4,7 +4,7 @@ import { Route, Link } from 'react-router-dom';
 function Header() {
     function btnClick() {
         return (
-            alert("小哥哥正在开中哦！")
+            alert('小哥哥正在开发中哦！')
         )
     }
     return (

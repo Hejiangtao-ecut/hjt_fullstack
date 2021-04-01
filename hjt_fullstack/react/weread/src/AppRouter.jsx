@@ -8,6 +8,7 @@ import Content from './pages/Content';
 import Load from './pages/Loading';
 import Search from './pages/Search';
 import Show from './pages/Show';
+import BookShelf from './pages/bookShelf';
 
 /**
  * 路由配置
@@ -25,6 +26,8 @@ function AppRouter() {
             <Route path='/search/:bookName' component={Search} />
             {/* 副首页 书籍分类展示页 */}
             <Route path='/show/' component={Show} />
+            {/* 我的书架 */}
+            <Route path='/bookShelf' component={BookShelf} />
         </Router>
     )
 }

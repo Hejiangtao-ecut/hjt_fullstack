@@ -4,7 +4,7 @@ import Header from './head';
 import MyBookShelf from './myBookShelf';
 import Recommend from './recommend';
 import WeekList from './weekList';
-// import { CSSTransition } from 'react-transition-group';
+import ClassifyList from './classifyList';
 
 function Index() {
     return (
@@ -28,10 +28,10 @@ function Index() {
                     <WeekList />
                 </div>
                 <div className="listBody">
-
+                    <ClassifyList />
                 </div>
-                <div className="footer">
-
+                <div className="index-footer">
+                    <span>开发人员：何江涛、黄志乾</span>
                 </div>
             </div>  
         </>

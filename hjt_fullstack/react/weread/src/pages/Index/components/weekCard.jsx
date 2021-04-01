@@ -1,3 +1,7 @@
+// 榜单卡片
+import proptypes from 'prop-types';
+
+
 function weekCard(e) {
     console.log(e)
     return (
@@ -8,14 +12,14 @@ function weekCard(e) {
             </div>
             <div className="weekCard_body_info">
                 {/* 信息 */}
-                <div className="weekCard_body_info_author">
+                <div className="weekCard_body_info_title">
                     <div className="weekCard_body_info_author_name">
-                        {e.item.author}
+                        {e.item.name}
                     </div>
                 </div>
-                <div className="weekCard_body_info_title">
+                <div className="weekCard_body_info_author">
                     <div className="weekCard_body_info_title_name">
-                        {e.item.name}
+                        {e.item.author}
                     </div>
 
                 </div>
