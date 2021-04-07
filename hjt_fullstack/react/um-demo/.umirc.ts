@@ -5,6 +5,11 @@ export default defineConfig({
   },
   routes: [
     {
+      name: '空白页面',
+      path: '/emptypage',
+      component: './EmptyPage',
+    },
+    {
       path: '/',
       component: '@/pages/index',
     },

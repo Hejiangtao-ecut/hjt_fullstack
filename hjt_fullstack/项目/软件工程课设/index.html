@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="zh" class="wide wow-animation">
+
+<head>
+  <!-- Site Title-->
+  <title>在线售票</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css"
+    href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7CLato%7CRoboto">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Page-->
+  <div class="page">
+    <!-- Page Header-->
+    <header class="page-head">
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fullwidth" data-md-layout="rd-navbar-fullwidth"
+          data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-static" data-sm-stick-up-offset="150px" data-lg-stick-up-offset="150px"
+          class="rd-navbar">
+          <div class="rd-navbar-inner">
+            <!-- RD Navbar Panel-->
+            <div class="rd-navbar-wrapper">
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button data-rd-navbar-toggle=".rd-navbar-nav-wrap" class="rd-navbar-toggle"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a href="index.html" class="brand-name">
+                    <div class="logo"><img src="images/logo.png" alt=""></div>
+                  </a></div>
+              </div>
+              <div class="rd-navbar-nav-wrap">
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li class="active"><a href="index.html"><span
+                        class="material-icons-room icon icon-white icon-lg"></span><span>首页</span><span
+                        ></span></a></li>
+                
+                  <li><a href="login2.html"><span
+                        class="material-icons-group icon icon-white icon-lg"></span><span>管理员登录</span><span
+                      ></span></a></li>
+                  <li><a href="login1.html"><span
+                        class="material-icons-group icon icon-white icon-lg"></span><span>用户登录</span><span
+                        ></span></a></li>
+                  <li><a href="#"><span
+                        class="material-icons-email icon icon-white icon-lg"></span><span>联系我们</span><span
+                        ></span></a></li>
+                </ul>
+              </div><a href="#" class="btn btn-orange-2 btn-lg btn-icon"><span
+                  class="icon icon-lg icon-white material-icons-location_on"></span><span>find us1111111</span></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Page Content-->
+    <main class="page-content">
+      <section class="section-60 section-sm-95 bg-image bg-image-1 text-center section-sm-bottom-60">
+        <!-- Swiper-->
+        <div data-autoplay="5000" class="swiper-container swiper-slider text-center">
+          <div class="swiper-wrapper">
+            <div data-slide-bg="images/index8.jpg" class="swiper-slide">
+            </div>
+            <div data-slide-bg="images/index10.jpg" class="swiper-slide">
+
+            </div>
+            <div data-slide-bg="images/index11.jpg" class="swiper-slide">
+            </div>
+          </div>
+
+          <!-- Swiper Pagination-->
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="shell">
+          <h1 class="txt-white">在线售票系统</h1>
+          <div class="range">
+            <div class="cell-lg-8 cell-lg-preffix-2">
+              <!-- RD Mailform-->
+              <form class="rd-mailform text-left form-search">
+                <p class="small text-xs-right">搜索:目的地+时间+旅行人数</p>
+                <div class="range offset-top-22">
+                  <div class="cell-sm-6">
+                    <div class="form-group">
+                      <label for="from" class="form-label">出发地</label>
+                      <input id="from" type="text" name="city" placeholder="请输入你想出发的城市：" class="form-control">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6 offset-top-45 offset-sm-top-0">
+                    <div class="form-group">
+                      <label for="to" class="form-label">目的地</label>
+                      <input id="to" type="text" name="city2" placeholder="请输入你想前往的城市：" class="form-control">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6 offset-top-45">
+                    <div class="form-group">
+                      <label for="from" class="form-label">出发日期</label>
+                      <input id="from" type="date" name="date" placeholder="年/月/日" class="form-control">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6 offset-top-45">
+                    <div class="form-group ">
+                      <label for="datetimepicker2" class="form-label">返回日期</label>
+                      <input id="datetimepicker2" type="date" name="date" placeholder="年/月/日" class="form-control">
+                    </div>
+                  </div>
+              
+                  <div class="cell-xs-6 cell-md-3 offset-top-45">
+                    <div class="form-group">
+                      <!--Select 2-->
+                      <label for="select-2" class="form-label">成年人</label>
+                      <select id="select-2" data-placeholder="-" data-minimum-results-for-search="Infinity"
+                        class="form-control select-filter">
+                        <option>-</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="cell-xs-6 cell-md-3 offset-top-45">
+                    <div class="form-group">
+                      <!--Select 2-->
+                      <label for="select-3" class="form-label">儿童</label>
+                      <select id="select-3" data-placeholder="-" data-minimum-results-for-search="Infinity"
+                        class="form-control select-filter">
+                        <option>-</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="cell-xs-6 cell-md-3 offset-top-45">
+                    <div class="form-group">
+                      <!--Select 2-->
+                      <label for="select-4" class="form-label">宠物</label>
+                      <select id="select-4" data-placeholder="-" data-minimum-results-for-search="Infinity"
+                        class="form-control select-filter">
+                        <option>-</option>
+                        <option>1</option>
+                        <option>2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="cell-xs-12 offset-top-37">
+                    <button type="submit" data-text="搜索"
+                      class="btn btn-orange btn-fullwidth btn-winona btn-sm"><span>搜索</span></button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section Hot Tours-->
+      <section class="section-71 section-bottom-80">
+        <div class="shell">
+          <h2 class="text-center">热门景点</h2>
+          <div class="range">
+            <!-- Owl Carousel-->
+            <div data-items="1" data-xs-items="1" data-sm-items="2" data-md-items="3" data-stage-padding="15"
+              data-loop="false" data-margin="30" data-nav="true" class="owl-carousel">
+              <div class="owl-item">
+                <div class="thumbnail-custom"><img src="images/index-2-370x370.jpg" alt="" width="370" height="370">
+                  <div class="caption">
+                    <h4>北京</h4>
+                    <p>5天4夜游</p>
+                    <div class="h4 orderItem_price">999元</div><a href="#" data-text="了解详情"
+                      class="btn btn-winona btn-transparent btn-xs">了解详情</a>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="thumbnail-custom"><img src="images/index-3-370x370.jpg" alt="" width="370" height="370">
+                  <div class="caption">
+
+                    <h4>赣州</h4>
+                    <p>五龙客家风情游</p>
+                    <div class="h4 price1">559元</div><a href="#" data-text="了解详情"
+                      class="btn btn-winona btn-transparent btn-xs">了解详情</a>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="thumbnail-custom"><img src="images/index-4-370x370.jpg" alt="" width="370" height="370">
+                  <div class="caption">
+
+                    <h4>吉埠</h4>
+                    <p>感受田园风光</p>
+                    <div class="h4 price1">299元</div><a href="#" data-text="了解详情"
+                      class="btn btn-winona btn-transparent btn-xs">了解详情 </a>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="thumbnail-custom"><img src="images/index-2-370x370.jpg" alt="" width="370" height="370">
+                  <div class="caption">
+
+                    <h4>陕西</h4>
+                    <p>大荔风光雨水</p>
+                    <div class="h4 price1">499元</div><a href="#" data-text="了解详情"
+                      class="btn btn-winona btn-transparent btn-xs">了解详情</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="cell-xs-12 offset-top-50 text-center"><a href="#" data-text="其他景点"
+                class="btn btn-xs btn-winona btn-transparent-2">其他景点</a></div>
+          </div>
+        </div>
+      </section>
+      <!--Section Popular Destinations-->
+      <section>
+        <div class="shell-fluid inset-left-0 inset-right-0">
+          <div class="range range-condensed">
+            <div class="cell-md-6 bg-primary text-center section-flex cell-md-push-6 section-40 section-md-0">
+              <h2>最受欢迎的景区</h2><a href="#" class="btn-link tt-u offset-top-21 reveal-inline-block">其他景区</a>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-1">
+              <div class="thumbnail-custom-2"><img src="images/index-5-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>丽&nbsp;&nbsp;江</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-2">
+              <div class="thumbnail-custom-2"><img src="images/index-6-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>三&nbsp;&nbsp;亚</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-3">
+              <div class="thumbnail-custom-2"><img src="images/index-7-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>张&nbsp;&nbsp;家&nbsp;&nbsp;界</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-4">
+              <div class="thumbnail-custom-2"><img src="images/index-8-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>九&nbsp;&nbsp;寨&nbsp;&nbsp;沟</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-5">
+              <div class="thumbnail-custom-2"><img src="images/index-9-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>桂&nbsp;&nbsp;林</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-7">
+              <div class="thumbnail-custom-2"><img src="images/index-10-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>鼓&nbsp;&nbsp;浪&nbsp;&nbsp;屿</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-8">
+              <div class="thumbnail-custom-2"><img src="images/index-11-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>长&nbsp;&nbsp;城</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-9">
+              <div class="thumbnail-custom-2"><img src="images/index-12-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>黄&nbsp;&nbsp;山</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-10">
+              <div class="thumbnail-custom-2"><img src="images/index-13-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>布&nbsp;&nbsp;达&nbsp;&nbsp;拉&nbsp;&nbsp;宫</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-6 cell-sm-4 cell-md-3 cell-md-push-11">
+              <div class="thumbnail-custom-2"><img src="images/index-14-512x270.jpg" alt="" width="512" height="270">
+                <div class="caption">
+                  <div class="h4"><a href="#"><span>西&nbsp;&nbsp;湖</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section Most popular Cruises-->
+      <section class="section-71 section-bottom-80">
+        <div class="shell">
+          <h2 class="text-center">最受欢迎的出行</h2>
+          <div class="range">
+            <!-- Owl Carousel-->
+            <div data-items="1" data-xs-items="1" data-sm-items="2" data-md-items="3" data-stage-padding="15"
+              data-loop="false" data-margin="30" data-nav="true" class="owl-carousel">
+              <div class="owl-item">
+                <div class="thumbnail-custom thumbnail-custom-variant-1"><img src="images/index-15-370x370.jpg" alt=""
+                    width="370" height="370">
+                  <div class="caption">
+                    <div class="h5">-35%</div>
+                    <h4>世纪神话号</h4>
+                    <p>平均价格</p>
+                    <div class="h4 price1">500元</div><a href="#" data-text="购买商品"
+                      class="btn btn-winona btn-transparent btn-xs">购买商品</a>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="thumbnail-custom thumbnail-custom-variant-1"><img src="images/index-16-370x370.jpg" alt=""
+                    width="370" height="370">
+                  <div class="caption">
+                    <div class="h5">-35%</div>
+                    <h4>泰坦尼克号</h4>
+                    <p>平均价格</p>
+                    <div class="h4 price1">200元</div><a href="#" data-text="购买商品"
+                      class="btn btn-winona btn-transparent btn-xs">购买商品</a>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="thumbnail-custom thumbnail-custom-variant-1"><img src="images/index-17-370x370.jpg" alt=""
+                    width="370" height="370">
+                  <div class="caption">
+                    <div class="h5">-35%</div>
+                    <h4>长江传说号</h4>
+                    <p>平均价格</p>
+                    <div class="h4 price1">300元</div><a href="#" data-text="购买商品"
+                      class="btn btn-winona btn-transparent btn-xs">购买商品</a>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="thumbnail-custom thumbnail-custom-variant-1"><img src="images/index-15-370x370.jpg" alt=""
+                    width="370" height="370">
+                  <div class="caption">
+                    <div class="h5">-35%</div>
+                    <h4>楚天轮船</h4>
+                    <p>平均价格</p>
+                    <div class="h4 price1">100元</div><a href="#" data-text="购买商品"
+                      class="btn btn-winona btn-transparent btn-xs">购买商品</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+      </section>
+      <!--Section Testimonials-->
+      <section class="section-71 section-bottom-80 bg-primary">
+        <div class="shell">
+          <h2 class="text-center">网友留言</h2>
+          <div class="range">
+            <div class="cell-md-6">
+              <div class="unit unit-xs unit-xs-horizontal unit-spacing-xs">
+                <div class="unit-left">
+                  <div class="round img-auto"><img src="images/头像1.jpg" width="84" height="84" class="round-green">
+                  </div>
+                </div>
+                <div class="unit-body">
+                  <blockquote class="quote">
+                    <p>
+                      <q>"故宫非常好玩，希望下次能够继续再来！"</q>
+                    </p>
+                    <p>
+                      <cite>来自：不会飞的猪</cite>
+                      <time datetime="2016">2020年10月17日</time>
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="cell-md-6 offset-top-50 offset-md-top-0">
+              <div class="unit unit-xs unit-xs-horizontal unit-spacing-xs">
+                <div class="unit-left">
+                  <div class="round img-auto"><img src="images/头像2.jpg" alt="" width="84" height="84"
+                      class="round-green"></div>
+                </div>
+                <div class="unit-body">
+                  <blockquote class="quote">
+                    <p>
+                      <q>"不到长城非好汉，到了长城直流汗、、"</q>
+                    </p>
+                    <p>
+                      <cite>来自：天天上班的人</cite>
+                      <time datetime="2016">2020年10月10日</time>
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="cell-xs-12 text-center offset-top-50"><a href="message.html" data-text="其他留言"
+                class="btn btn-xs btn-winona btn-orange-3">我要留言</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Page Footer-->
+    <footer class="page-foot bg-base text-center text-md-left">
+      <section class="bg-gray-dark section-10">
+        <div class="shell">
+          <p style="text-align:center">
+            Copyright &copy;在线售票管理信息系统.</a>
+          </p>
+        </div>
+      </section>
+    </footer>
+  </div>
+  <!-- Global Mailform Output-->
+  <div id="form-output-global" class="snackbars"></div>
+  <!-- PhotoSwipe Gallery-->
+  <div tabindex="-1" role="dialog" aria-hidden="true" class="pswp">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button title="Close (Esc)" class="pswp__button pswp__button--close"></button>
+          <button title="Share" class="pswp__button pswp__button--share"></button>
+          <button title="Toggle fullscreen" class="pswp__button pswp__button--fs"></button>
+          <button title="Zoom in/out" class="pswp__button pswp__button--zoom"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button title="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button>
+        <button title="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__cent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Java script-->
+  <script type="text/javascript" src="js/core.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

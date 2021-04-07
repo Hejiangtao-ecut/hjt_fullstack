@@ -12,12 +12,10 @@
   <view class="type-container">
     <view class="type-item" 
     wx:for="{{typeCat}}"
-    wx:key="id"
-    >
+    wx:key="id">
       <view data-id="{{item.id}}"
        class="type-name {{activeTypeId === item.id? 'type-item-on':''}}"
-       bindtap="typeSwitch"
-       >
+       bindtap="typeSwitch">
         {{item.name}}
       </view>
     </view>
@@ -27,7 +25,7 @@
       <view class="fruit-item" bindtap="tapToDetail"
       data-fid="{{item._id}}" wx:if="{{item.onShow}}">
         <view class="fruit-image">
-          <image src="{{item.img}}" mode="aspectFill"/>
+          <image src="{{item.imgUrl}}" mode="aspectFill"/>
         </view>
         <view class="fruit-info">
           <view class="line1">

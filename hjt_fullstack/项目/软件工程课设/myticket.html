@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+*{
+	padding:0px;
+	margin:0px;
+}
+
+.banner{
+	width:100%;
+	height:100px;
+	background-color: rgb(179, 171, 224);
+	/*background-color:#FF6633;*/
+}
+.title{
+	position: absolute;/* 绝对位置，针对父标签的位置；fixed，相对浏览器的 */
+    top: 30px;
+    right: 20px;/* 设置绝对位置 */
+	color:black;
+	font-weight:bolder;
+	font-size:16px;
+}
+
+#main{
+	background-color:#EFEFEF;
+}
+#left{
+	width:12%;
+	height:900px;
+	background-color:#F2F2F2;
+	float:left;/* 为了让div左右排列 */
+	border-right: 1px solid #dedede;
+	padding-bottom:100px;
+}
+#left ul{
+	list-style:none;/* 去掉默认的小黑点 */
+	width:100%;	
+}
+#left ul li{
+	height:70px;
+	line-height:70px;/* 垂直居中 */
+	background-color:#F9F9F9;
+	border-bottom: 1px solid #dedede;/* 设置下边 */
+	text-align:center;
+	position:relative;/* 相对位置，是为了里面那个小图标的位置固定 */
+}
+#left ul li:hover{
+	background-color:#FFFFFF;
+}
+.icon1{
+	position: absolute;
+    left: 30px;
+	top:25px;
+	display:block;
+}
+#left ul li a{
+	text-decoration:none;/* 去下划线 */
+	color:#666666;
+}
+#left ul li a:hover{
+	color:#FF6633;
+}
+
+#right{
+	float:left;
+	width:86%;
+	/*height:1300px;*/
+	background-color:white;
+	padding:10px;
+}
+
+#loginDiv{
+	height:540px;
+	width:300px;
+	background-color:#FFFFFF;
+	padding:30px;
+	position:fixed;
+    left: 40%; 
+    top: 25%;
+    border: 1px solid #CCC;
+}
+
+.box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    display: none;
+}
+
+.logTitle{
+	height:40px;
+	border-bottom:#ffb447 solid 1px;
+	font-size:28px;
+	margin-bottom:40px;
+}
+.formInput{
+	margin-bottom:20px;
+	height:40px;
+	width:100%;
+}
+.formInput img{
+	position: absolute;
+    padding-top: 12px;
+    padding-left: 8px;
+}
+.formInput input,select{
+	font-size:16px;
+	width:100%;
+	text-indent:5em;
+	height:40px;
+}
+
+.formInput span{
+	color:#999999;
+	position: absolute;
+    padding-top: 12px;
+    padding-left: 8px;
+}
+.formButton {
+	margin-top: 20px;
+    border: 0px;
+    font-size: 18px;
+    width: 100%;
+    height: 40px;
+	background-color:#ffb447;
+	color:#FFFFFF;
+}
+th{
+	border:1px solid black;
+	height: 20px;
+}
+td{
+	border:1px solid black;
+	text-align: center;
+}
+tr{
+	height: 80px;
+}
+</style>
+
+</head>
+<body>
+    <div class="banner"><!-- 上面那个图片部分 -->
+        <h1 style="padding-top: 20px;padding-left: 20px;">火车售票系统购票界面</h1>
+		<div class="title">
+			欢迎***<a href="index.html
+			">【退出】</a>
+		</div>
+	</div>
+	<div id="main">
+		<div id="left">
+			<ul>
+				<li>
+					<a href="ticket.html">余票信息表单</a>
+                </li>
+                <li>
+					<a href="myticket.html">我的订单</a>
+                </li>
+                <li>
+					<a href="ongoing.html">进行中</a>
+                </li>
+                <li>
+					<a href="#">已完成</a>
+                </li>
+                <li>
+					<a href="#">我的信息</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 列表 -->
+		<div id="right">
+			<table style="border:2px solid black;width: 100%;">
+				<thead>
+					<tr>
+                        <th>购买时间</th>
+						<th>出发站</th>
+						<th>火车班次</th>
+						<th>终点站</th>
+						<th>发车时间</th>
+						<th>金额</th>
+						<th>座位号</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${users }" var="row">
+						<tr>
+                            <td>2020/1/1</td>
+							<td>西安</td>
+							<td>G3521</td>
+							<td>北京</td>
+							<td>12：40</td>
+							<td>199元</td>
+							<td>3车14A</td>
+							<td><a href="#" class="btn btn-primary">删除记录</a></td>
+						</tr>
+					</c:forEach>
+					<c:forEach items="${users }" var="row">
+						<tr>
+                            <td>2020/1/1</td>
+							<td>天津</td>
+							<td>G3524</td>
+							<td>赣州</td>
+							<td>13:00</td>
+							<td>529元</td>
+							<td>3车14A</td>
+							<td><a href="#" class="btn btn-primary">删除记录</a></td>
+						</tr>
+					</c:forEach>
+					<c:forEach items="${users }" var="row">
+						<tr>
+                            <td>2020/1/1</td>
+							<td>北京</td>
+							<td>G3111</td>
+							<td>上海</td>
+							<td>13:10</td>
+							<td>144元</td>
+							<td>3车14A</td>
+							<td><a href="#" class="btn btn-primary">删除记录</a></td>
+						</tr>
+					</c:forEach>
+					<c:forEach items="${users }" var="row">
+						<tr>
+                            <td>2020/1/1</td>
+							<td>上海</td>
+							<td>G3521</td>
+							<td>广州</td>
+							<td>14：00</td>
+							<td>239元</td>
+							<td>3车14A</td>
+							<td><a href="#" class="btn btn-primary">删除记录</a></td>
+						</tr>
+					</c:forEach>
+					<c:forEach items="${users }" var="row">
+						<tr>
+                            <td>2020/1/1</td>
+							<td>南京</td>
+							<td>G3515</td>
+							<td>南昌</td>
+							<td>17：00</td>
+							<td>622元</td>
+							<td>3车14A</td>
+							<td><a href="#" class="btn btn-primary">删除记录</a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
