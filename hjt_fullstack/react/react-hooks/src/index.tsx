@@ -8,7 +8,6 @@ import {AppRouter} from './router';
 // import { HelloComponent } from './hello';
 
 ReactDOM.render(
-    // <App />,
     <AppRouter />,
     document.getElementById('root')
 );
