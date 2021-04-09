@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import Buttons from './buttones';
 import ShowText from './showText';
+import { Color } from './color';
 
 function Index() {
     return (
         <div>
-            <Buttons />
-            <ShowText />
+            <Color >
+                <ShowText />
+                <Buttons />
+            </Color>
         </div>
     )
 }

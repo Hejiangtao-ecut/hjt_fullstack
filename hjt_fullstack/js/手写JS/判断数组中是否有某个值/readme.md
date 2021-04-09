@@ -1,0 +1,9 @@
+# 判断数组中是否含有某个值
+1. array.indexOf  
+    - 返回下标值，不存在则-1
+2. array.includes(item) 
+    - 存在则为true，不存在则返回false
+3. array.find(callback[,thisArg])
+    - 返回callback函数中第一个满足条件的值，不存在则返回undefined
+4. array.findeIndex(callback)
+    - 返回第一个满足callback函数条件的下标，不存在这返回-1

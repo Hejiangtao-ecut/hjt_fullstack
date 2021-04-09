@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ColorContext } from './color';
 
-function showText() {
+function ShowText() {
+    const { color } = useContext(ColorContext);
     return (
-        <div style={{ color: 'blue' }}>
-            字体颜色为蓝色
+        <div style={{ color:color }}>
+            字体颜色为{color}
         </div>
     )
 }
 
-export default showText
+export default ShowText
