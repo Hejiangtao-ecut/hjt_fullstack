@@ -92,9 +92,11 @@ import VueImgVerify from '@/components/vue-img-verify.vue';
 import {register,login} from '@/service/user';
 import { Toast } from "vant";
 import md5 from 'js-md5';
+import { useRouter } from 'vue-router';
 
 export default {
     setup() {
+        const Router = useRouter();
         const verifyRef = ref(null)
         const state = reactive({
             username:'',
@@ -120,7 +122,9 @@ export default {
               'passwordMd5':md5(state.password)
             })
             Toast.success('登录成功！')
-            console.log(data);
+            // console.log(data);
+            localStorage.setItem('token',data);
+            Router.push({path:'/home'})
           }else{
             // console.log(verifyRef.value.imgCode)
             // console.log(state.password1)
