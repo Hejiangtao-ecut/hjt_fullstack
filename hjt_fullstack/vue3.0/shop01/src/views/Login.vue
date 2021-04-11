@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <!-- header -->
-    <s-header name="登录"></s-header>
+    <s-header :name="type=='login'?'登录':'注册'"></s-header>
     <img
       class="logo"
       src="//s.yezgea02.com/1604045825972/newbee-mall-vue3-app-logo.png"
@@ -9,7 +9,7 @@
     />
     <!-- 登录 -->
     <div class="login login-body" v-if="type==='login'">
-      <van-form>
+      <van-form @submit="onSubmit">
         <van-field
           v-model="username"
           name="用户名"
@@ -31,8 +31,8 @@
           label="验证码"
           placeholder="请输入验证码"
         >
-          <template #button>
-            <vue-img-verify />
+          <template #button >
+            <vue-img-verify ref="verifyRef" />
           </template>
         </van-field>
 
@@ -47,7 +47,7 @@
 
     <!-- 注册 -->
     <div class="login-body register" v-else>
-      <van-form>
+      <van-form @submit="onSubmit">
         <van-field
           v-model="username1"
           name="用户名"
@@ -69,8 +69,8 @@
           label="验证码"
           placeholder="请输入验证码"
         >
-          <template #button>
-            <vue-img-verify />
+          <template #button >
+            <vue-img-verify ref="verifyRef" />
           </template>
         </van-field>
 
@@ -86,25 +86,58 @@
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue';
+import { reactive, toRefs,ref } from 'vue';
 import sHeader from "@/components/SimpleHeader.vue";
 import VueImgVerify from '@/components/vue-img-verify.vue';
+import {register,login} from '@/service/user';
+import { Toast } from "vant";
+import md5 from 'js-md5';
 
 export default {
     setup() {
+        const verifyRef = ref(null)
         const state = reactive({
             username:'',
             password:'',
+            username1:'',
+            password1:'',
+            verify:'',
             type:'login'
         })
 
         const changePage = ()=>{
-            state.type = state.type === 'login'?'register':'login'
+          state.type = state.type === 'login'?'register':'login'
+        }
+        const onSubmit = async ()=>{
+          // console.log(verifyRef.value.imgCode) // 输出验证码
+          if(state.verify.toLowerCase() !== verifyRef.value.imgCode.toLowerCase()){
+            Toast.fail("验证码错误！");
+            return
+          }
+          if(state.type == 'login'){
+            const {data} = await login({
+              'loginName':state.username,
+              'passwordMd5':md5(state.password)
+            })
+            Toast.success('登录成功！')
+            console.log(data);
+          }else{
+            // console.log(verifyRef.value.imgCode)
+            // console.log(state.password1)
+            await register({
+              'loginName':state.username1,
+              // 密码需要加密
+              'password':state.password1
+            })
+            Toast.success('注册成功');
+          }
         }
 
         return {
             ...toRefs(state),
-            changePage
+            changePage,
+            onSubmit,
+            verifyRef
         }
     },
     components: {
