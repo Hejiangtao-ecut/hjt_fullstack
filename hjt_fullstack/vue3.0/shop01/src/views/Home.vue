@@ -6,7 +6,7 @@
         <i class="iconfont iconmenu icon-menu"></i>
     </router-link>
     <div class="header-search">
-        <span class="app-name">跳蚤商城</span>
+        <span class="app-name">江河商城</span>
         <i class="iconfont iconsearch icon-search"></i>
         <router-link 
         to="/product-list?from=home"
@@ -73,12 +73,12 @@ export default {
                 categoryId: 100002,
                 },
                 {
-                name: "嘉新生鲜",
+                name: "江河生鲜",
                 imgUrl: "//s.yezgea02.com/1604041127880/%E7%94%9F%E9%B2%9C%402x.png",
                 categoryId: 100004,
                 },
                 {
-                name: "嘉新到家",
+                name: "江河到家",
                 imgUrl: "//s.yezgea02.com/1604041127880/%E5%88%B0%E5%AE%B6%402x.png",
                 categoryId: 100005,
                 },
@@ -114,7 +114,6 @@ export default {
             headerTop:false
         })
 
-
         onMounted(async ()=>{
             const token=localStorage.getItem('token')
             if(token){
@@ -127,16 +126,31 @@ export default {
                 forbidClick:true
             })
             const {data} =await getHome();
-            console.log(data);
+            // console.log(data);
             state.swiperList = data.carousels;
             state.newGoods = data.newGoodses;
             state.hotGoods = data.hotGoodses;
             state.recommendGoodses = data.recommendGoodses;
         })
-        window.addEventListener('scroll',()=>{
+       
+        // 节流函数
+        function debounce(fn,delay){
+          let timer = null;
+          return ()=>{
+            if(timer){
+              clearTimeout(timer);
+            }
+            timer = setTimeout(fn, delay);
+          }
+        }
+        function showTop(){
             let scollTop = window.pageYOffset || document.documentElement.scollTop||document.body.scollTop;
             scollTop > 100?(state.headerTop=true):(state.headerTop = false);
-        })
+            // console.log('demo')
+        }
+        window.onscroll = debounce(showTop,40)
+
+
 
         return {
             ...toRefs(state)
