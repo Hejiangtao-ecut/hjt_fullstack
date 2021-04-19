@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            /* 使得元素水平垂直居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(82, 56, 56);
+        }
+        div{
+            font-size: 2em;
+            font-weight: bold;
+            /* 全部转变成大写 */
+            text-transform: uppercase;
+        }
+        div>span{
+            position: relative;
+            display: inline-block;
+        }
+        .color{
+            /* color: red; */
+            animation-name: donghua;
+            /* 动画时间 */
+            animation-duration: 1s;
+            /* 重复的次数 */
+            animation-iteration-count: 1;
+            /* 动画方式，线性动画 */
+            animation-timing-function: linear;
+            /* 来回切换 */
+            animation-direction:alternate ;
+        }
+        @keyframes donghua{
+            50%{
+                color: springgreen;
+                /* 放大两倍 */
+                transform: scale(2);
+
+            }
+            100%{
+                color: rgb(229, 243, 26);
+                /* 放大两倍 */
+                transform: scale(0.5);
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="demo">鼠标滑过上色</div>
+    <script>
+        const addColor = document.getElementById('demo');
+        [...addColor.textContent].reduce((pre,item,index)=>{
+            // 第一次进来清空字段
+            pre == index&&(addColor.innerHTML = '');
+            // 给每一个元素添加span标签
+            let span = document.createElement('span');
+            // 给每一个span标签赋值
+            span.innerHTML = item;
+            // 加进addcolor中
+            addColor.appendChild(span);
+            span.addEventListener("mouseenter",function(){
+                this.classList.add('color')
+            })
+            span.addEventListener("animationend",function(){
+                this.classList.remove('color');
+            })
+
+        },0)
+    </script>
+</body>
+</html>
