@@ -13,4 +13,4 @@
 
 # set和weakSet
 1. weakSet 要求传递的必须是引用类型
-2. 
+2. weakSet 的遍历、循环等都不能操作，垃圾回收策略问题，内容清空了weakSet还会默认里面有值
