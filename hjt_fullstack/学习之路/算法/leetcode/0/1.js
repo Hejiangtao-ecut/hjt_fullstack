@@ -1,13 +1,10 @@
-var reverse = function (x) {
-    if (Math.abs(x) < 10) {
-        return x;
+var strStr = function (haystack, needle) {
+    if (needle == '') {
+        return 0;
     }
-    let y = 1;
-    if (x < 0) {
-        y = -1;
-        x = Math.abs(x);
-    }
-    x = String(x).split('').reverse().join('');
-    return x * y;
+    let x = new RegExp(needle,'g')
+    
+    return x.test(haystack).lastIndex;
 };
-console.log(reverse(-123));
+
+console.log(strStr("hello",'ll'));
