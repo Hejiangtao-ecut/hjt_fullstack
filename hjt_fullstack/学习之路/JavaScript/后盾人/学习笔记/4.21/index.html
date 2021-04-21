@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Color(elem){
+            this.elem = elem;
+            this.colors = ['#98e27b','#378319','#24ca63','#7ec298'];
+            this.run=()=>{
+                setInterval(()=>{
+                    console.log(this);
+                },1000)
+            }
+
+        }
+        let obj = Color(document.body);
+        obj.run();
+    </script>
+</body>
+</html>

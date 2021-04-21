@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 给绝对定位，方便后面进行移动 */
+        button{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button>飘了</button>
+    <script>
+        let btns = document.querySelectorAll("button");
+        btns.forEach(function(item){
+            // 设置开关，不然一直点会加速
+            let run = false;
+            let left = 1;
+            item.addEventListener("click",function(){
+                if(!run){
+                    // 第一次启动后禁止后面再次进来
+                    run = true;
+                    setInterval(function () {
+                        item.style.left = `${left++}px`;
+                    }, 10)
+                }          
+            })
+        })
+    </script>
+</body>
+</html>
