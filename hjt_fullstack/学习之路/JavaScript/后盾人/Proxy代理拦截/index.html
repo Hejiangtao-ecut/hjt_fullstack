@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" v-model="title">
+    <input type="text" v-model="title">
+    <div>实现两个输入框的数据双向绑定</div>
+
+    <script>
+        function View(){
+            // 设置代理
+            // 代理设置{}作为容器存储数据
+            let proxy = new Proxy({},{
+                // 设置对象，参数
+                get(obj,item){},
+                set(obj, item,value){
+                    // console.log(value)
+                    // 找到所有的使用模型
+                    // 遍历并更新值
+                    document.querySelectorAll(`[v-model="${item}"]`).forEach(e=>{
+                        e.value = value
+                    })
+                }
+            })
+            this.init = function(){
+                // 设置绑定事件
+                // 找到所有的触发事件文本框
+                const model = document.querySelectorAll("[v-model]");
+                // 给所有文本框添加监听机制
+                model.forEach(item=>{
+                    // 监听键盘弹起事件，即完成一个字符的输入
+                    item.addEventListener('keyup',function(){
+                        // console.log(1)
+                        // 给容器的值设置为最新的值
+                        proxy[this.getAttribute('v-model')] = this.value;
+                    })
+                })
+
+            }
+        }
+        // new 出实例并运行方法
+        new View().init();
+    </script>
+</body>
+</html>
