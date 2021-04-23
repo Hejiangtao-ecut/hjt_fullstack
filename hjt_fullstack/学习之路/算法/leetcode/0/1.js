@@ -1,10 +1,9 @@
-var strStr = function (haystack, needle) {
-    if (needle == '') {
-        return 0;
+function add(a) {
+    return function (b) {
+        return (c) => {
+            return a + b + c;
+        }
     }
-    let x = new RegExp(needle,'g')
-    
-    return x.test(haystack).lastIndex;
-};
+}
 
-console.log(strStr("hello",'ll'));
+console.log(add(1)(2)(3));
