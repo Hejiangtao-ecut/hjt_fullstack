@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo1{
+            width: 200px;
+            border: 1px solid red;
+            /* 设置自动换行 */
+            overflow: hidden;
+            white-space: normal;
+            word-break: break-all;
+            /* 当行高写定，小于字号时候出现重叠，影响美观 */
+            font-size: 20px;
+            line-height: 10px;
+        }
+        .demo2{
+            width: 200px;
+            border: 1px solid red;
+            /* 设置自动换行 */
+            overflow: hidden;
+            white-space: normal;
+            word-break: break-all;
+            /* 当行高变成响应式，自动随着字号变化而变化，不再出现重叠现象 */
+            font-size: 40px;
+            line-height: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo1">
+        demodmeodmeomdeomdeomdodoemodmeomdoefebfwbfwbwwwwfwfw
+    </div>
+    <div class="demo2">
+        demodmeodmeomdeomdeomdodoemodmeomdoefebfwbfwbwwwwfwfw
+    </div>
+</body>
+</html>

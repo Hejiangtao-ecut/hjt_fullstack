@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            /* 保留文本格式 */
+            /* white-space: pre; */
+            /* 空白合并保留换行符 */
+            white-space: pre-line;
+        }
+        div{
+            /* 禁止换行 */
+            white-space:nowrap;
+            border: 1px solid red;
+            width: 300px;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 溢出加省略号 */
+            text-overflow: ellipsis;
+            text-indent: 2em;
+            vertical-align: top;
+        }
+        .demo{
+            text-align: center;
+            /* 字符间距 */
+            letter-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        demo1   demo2
+        demo2
+    </h2>
+    <div>
+        dnfefbiwobwobfwoebfobfewfgwugwuegfwu
+    </div>
+    <div class="demo">对齐</div>
+</body>
+</html>
