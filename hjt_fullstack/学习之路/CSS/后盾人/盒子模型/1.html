@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .demo1{
+            /* 使用内边距撑开盒子 */
+            padding: 30px;
+            border: 1px solid peru;
+        }
+        .demo2{
+            border: 1px solid pink;
+        }
+        .demo2-1{
+            margin: 30px;
+            border: 1px solid red;
+        }
+        .demo3{
+            width: 600px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .demo3-1{
+            width: 200px;
+            height: 100px;
+            border: 3px solid red;
+            /* margin-left: auto;
+            margin-right: auto; */
+            margin:auto;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="demo1">
+        <p>父元素内边距撑开盒子</p>
+    </div>
+    <div class="demo2">
+        <p class="demo2-1">子元素外边距撑开盒子</p>
+    </div>
+    <div class="demo3">
+        <div class="demo3-1">左右自动边距,实现水平居中</div>
+    </div>
 </body>
 </html>
