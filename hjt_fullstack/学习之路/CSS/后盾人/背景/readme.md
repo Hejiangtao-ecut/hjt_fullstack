@@ -36,4 +36,5 @@
     - 渐变的过渡点
     - background:linear-gradient(0deg, red 30%,blue 40%,green 60%);
     - 前面30%全部为红色不进行渐变，60%后全部为绿色
-    -   
+6. 重复渐变
+    - repeat-linear/radial-gradient 实现重复渐变效果，加上动画效果可以实现进度条的滚动
