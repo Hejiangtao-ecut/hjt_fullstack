@@ -1,0 +1,18 @@
+# 前端路由是怎么实现的
+1. router原理
+    - 路由
+        - url路径和处理函数的映射
+    - 路由描述的是url和UI之间的映射关系，这种映射关系是单向的，即URL变化引起的UI更新，而且无需刷新页面
+2. 如何实现前端路由
+    - url变化
+        - 如何实现url变化但是页面不刷新
+            - 拼接hash值但是不会引起刷新
+        - 如何检测url变化了
+            - hash
+                - 因为在浏览器url栏拼接hash值本身不会触发页面刷新，所以通过js拿到hash值得变化结果然后可以动态判断页面上得html变化
+            - history
+                - pushState
+                    - 往url上拼接东西也不会引起页面刷新
+                - replaceState
+                - 因为html5中具备一个history对象，该对象中的pushState可以做到向url中拼接参数而不刷新页面，且popState可以监听url的变化，所以只需要取出a的默认方法，然后用pushState模拟url跳转，就可以判断url变化动态决定要渲染的UI
+    - UI更新
