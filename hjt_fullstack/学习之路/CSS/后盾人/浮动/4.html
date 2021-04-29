@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 400px;
+            border: 1px solid black;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        div.red{
+            background-color: red;
+            float: left;
+        }
+        div.green{
+            background-color: forestgreen;
+            float: right;
+        }
+        div.blue{
+            background-color: blue;
+            width: 120px;
+            /* clear: left; */
+            float: left;
+        }
+        div.clearFloat{
+            width: 0;
+            height: 0;
+            clear: both;
+            border: 0;
+        }
+        nav{
+            width: 400px;
+            border: 1px solid black;
+        }
+        nav::after{
+            /* 内容为空 */
+            content: '';
+            /* 块级元素，独占一行 */
+            display: block;
+            /* 清除浮动 */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- 清除浮动 -->
+    <main>
+        <div class="red">red</div>
+        <div class="green">green</div>
+        <div class="blue">blue</div>
+        <div class="clearFloat"></div>
+    </main>
+    <nav>
+        <div class="red">red</div>
+        <div class="green">green</div>
+        <div class="blue">blue</div>
+    </nav>
+    
+</body>
+</html>
