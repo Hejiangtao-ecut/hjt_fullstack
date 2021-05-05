@@ -11,6 +11,7 @@
         - position: sticky;
         - top: 0;
         - 将设置该属性的元素黏在顶部 
+        - 如果是同级元素会进行叠加，非同级会顶走上一个元素
     - 标签设置
         - 1.html
         - 父元素设置position：relative 进行子元素定位控制
