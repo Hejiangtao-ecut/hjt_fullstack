@@ -12,6 +12,8 @@
         - row-reverse 反向行排列(元素从右到左排列)
         - column 列排列，垂直从上到下
         - column-reverse 反向列排列
+    2. order 排序序号
+        - 默认为0，数字越大排列越靠后
 
 3. 弹性元素溢出处理
     1. 默认按比例缩小
@@ -45,4 +47,13 @@
 8. 元素可用空间分配
     1. flex-grow：1 所有元素平均分配剩余空间,各个元素单独设置后会进行按比例分配剩余空间
     2. flex-shirk 当父容器小于子元素时候子元素按比例·缩小的尺寸
-9. 
+    3. flex-basis 控制主轴方向的尺寸
+        - 100px 横向  后面元素宽度就为100px，优先级大于宽高
+        - 优先级：min/max-width > flex-basis > width
+9. 组合规则
+    - flex：grow shrink basis；
+    - 接收三个参数，依次为增长尺寸，缩小尺寸，主轴方向尺寸
+    - flex:1 2 100px 相当于
+        - flex-grow:1
+        - flex-shrink:2
+        - flex-basis:100px
