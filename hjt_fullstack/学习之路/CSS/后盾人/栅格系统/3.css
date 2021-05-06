@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body > main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 5vh 1fr 8vh;
+  grid-template-columns: 30vw 1fr;
+  grid-template-areas: "header header" "nav main" "footer footer";
+}
+body > main header {
+  padding: 5px;
+  grid-area: header;
+  background-color: aqua;
+}
+body > main nav {
+  padding: 5px;
+  grid-area: nav;
+  background-color: red;
+}
+body > main main {
+  padding: 5px;
+  grid-area: main;
+  background-color: yellowgreen;
+}
+body > main footer {
+  padding: 5px;
+  grid-area: footer;
+  background-color: green;
+}
+body > main :nth-child(n) {
+  box-sizing: content-box;
+}

@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    >main{
+        // box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 5vh 1fr 8vh;
+        grid-template-columns: 30vw 1fr;
+        grid-template-areas: "header header""nav main""footer footer";
+        header{
+            padding: 5px;
+            grid-area: header;
+            background-color: aqua;
+        };
+        nav{
+            padding: 5px;
+            grid-area: nav;
+            background-color: red;
+        };
+        main{
+            padding: 5px;
+            grid-area: main;
+            background-color: yellowgreen;
+        };
+        footer{
+            padding: 5px;
+            grid-area: footer;
+            background-color: green;
+        };
+        :nth-child(n){
+            box-sizing: content-box
+        }
+    };
+}

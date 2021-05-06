@@ -1,6 +1,6 @@
 import React from 'react';
 // Router 路由器  Route 线路  link 组件跳转
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Index from './pages/Index';
 import List from './pages/List';
 import Home from './pages/Home'

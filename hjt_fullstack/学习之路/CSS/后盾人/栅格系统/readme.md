@@ -19,4 +19,20 @@
         - grid-column-end: 4;
     2. 根据栅格命名放置
         - 命名 [] 括号内名字随便起，相邻两个元素要用空格隔开[r2-end r3-start]
-        - 然后根据命名摆放 
+        - 然后根据命名摆放
+    3. 根据偏移量进行布局
+        - grid-column-end：span 3;  占三列
+    4. 组合定位
+        - grid-row：2/4  从第二条线开始，到第四条线结束
+        - grid-column：1/span 3；从第一条线开始，偏移量为3(占三个格子)
+    5. 区域命名放置
+        - 3.less
+4. 栅格流动
+    1. grid-auto-flow：row/column dense
+        - row/column 行/列流动
+        - dense 自动填满
+5. 栅格元素对齐
+    - justify-items和align-items:参数参照justify-contents
+    - 单个元素 justify-self
+    - 组合定义
+        - place-content
