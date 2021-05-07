@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D贺卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: silver;
+        }
+        .card{
+            width: 300px;
+            height: 500px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: white;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: perspective(900px) rotate3d(1,1,0,30deg);
+            
+        }
+        .card::before{
+            content: '贺';
+            background-color: orange;
+            width: 40%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            transition: 1s;
+            transform-origin: left;
+        }
+        .card::after{
+            content: '卡';
+            background-color: orange;
+            width: 60%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transition: 1s;
+            transform-origin: right;
+        }
+        .card:hover::before{
+            transform: rotateY(-180deg);
+        }
+        .card:hover::after{
+            transform: rotateY(180deg);
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="card">生日快乐</div>
+    </main>
+</body>
+</html>

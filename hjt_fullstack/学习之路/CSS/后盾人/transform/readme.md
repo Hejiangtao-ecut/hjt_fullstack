@@ -16,10 +16,12 @@
             - rotate(X,Y) 单位deg
             - rotateX(45deg) X轴旋转45度
             - rotateY(45deg) Y轴旋转45度
-            - rotate3d(2,2,6) X和Y放大两倍，z轴放大6
+            - rotate3d(2,2,0,45edg) 沿着X轴和Y轴对角线，45度，前面三个数定义的是向量值，第四个参数是角度
         - 缩放基点
             - transform-origin：left top;
-    3. 
+    3. perspective 透视，定义 3D 元素距视图的距离，以像素计
+    4. 倾斜
+        - skew(X,Y),单位是deg
 2. 元素居中
     1. flex布局
         - display:flex
@@ -31,3 +33,7 @@
         - transform: translate(-50%,-50%);
 3. transtion放置
     - 那里需要缩放优先放置在哪，放置在伪类会产生结束后的突变
+4. 属性叠加
+    1. transform属性不会叠加，不会继承，每一次使用都需要重新定义
+5. transform-origin: 旋转参考点
+6. transform-style: preserve-3d; 3d效果

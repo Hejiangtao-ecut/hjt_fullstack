@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态logo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: #2e3c50;
+        }
+        main div{
+            color: silver;
+            font-size: 2em;
+            transition: 1s;
+        }
+        main div:hover{
+            transform: rotate(360deg);
+            /* transform: skew(0,45deg); */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>江河</div>
+    </main>
+</body>
+</html>
