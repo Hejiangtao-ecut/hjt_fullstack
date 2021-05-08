@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: silver;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+        main{
+            position: relative;
+        }
+        div{
+            position: absolute;
+            transition: 1s;
+        }
+        .first{
+            transform: scale(2);
+            color: red;
+            opacity: 0;
+        }
+        .third{
+            opacity: 1;
+            transform: scale(1);
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <main onclick="dianzan()">
+        <div>❤</div>
+        <div>❤</div>
+    </main>
+
+    <script>
+        function dianzan(){
+            // console.log('----')
+            const div = document.querySelectorAll("div");
+            console.log(div);
+            // div = [...div];
+            // console.log(div)
+            if(div[0].classList.contains("first")){
+                div[0].classList.remove("first");
+            }else{
+                div[0].classList.add("first");
+            }
+            if(div[1].classList.contains("third")){
+                div[1].classList.remove("third");
+            }else{
+                div[1].classList.add("third");
+            }
+            console.log(div)
+            
+        }
+    </script>
+</body>
+</html>

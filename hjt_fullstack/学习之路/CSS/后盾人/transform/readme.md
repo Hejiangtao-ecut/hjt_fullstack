@@ -36,4 +36,5 @@
 4. 属性叠加
     1. transform属性不会叠加，不会继承，每一次使用都需要重新定义
 5. transform-origin: 旋转参考点
-6. transform-style: preserve-3d; 3d效果
+6. transform-style: preserve-3d; 3d效果 
+    - 配合透视效果呈现3D图形
