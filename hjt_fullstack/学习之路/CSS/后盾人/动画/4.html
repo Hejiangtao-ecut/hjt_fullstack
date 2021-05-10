@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            background-color: silver;
+        }
+        main{
+            width: 400px;
+            height: 200px;
+            /* grid-template: 1fr/repeat(4,200px); */
+            align-self: center;
+            justify-self: center;
+            overflow: hidden;
+        }
+        section{
+            width: 1600px;
+            height: 200px;
+            display: grid;
+            grid-template: 1fr/repeat(4,400px);
+            animation-name: swiper;
+            animation-duration: 4s;
+            animation-timing-function: steps(4);
+            animation-iteration-count: infinite;
+        }
+        section:hover{
+            animation-play-state: paused;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes swiper{
+            to{
+                transform: translateX(-1600px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.7v6.net%2Fuploads%2Fallimg%2F200417%2F141-20041F93144926.jpg&refer=http%3A%2F%2Fwww.7v6.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623226866&t=1a370853c7142f46b4c8e87c8e30210d" alt=""></div>
+            <div><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3892145690,2677137013&fm=26&gp=0.jpg" alt=""></div>
+            <div><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.7v6.net%2Fuploads%2Fallimg%2F200417%2F141-20041F93144926.jpg&refer=http%3A%2F%2Fwww.7v6.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623226866&t=1a370853c7142f46b4c8e87c8e30210d" alt=""></div>
+            <div><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3892145690,2677137013&fm=26&gp=0.jpg" alt=""></div>
+        </section>
+    </main>
+</body>
+</html>
