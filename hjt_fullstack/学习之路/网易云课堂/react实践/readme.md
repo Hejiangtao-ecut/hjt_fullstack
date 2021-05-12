@@ -22,6 +22,9 @@
         - 缺点，会产生一个空字符
         - 改进，如果false状态没有输出则使用&&操作
             - {this.state.isShow && <div className="box"></div>}
+4. JSX和HTML的区别
+    - React事件是驼峰命名法，不是全部小写
+    - 
 
 ## 虚拟Dom操作
 1. ReactDom.findDOMNode(dom操作)
@@ -68,5 +71,20 @@
     2. 页面将要加载
         - componentWillMount
         - 在16版本后要求使用UNSAFE_componentWillMount
-        - 不建议使用
-    3. 
+        - 一般不进行使用
+    3. 页面加载完成
+        - componentDidMount
+        - 所有页面初始化数据都放在在这里，比如页面的图片等，不需要操作直接显式出来的，都放在这里
+    4. shouldComponentUpdate 是否更新组件
+        - 返回布尔值，true更新，false不更新
+        - 在组件接收到新的props或者state被调用时调用，可以用于组件的优化
+        - 两个参数，(newProps,newState)
+        - 但是慎用，用多了性能优化页不强
+    5. componentDidUpdate 组件更新完成后立即调用
+        - 获取的props是更新之前的，有延迟
+    6. render()
+        - 组件渲染
+    7. componentWillUnmount
+        - 离开页面时候使用
+        - 重要函数
+        - 离开页面的时候清除上一个页面的所有任务，否则会造成应用的内存泄露，引发闪退

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标拖动div</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var one = document.getElementById('one');
+            //判断鼠标是否按下
+            var p = false;
+            //鼠标按下处在页面中的水平偏移
+            var dx = 0;
+            //鼠标按下处在页面中的垂直偏移
+            var dy = 0;
+            //div在页面中的水平偏移
+            var sx = 0;
+            //div在页面中的垂直偏移
+            var sy = 0;
+
+            //鼠标按下时
+            one.onmousedown = function (event) {
+                if (!p) {
+                    p = true;
+                }
+                //处理兼容性和滚动条
+                var event = event || window.event;
+                var scrollLeft = document.documentElement.scrollLeft;
+                var scrollTop = document.documentElement.scrollTop;
+                var pageX = event.pageX || event.clientX + scrollLeft;
+                var pageY = event.pageY || event.clientY + scrollTop;
+                dx = pageX;
+                dy = pageY;
+                sx = one.offsetLeft;
+                sy = one.offsetTop;
+                console.log('鼠标按下');
+            }
+
+            //鼠标移动时
+            document.onmousemove = function (event) {
+                if (p) {
+                    var event = event || window.event;
+                    var scrollLeft = document.documentElement.scrollLeft;
+                    var scrollTop = document.documentElement.scrollTop;
+                    var pageX = event.pageX || event.clientX + scrollLeft;
+                    var pageY = event.pageY || event.clientY + scrollTop;
+                    one.style.left = pageX - (dx - sx) + 'px';
+                    one.style.top = pageY - (dy - sy) + 'px';
+                }
+                console.log('移动');
+            }
+
+            //鼠标松开时
+            document.onmouseup = function () {
+                if (p) {
+                    p = false;
+                }
+                console.log('鼠标放开')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="one"></div>
+</body>
+
+</html>

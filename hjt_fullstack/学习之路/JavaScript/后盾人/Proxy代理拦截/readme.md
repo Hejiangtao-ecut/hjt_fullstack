@@ -12,4 +12,3 @@
     - 3.js
 5. 实现vue.js 的双向数据绑定
     - index.html
-6. 

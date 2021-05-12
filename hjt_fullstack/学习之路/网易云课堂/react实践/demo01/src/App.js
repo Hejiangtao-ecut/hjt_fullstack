@@ -34,8 +34,19 @@ class App extends Component {
     this.setState({
       isShow: isShow
     }, () => {
-        console.log(this.state.isShow)
+        // console.log(this.state.isShow)
     })
+  }
+  shouldComponentUpdate(newProps, newState) {
+    if (this.state.isShow !== newState.isShow) {
+      console.log("true--------");
+      return true
+    }
+    console.log("false--------");
+    return false
+  }
+  componentDidUpdate() {
+    
   }
 
   render() { 
@@ -55,6 +66,9 @@ class App extends Component {
         </ul>
       </div>
     );
+  }
+  componentWillUnmount() {
+    
   }
 }
  

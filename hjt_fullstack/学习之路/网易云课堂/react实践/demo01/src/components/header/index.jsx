@@ -7,9 +7,9 @@ class Header extends Component {
         super(props);
         this.state = {  }
     }
-    UNSAFE_componentWillMount() {
-        console.log('componentWillMount')
-    }
+    // UNSAFE_componentWillMount() {
+    //     console.log('componentWillMount')
+    // }
     render() { 
         return ( 
             <div>
