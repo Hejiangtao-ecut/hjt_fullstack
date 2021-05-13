@@ -1,3 +1,4 @@
+// 表单操作
 import React, { Component } from 'react';
 
 class Demo02 extends Component {
@@ -54,7 +55,28 @@ class Demo02 extends Component {
                 }
         })
     }
-
+    // 批量删除
+    deleteClicked(){
+        let user = this.state.user;
+        let isDelete = !user.some((item) => {
+            return item.checked;
+        })
+        if (isDelete) {
+            alert("请至少选择一位用户！")
+        } else {
+            for (let i = 0; i < user.length; i++){
+                if (user[i].checked) {
+                    user.splice(i--, 1);
+                }
+            }
+            this.setState({user:user}, () => {
+                if (this.state.user.length === 0 && this.state.allSelected) {
+                    this.setState({allSelected:false})
+                }
+            })
+        }
+    }
+        
     render() {
         return (
             <>
@@ -78,7 +100,7 @@ class Demo02 extends Component {
                             })
                         }
                         <tr bgcolor='red'>
-                            <td  align='center'>批量删除</td>
+                            <td  align='center' onClick={this.deleteClicked.bind(this)}>批量删除</td>
                         </tr>
                     </tbody>
                 </table>
