@@ -1,0 +1,15 @@
+.my-swiper-main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: red;
+}
+.my-swiper-slider{
+    width: 100%;
+    height: 100%;
+}
+.my-swiper-slider>a img{
+    width: 100%;
+    height: 100%;
+}
