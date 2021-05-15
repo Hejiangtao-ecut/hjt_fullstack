@@ -5,30 +5,33 @@ import './style.css'
 class Swiper extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
-            
-         }
+        this.state = {
+
+        }
     }
-    render() { 
+    render() {
         return (
             <>
                 <main className="my-swiper-main">
-                    <div className="my-swiper-slider">
-                        {
-                            this.props.imgs.map((item,index) => {
-                                return (
-                                    <a href={item.href} target="_blank" key={index} onClick={this.props.getOnClick.bind(this)}>
+                    {
+                        this.props.imgs.length > 0 && this.props.imgs.map((item, index) => {
+                            return (
+                                <div className="my-swiper-slider" key={index}>
+                                    <a href={item.src} target="_blank">
                                         <img src={item.src} alt="" />
                                     </a>
-                                )
-                            })
-                        }
-                        
+                                </div>
+                            )
+                        })
+                    }
+                    <div className="pagination">
+                        <div className="dot active"></div>
+                        <div className="dot"></div>
                     </div>
                 </main>
             </>
         );
     }
 }
- 
+
 export default Swiper;
