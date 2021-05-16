@@ -67,3 +67,7 @@
                 4. {this.state.isShow && <Suspense fallback={<div></div>}><Input /></Suspense>}
 
 ## 组件开发 demo06
+1. swiper
+    1. 注意父级给组件传值的时候的异步问题，在render里面进行第一次将值给临时变量，可以解决这个问题
+    2. 控制图片切换和小圆点的位置
+        - 图片需要层叠，小圆点不层叠，所以需要分开写，不能写在一个return里面

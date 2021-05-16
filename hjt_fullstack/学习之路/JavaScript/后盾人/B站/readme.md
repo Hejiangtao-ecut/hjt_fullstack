@@ -11,6 +11,19 @@
     - index.html
 7. 闭包内存泄露解决
     - 手动设置为null
+        - function add(x) {
+            let num = x;
+            return function (y) {
+                return num += y;
+            }
+        }
+
+        const a = add(1);
+        console.log(a(2),add(1));
+        console.log(a(3));
+        // 使用add函数成为了闭包，所以将add清除
+        add = null;
+        console.log(a(4),add(1));
 
 8. 闭包里面的this指向调用它的地方
     1. 在父级声明一个this传进闭包使用

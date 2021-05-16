@@ -1,5 +1,6 @@
 // Toast 组件
 import React, { Component } from 'react';
+import Toast from '../components/toast'
 
 class Demo07 extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class Demo07 extends Component {
     render() { 
         return (
             <div>
-                
+
             </div>
         );
     }
