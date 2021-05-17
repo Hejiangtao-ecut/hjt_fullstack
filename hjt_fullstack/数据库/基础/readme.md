@@ -19,8 +19,8 @@
         - DROP DATABASE 'ECUT'
 5. 查询
     - SELECT COUNT FROM STUDENT WHERE SEX = 0
-    - SUM 加法
-    - count 计数
+        - SUM 加法
+        - count 计数
 6. join
     - SELECT A.NAME B.CLASS  B.POINT FROM STUDENT AS A JOIN LESSON AS B ON A.LESSONID = B.ID WHERE AGE = 18
 

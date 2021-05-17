@@ -28,4 +28,3 @@
     - Object.isSealed() 判断对象是否封锁 false表示未封锁
 8. 冻结对象
     - Object.freeze()  冻结后也是不可操作属性，所有操作都不可
-    - 

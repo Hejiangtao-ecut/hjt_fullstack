@@ -45,7 +45,7 @@
         - this.props.title
 3. 类型约束
     1. tsx
-    2. 使用自带的类型约束方法
+    2. 使用自带的型类约束方法
         - import propTypes from 'prop-types'; 引入约束
         - 编写约束
             - Header.propTypes = {
