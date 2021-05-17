@@ -1,7 +1,8 @@
 import './App.css';
 // import Demo01 from './pages/demo01';
 // import Demo02 from './pages/demo02';
-import Demo03 from './pages/demo03';
+// import Demo03 from './pages/demo03';
+import Demo04 from './pages/demo04'
 
 function App() {
   // demo01
@@ -15,7 +16,9 @@ function App() {
       {/* 高阶组件 代理模式 */}
       {/* <Demo02 /> */}
       {/* 高阶组件 反向继承 */}
-      <Demo03 />
+      {/* <Demo03 /> */}
+      {/* 高阶组件实例 */}
+      <Demo04 />
     </div>
   );
 }
