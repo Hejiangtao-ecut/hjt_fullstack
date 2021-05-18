@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Router from './router';
 import reportWebVitals from './reportWebVitals';
+
+// 使用无状态组件进行包裹，方便进行数据交互
+function App() {
+  return (
+    <React.Fragment>
+      <Router></Router>
+    </React.Fragment>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
