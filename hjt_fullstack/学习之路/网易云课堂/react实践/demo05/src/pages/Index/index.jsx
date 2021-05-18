@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 export default function Index() {
     return (
         <div>
-            Index
-            <br />
-            <Link to='/My'>my</Link>
+            <div>Index</div>
+            <div><Link to='/My'>my</Link></div>
+            <div><Link to='/goods'>goods</Link></div>
+            
         </div>
     )
 }

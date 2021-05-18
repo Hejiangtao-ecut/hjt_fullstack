@@ -32,5 +32,10 @@
         - 模块导入的时候使用lazy，然后整个路由配置使用Suspense
     - 缺点，版本限制，只有React16.6之后才有
 
-## 路由嵌套
-1. 
+## 路由嵌套 goods
+1. 在子页面实现路由嵌套，必须使用在嵌套路由前面加上主路径
+    - <Route path="/goods/item" component={Item} />
+        - 嵌套进入item页面，然后前面必须加上goods页面
+2. 子路由嵌套
+    - 使用withRoute进行路由传值，
+    - goods/indexNav
