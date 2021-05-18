@@ -10,7 +10,7 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
-# 主任家的小程序
+# 百果园微信小程序
 
 水果电商小程序
 
@@ -18,22 +18,21 @@ shop（店） <-  水果
 
 10:06  kfc 打烊 
 
-1. 首页设计店营业/打洋的需要？
+1. 首页设计店营业/打洋的需要
   offline 
 2. 页面功能， 
   搜索、swiper、列表
   组件化
 3. isShow? 
-  isShow true  false  没准备好
-  ? 
-4. 搜索 
+  isShow true/false 控制商品上线 
+4. 搜索
 5. 轮播图
   大项目页面比较长， 用组件封装出去， 没有那么长了提高复用性 
   application<- pages <- components<- 原子的组标
   组件有data 和property 的概念， 
   page 老板   component 打工人， property 属性  data 
 
-6. tab 切换？ 
+6. tab 切换
   1. 设备数据 tab 状态相关 activeTypeId 
   2. 多个type  放到数据里
   3. css
@@ -48,7 +47,7 @@ shop（店） <-  水果
     详情页 swiper 
   
   - 封装云开发数据操作的能力
-    1. app.js 是天然的公用js 方法的地方 
+    1. app.js 公用js 方法的地方 
       const app = getApp(); // 微信的定义
       app.get
     2. 抽象了某个表某种排序方式，得到结果后做某种操作
