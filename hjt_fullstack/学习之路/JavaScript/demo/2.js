@@ -11,14 +11,24 @@ function b() {
     return new Promise((res, rej) => {
         setTimeout(() => {
             console.log('B');
-            res('B');
+            rej('B');
         }, 100);
     })
 }
 
-let result = Promise.all([a(), b()])
+function c() {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            console.log('c');
+            res('c');
+        }, 400);
+    })
+}
+
+Promise.all([a(), b(), c()])
     .then(res => {
         console.log(res);
-        return res;
     })
-console.log(result);
+    .catch(e => {
+        console.log(e);
+    })
