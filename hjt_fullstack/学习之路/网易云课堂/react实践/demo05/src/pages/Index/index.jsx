@@ -6,8 +6,9 @@ export default function Index() {
         <div>
             <div>Index</div>
             <div><Link to='/My'>my</Link></div>
+            <div><Link to='/user'>用户中心</Link></div>
             <div><Link to='/goods'>goods</Link></div>
-            
+            <div><Link to='/login'>登录</Link></div>
         </div>
     )
 }

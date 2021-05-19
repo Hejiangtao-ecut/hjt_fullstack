@@ -1,11 +1,15 @@
 import './App.css';
 import React,{lazy,Suspense} from 'react';
-import { BrowserRouter, Route,Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// 导入认证路由
+import AuthRouter from './routers/AuthRouter';
 // 组件导入的时候进行懒加载，配合路由实现路由的懒加载
 const Index = lazy(()=>import('./pages/Index'));
 const MyInfo = lazy(() => import('./pages/MyInfo'));
 const Details = lazy(() => import('./pages/MyInfo/details'));
 const Goods = lazy(() => import('./pages/goods'));
+const Login = lazy(() => import('./pages/login'));
+const User = lazy(() => import('./pages/user'));
 
 function Router() {
   return (
@@ -25,6 +29,10 @@ function Router() {
               <Route path='/My/details' component={Details}></Route>
               {/* Goods,路由嵌套 */}
               <Route path='/goods' component={Goods} />
+              {/* 登录认证 */}
+              <Route path='/login' component={Login} />
+              {/* 用户界面*/}
+              <AuthRouter path='/user' component={User} />
             </Suspense>
           </Switch>
 

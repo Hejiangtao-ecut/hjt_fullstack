@@ -39,3 +39,18 @@
 2. 子路由嵌套
     - 使用withRoute进行路由传值，
     - goods/indexNav
+3. 路由认证
+    - login和user
+        - 通过在login页面进行登录验证，登录成功在localStorage里面设置username和islogin字段实现本地存储登录状态，登陆后history回退
+        - user页面设置退出功能，点击退出后localStorage.clear();清空数据，然后history回退
+    - 缺点，如果没有登录会出现一次闪屏，因为会先渲染不存在的页面
+        - 手写一个函数然后根据状态进行渲染
+            - routers
+            - 思想，从官方文档改版，获取当前准备跳转的路由，然后根据登录状态进行动态选择，登陆了则正常进入页面，没有登录则跳转到登录的页面
+
+## hash和history区别以及环境中的注意点
+1. 区别
+    1. hash
+        - 带#号
+    2. history
+        - 不带#
