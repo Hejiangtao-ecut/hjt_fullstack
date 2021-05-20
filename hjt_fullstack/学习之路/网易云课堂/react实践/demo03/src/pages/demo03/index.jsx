@@ -18,4 +18,4 @@ class Demo03 extends Component {
     }
 }
 
-export default Hoc(Demo03, '反向继承组件');
+export default Hoc(Demo03);

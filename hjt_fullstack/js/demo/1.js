@@ -1,10 +1,15 @@
-let ran_num = Math.random();
-console.log(ran_num);
-console.log(Math.floor(2.3));
-console.log(Math.ceil(7.1));
-console.log(Math.round(25.5));
-console.log(Math.round(ran_num*10))
+const s = [];
+let arr = s;
+for (let i = 0; i < 3; i++){
+    var pusher = {
+        value : `item` + i
+    }, temp;
+    if (i !== 2) {
+        temp = [];
+        pusher.children = temp;
+    }
+    arr.push(pusher);
+    arr = temp;
+}
 
-let max = 100, min = 0;
-let ran = Math.floor(Math.random()*max);
-console.log(ran)
+console.log(s[0]);
