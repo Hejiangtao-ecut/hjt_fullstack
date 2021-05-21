@@ -2,12 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  fetch('http://www.hjmin.com/comment/music?id=186016&limit=3')
-    .then(data => data.json())
-    .then(data => {
-      // console.log();
-      return data.hotComments;
-    })
   return (
     <div className="App">
       <header className="App-header">
