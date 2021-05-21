@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# react shop
+## **1. 项目介绍**
+1. 这是一个纯前端react项目，基于线上的接口文档进行二次复写自己的项目，数据来源于线上
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **2. 项目架构**
+一个好的架构可以让整个项目更加清晰有条理，便于开发和后期再次阅读
 
-## Available Scripts
+### **2.1 目录结构**
+1. src 文件目录
+    - assets 静态资源
+        - css
+            - common 公用CSS
+                - public.css 全局CSS
+        - js
+        - image
+    - pages  页面内容
+        - home 主页
+            - index 只写了一个底部导航,作为整个项目的主路由,这种写法确实以前没有尝试过
+            - home 首页
+            - cart 购物车
+        - routes
+            - private 复写了private路由，router官网的authRouter耦合度过高，我只需要里面最简单的路由认证功能
+        - user  个人主页
+            - index  主页的首页,由底部导航栏进入
 
-In the project directory, you can run:
+## **3. 项目编写**
+1. 最外层交给router管理，负责整个项目的页面导向
+2. 路由
+    - /home 主页
+        - /index 首页
+        - /cart 购物车
+        - /my 我的
+    - 默认重定向去首页  config.path+'home/index'
 
-### `yarn start`
+## 遇见的问题
+1. 在最开始配置路由的时候，因为router是4.0版本，使用路由懒加载出现了不兼容问题
+    - 解决React路由跳转时出现的红色警告： Warning: Failed prop type: Invalid prop `component` of type `object` supplied to `Route`, expected `function`.
+    - 解决方法，讲router-dom更新到最新的5.+就可以解决
+    - 原因分析：lazy方法出现的时间不久，对过去比较老的版本兼容有问题
+    - 补充:也可以使用官方提供的路由异步加载
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. 多媒体适配办法
+    - 在public.css里面进行媒体查询,然后设置不同的字体大小就可以进行媒体适配
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 心得
+1. 写项目要大开大合,不能局限自己在项目中使用的变量和方法
+    - 在过去进行导航栏切换思维是固定在点击哪个页面要CSS自动判断
+    - 现在:设置不同变量记录当前是哪个页面在展示,展示的页面为true
+        - 设置点击事件,导航栏三个图标绑定一个点击事件,传入自己下标,根据下标进行批量调用修改样式的函数
+        - arr = [setHomeStyle, setCartStyle, setMyStyle].forEach
+        - home -> index -> goPage函数
