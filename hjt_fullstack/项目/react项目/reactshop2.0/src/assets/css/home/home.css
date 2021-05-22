@@ -134,7 +134,7 @@ img{
 .goods-classify-warp{
     width: 100%;
     background-color: #fff;
-    
+    margin-bottom: 5rem;
 }
 .goods-classify-warp .classify-title{
     width: 100%;
@@ -160,6 +160,7 @@ img{
     height: 8.75rem;
     /* background-color: #00f; */
     border-right: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
     position: relative;
     z-index: 1;
 }
@@ -215,7 +216,83 @@ img{
     height: 50%;
     /* background-color: #00f; */
     border-bottom: 1px solid #efefef;
+    position: relative;
 }
-.goods-classify-warp .goods-lever1 .goods-lever1-item2 .goods-row{
+.goods-classify-warp .goods-lever1 .goods-lever1-item2 .goods-row .goods-title{
+    width: 5rem;
+    height: 1.2rem;
+    overflow: hidden;
+    font-size: 0.8rem;
+    position: absolute;
+    font-weight: 700;
+    z-index: 1;
+    left: .2rem;
+    top: .2rem;
+}
+.goods-classify-warp .goods-lever1 .goods-lever1-item2 .goods-row .goods-list-tip{
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    left: .2rem;
+    top: 1.5rem;
+    color: #7b7f82;
+    font-size: 0.8rem;
+}
+.goods-classify-warp .goods-lever1 .goods-lever1-item2 .goods-row .goods-list-image{
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+    position: absolute;
+    right: .4rem;
+    top: .4rem;
+}
+/* 第二层商品列表 */
+.goods-classify-warp .goods-lever2{
+    width: 100%;
+    height: 8rem;
+    background-color: #fff;
+    display: flex;
+    display: -webkit-flex;
 
+}
+.goods-classify-warp .goods-lever2 .goods-list{
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #efefef;
+    box-sizing: border-box;
+}
+.goods-classify-warp .goods-lever2 .goods-list .goods-title{
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: .2rem;
+}
+.goods-classify-warp .goods-lever2 .goods-list  .goods-image{
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #f0f;
+    margin-top: 0.5rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.goods-classify-warp .goods-lever2 .goods-list .price{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #d32a4e;
+    margin-top: 0.25rem;
+    font-size: 0.7rem;
+}
+.goods-classify-warp .goods-lever2 .goods-list .price.line{
+    width: 100%;
+    height: auto;
+    /* 文字划线 */
+    text-decoration: line-through;
+    color: #7b7f82;
 }

@@ -87,12 +87,57 @@ export default function HomeIndex() {
                     {/* 右侧 */}
                     <div className="goods-lever1-item2">
                         {/* 右侧分层 */}
-                        <div className="goods-row"></div>
-                        <div className="goods-row"></div>
+                        <div className="goods-row">
+                            <div className="goods-title">欧美尖头蝴蝶结拖鞋女夏外穿2018新款绸缎面细跟凉拖半拖鞋穆勒鞋</div>
+                            <div className="goods-list-tip">品质精挑</div>
+                            <div className="goods-list-image">
+                                <img src="//vueshop.glbuys.com/uploadfiles/1524556315.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div className="goods-row">
+                            <div className="goods-title">老爹鞋女韩版ulzzang原宿百搭网鞋透气网面内增高运动鞋网鞋夏季</div>
+                            <div className="goods-list-tip">品质精挑</div>
+                            <div className="goods-list-image">
+                                <img src="//vueshop.glbuys.com/uploadfiles/1524556315.jpg" alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {/* 第二行商品 */}
-                {/* <div className="goods-lever2"></div> */}
+                <div className="goods-lever2">
+                    <div className="goods-list">
+                        <div className="goods-title">小白鞋女2018春夏季新款韩版百搭平底学生原宿ulzzang帆布鞋板鞋</div>
+                        <div className="goods-image">
+                            <img src="//vueshop.glbuys.com/uploadfiles/1524556119.jpg" alt=""/>
+                        </div>
+                        <div className="price">¥288</div>
+                        <div className="price line">¥576</div>
+                    </div>
+                    <div className="goods-list">
+                        <div className="goods-title">小白鞋女2018春夏季新款韩版百搭平底学生原宿ulzzang帆布鞋板鞋</div>
+                        <div className="goods-image">
+                            <img src="//vueshop.glbuys.com/uploadfiles/1524556119.jpg" alt="" />
+                        </div>
+                        <div className="price">¥288</div>
+                        <div className="price line">¥576</div>
+                    </div>
+                    <div className="goods-list">
+                        <div className="goods-title">小白鞋女2018春夏季新款韩版百搭平底学生原宿ulzzang帆布鞋板鞋</div>
+                        <div className="goods-image">
+                            <img src="//vueshop.glbuys.com/uploadfiles/1524556119.jpg" alt="" />
+                        </div>
+                        <div className="price">¥288</div>
+                        <div className="price line">¥576</div>
+                    </div>
+                    <div className="goods-list">
+                        <div className="goods-title">小白鞋女2018春夏季新款韩版百搭平底学生原宿ulzzang帆布鞋板鞋</div>
+                        <div className="goods-image">
+                            <img src="//vueshop.glbuys.com/uploadfiles/1524556119.jpg" alt="" />
+                        </div>
+                        <div className="price">¥288</div>
+                        <div className="price line">¥576</div>
+                    </div>
+                </div>
             </div>
 
         </div>

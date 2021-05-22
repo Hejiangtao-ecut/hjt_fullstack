@@ -1,28 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 /* 底部导航样式 */
 .home-bottom-nav{
     width: 100%;
-    height: 2.5rem;
+    height: 3rem;
     background-color: #fff;
     /* 视窗图钉,让底部导航一直显式在页面上 */
     position: fixed;
     /* 设置高层Z值,一直在最上层 */
     z-index: 10;
     /* 定位到最下面 */
+    left: 0;
     bottom: 0;
     box-shadow:0 0 10px rgba(239,239,239,1);
-    -webkti-box-shadow:0 0 10px rgba(239,239,239,1);
     /* 设置图标并排,用flex布局 */
     display: flex;
-    display: -webkit-flex;
     justify-content: space-between;
     -webkit-justify-content: space-between;
     align-items: center;
-    -webkit-align-items: center;
+    -webkit-box-pack: justify;
+    padding: 0 .5rem;
+
 }
 .home-bottom-nav ul{
-    width: 1.5rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     /* background-color: blue; */
+    bottom: 0;
+    top: 0;
+    margin: auto;
 }
 .home-bottom-nav ul:nth-child(1){
     /* 将两侧往中间挤 */
@@ -41,6 +49,9 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position:center;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .home-bottom-nav ul li.homeIcon.active{
     background-image: url('../../images/common/home2.png');
@@ -62,6 +73,9 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position:center;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .home-bottom-nav ul li.cartIcon.active{
     background-image: url('../../images/common/cart2.png');
@@ -75,6 +89,9 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position:center;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .home-bottom-nav ul li.myIcon.active{
     background-image: url('../../images/common/my2.png');
