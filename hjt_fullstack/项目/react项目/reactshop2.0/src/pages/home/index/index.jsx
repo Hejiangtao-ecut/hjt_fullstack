@@ -19,7 +19,7 @@ export default function Index(props) {
 
     function goPage(url, num) {
         let arr = [setHomeStyle, setCartStyle, setMyStyle].forEach((item, index)=> {
-            if (num == index) {
+            if (num === index) {
                 item(true);
             } else {
                 item(false);
