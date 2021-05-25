@@ -1,0 +1,63 @@
+.goods-content{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.goods-warp{
+    width: 90%;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin:auto;
+    /* background-color: #fff; */
+}
+.goods-warp .classify-name{
+    width: 100%;
+    height: 1.75rem;
+    font-size: 0.825rem;
+    line-height: 1.75rem;
+
+
+}
+.goods-warp .goods-items-wrap{
+    width: 100%;
+    /* height: 8rem; */
+    background-color:white;
+    display: block;
+    overflow: hidden;
+}
+.goods-warp .goods-items-wrap ul{
+    width: 33%;
+    height: 7.5rem;
+    float: left;
+    /* background-color: #fff; */
+    position: relative;
+    margin: 0;
+}
+.goods-warp .goods-items-wrap ul .li1{
+    width: 4.5rem;
+    height: 4.5rem;
+    top:0.3rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* margin-top: 0.2rem; */
+    /* background-color: #f0f; */
+    position: absolute;
+}
+.goods-warp .goods-items-wrap ul .li2{
+    width: 100%;
+    height: 1.2rem;
+    overflow: hidden;
+    line-height: 1.2rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 0.7rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}

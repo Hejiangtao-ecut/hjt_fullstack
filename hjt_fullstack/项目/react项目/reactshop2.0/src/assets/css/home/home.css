@@ -209,7 +209,7 @@ img{
     top: 1.2rem;
     transform: translateX(-50%);
 }
-.goods-classify-warp .goods-lever1 .goods-lever1-item1 .goods-price1{
+.goods-classify-warp .goods-lever1 .goods-lever1-item1 .goods-price0{
     width: auto;
     height: 1rem;
     background-color: red;
@@ -223,19 +223,6 @@ img{
     line-height: 1rem;
 }
 .goods-classify-warp .goods-lever1 .goods-lever1-item1 .goods-price2{
-    width: auto;
-    height: 1rem;
-    background-color: #5fc600;
-    color: #fff;
-    font-size: 0.7rem;
-    border-radius: 10%;
-    position: absolute;
-    top: 1.2rem;
-    left: 5rem;
-    text-align: center;
-    line-height: 1rem;
-}
-.goods-classify-warp .goods-lever1 .goods-lever1-item1 .goods-price3{
     width: auto;
     height: 1rem;
     background-color: #5fc600;
@@ -390,11 +377,43 @@ img{
     font-weight: 700;
 }
 
-/* 推荐商品 */
+/* 推荐商品容器 */
 .goods-recom{
     width: 100%;
     height: auto;
     display: flex;
     display: -webkit-flex;
-    
+    flex-wrap: wrap;
+
+}
+.goods-recom .list{
+    width: 46%;
+    height: 11.5rem;
+    background-color: #fff;
+    flex-shrink: 0;
+    margin: 2%;
+    box-sizing: border-box;
+}
+.goods-recom .list .list-img{
+    width: 7rem;
+    height: 7rem;
+    left: 0;
+    right: 0;
+    margin: 0.5rem auto 0;
+
+}
+.goods-recom .list .goods-title{
+    width: 100%;
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.goods-recom .list .goods-price{
+    width: auto;
+    height: auto;
+    margin-top: 0.2rem;
+    color: red;
 }

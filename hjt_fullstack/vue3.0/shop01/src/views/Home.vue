@@ -145,8 +145,7 @@ export default {
         }
         function showTop(){
             let scollTop = window.pageYOffset || document.documentElement.scollTop||document.body.scollTop;
-            scollTop > 100?(state.headerTop=true):(state.headerTop = false);
-            // console.log('demo')
+            console.log(scollTop);
         }
         window.onscroll = debounce(showTop,40)
 

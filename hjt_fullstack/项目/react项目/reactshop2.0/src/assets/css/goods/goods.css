@@ -1,0 +1,63 @@
+/* 分类页的CSS */
+
+/* 头部搜索框的CSS */
+.classify1 .goods-header{
+    width: 100%;
+    height: 8vh;
+    background-color: #fff;
+    /* position: fixed; */
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.classify1 .goods-header .back{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('../../images/home/goods/back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.classify1 .goods-header .search{
+    width: 85%;
+    height: 2.2rem;
+    border: 1px solid #b2b2b2;
+    border-radius: .3rem;
+    color: #626262;
+    font-size: 0.82rem;
+    padding-left: 0.6rem;
+    vertical-align: center;
+    display: inline-flex;
+    align-items: center;
+}
+.classify1 .classifybox{
+    width: 100%;
+    height: 92vh;
+    /* background-color: blue; */
+    display: flex;
+    display: -webkit-flex;
+}
+.classify1 .classifybox .classify-right{
+    width: 5rem;
+    height: 100%;
+    background-color: #fff;
+    overflow: scroll;
+} 
+.classify1 .classifybox .classify-right .classify-item{
+    width: 100%;
+    height: 2.35rem;
+    font-size: 0.825rem;
+    border-bottom: 1px solid #efefef;
+    background-color: #fff;
+    text-align: center;
+    line-height: 2.35rem;
+    overflow: hidden;
+}
+.classify1 .classifybox .classify-right .classify-item.bg-red{
+    color: red;
+}
+.classify1 .classifybox .classify-left{
+    flex: 1 1 auto;
+    /* background-color:blanchedalmond; */
+}

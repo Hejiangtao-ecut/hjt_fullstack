@@ -10,6 +10,7 @@ import config from './assets/js/conf/config';
 // 页面导入
 // 使用懒加载
 const Index = lazy(() => import('./pages/home/index'));
+const GoodsClassify = lazy(() => import('./pages/home/goods/index'));
 
 export default function AppRouter() {
   return (
@@ -21,6 +22,7 @@ export default function AppRouter() {
             {/* 启用路由的懒加载 */}
             <Suspense fallback={<div>loading...</div>}>
               <Route path={config.path + 'home/'} component={Index} />
+              <Route path={config.path + 'goods/classify'} component={GoodsClassify} />
               
               <Redirect to={config.path + 'home/index'} />
             </Suspense>

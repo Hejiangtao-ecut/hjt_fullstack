@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouter from './router';
+import 'whatwg-fetch';
 import reportWebVitals from './reportWebVitals';
 // 引入antd样式
 import 'antd/dist/antd.css';
