@@ -37,6 +37,7 @@
     /* background-color: blue; */
     display: flex;
     display: -webkit-flex;
+    -webkit-overflow-scrolling:touch;
 }
 .classify1 .classifybox .classify-right{
     width: 5rem;

@@ -6,6 +6,8 @@ import Ajax from '../../../assets/js/axios/axios';
 import config from '../../../assets/js/conf/config';
 // 引入图片懒加载
 import { lazyImage } from '../../../assets/js/utils/util';
+// 引入搜索
+const Search = lazy(import('../../../components/search/index'));
 
 export default function HomeIndex(props) {
     // swiper数据
@@ -27,7 +29,6 @@ export default function HomeIndex(props) {
             .then(res => {
                 if (res.code === 200) {
                     setSwiperData([...res.data]);
-                    lazyImage();
                 }
             })
         // 请求首页导航数据
@@ -36,7 +37,6 @@ export default function HomeIndex(props) {
                 if (res.code === 200) {
                     // console.log(res.data);
                     setIndexNav([...res.data]);
-                    lazyImage();
                 }
             })
         // 获取商品数据
