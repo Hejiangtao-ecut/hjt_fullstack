@@ -4,6 +4,8 @@ import {Redirect, Route,Switch} from 'react-router-dom'
 import '../../../assets/css/goods/goods.css';
 import config from '../../../assets/js/conf/config';
 import Ajax from '../../../assets/js/axios/axios';
+import Search from '../../../components/search/index';
+import axios from 'axios';
 
 // 懒加载组件
 const Items = React.lazy(() => import('./items'));
@@ -15,6 +17,8 @@ export default function GoodsClassify(props) {
     const [listStyle, setListStyle] = useState([true]);
     // 右侧商品信息
     const [goodsInfo, setGoodsInfo] = useState([]);
+    // 控制搜索框的出现和消失
+    const [isSearch, setIsSearch] = useState(false);
 
     useEffect(() => {
         // 获取分类列表
@@ -44,17 +48,22 @@ export default function GoodsClassify(props) {
         })
         setListStyle(list);
         getGoodsInfo(Url);
-        props.history.push(config.path + Url);
+        props.history.replace(config.path + Url);
     }
     // 获取右侧商品信息
     function getGoodsInfo(Url) {
-        Ajax(config.baseUrl +'/api/home/category/show?cid=&token='+ config.token)
+        Ajax(config.baseUrl + '/api/home/category/show?cid=&token=' + config.token)
             .then(res => {
                 // console.log(res.data);
                 if (res.code === 200) {
                     setGoodsInfo([...res.data]);
                 }
-        })
+            })
+    }
+    // 控制搜索组件的出现
+    function changeIsSearch() {
+        let b = isSearch;
+        setIsSearch(!b);
     }
 
     return (
@@ -62,7 +71,7 @@ export default function GoodsClassify(props) {
             {/* 头部导航 */}
             <div className="goods-header">
                 <div className="back" onClick={() => { props.history.goBack()}}></div>
-                <div className="search">请输入商品</div>
+                <div className="search" onClick={() => { changeIsSearch() }}>请输入商品</div>
             </div>
             {/* 商品分类盒子 */}
             <div className="classifybox">
@@ -88,6 +97,9 @@ export default function GoodsClassify(props) {
                         </React.Suspense>
                     </Switch>
                 </div>
+            </div>
+            <div style={isSearch ? { display: "block" } : { display: "none" }}>
+                <Search changeStyle={setIsSearch}></Search>
             </div>
         </div>
     )

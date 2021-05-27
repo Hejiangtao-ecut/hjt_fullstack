@@ -7,7 +7,7 @@ import config from '../../../assets/js/conf/config';
 // 引入图片懒加载
 import { lazyImage } from '../../../assets/js/utils/util';
 // 引入搜索
-const Search = lazy(import('../../../components/search/index'));
+import Search from '../../../components/search/index';
 
 export default function HomeIndex(props) {
     // swiper数据
@@ -20,6 +20,8 @@ export default function HomeIndex(props) {
     const [recommend, setRecommend] = useState([]);
     // 滚动变色
     const [isScroll, setIsScroll] = useState(false);
+    // 控制搜索框的出现和消失
+    const [isSearch, setIsSearch] = useState(false);
 
     // 数据对接
     // 第二个参数为空，这个函数用来请求静态资源
@@ -88,15 +90,21 @@ export default function HomeIndex(props) {
     function pushPage(Url) {
         props.history.push(config.path + Url);
     }
+    // 控制搜索组件的出现
+    function changeIsSearch() {
+        let b = isSearch;
+        setIsSearch(!b);
+    }
 
     return (
         <div className="Indexpage">
+            
             {/* 搜索栏 */}
             <div className={isScroll ? "home-header red-bg" : "home-header" }>
                 {/* 分类图标 */}
                 <div className="classify-icon" onClick={()=>{pushPage('goods/classify')}} ></div>
                 {/* 搜索框 */}
-                <div className="searchInput">
+                <div className="searchInput" onClick={() => { changeIsSearch()}}>
                     {/* 搜索图标 */}
                     <div className="searchIcon"></div>
                     {/* 输入框 */}
@@ -271,6 +279,9 @@ export default function HomeIndex(props) {
                         )
                     })
                 }
+            </div>
+            <div style={isSearch?{ display: "block" }:{ display: "none" }}>
+                <Search changeStyle={setIsSearch}></Search>
             </div>
         </div>
 

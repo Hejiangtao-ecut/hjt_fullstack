@@ -8,9 +8,6 @@ export default function GoodsItem(props) {
     // 右侧商品信息
     const [goodsInfo, setGoodsInfo] = useState([]);
 
-    
-
-
     useEffect(() => {
         let cid = props.history.location.search;
         cid = cid.split("=")[1];
@@ -26,13 +23,9 @@ export default function GoodsItem(props) {
                     setGoodsInfo([]);
                 }
             })
-        // console.log(props.history.location.search);
-        
+        // console.log(props.history.location.search); 
     }, [props])
 
-    if (setGoodsInfo.length > 1) {
-        
-    }
     return (
         <React.Fragment>
             <div className="goods-content">

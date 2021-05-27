@@ -1,7 +1,10 @@
 // 封装ajax请求
+import axios from 'axios';
 
 export default async function Ajax(Url,pType='GET') {
-    return await fetch(Url,{method:pType})
-        .then(res => res.json())
+    return await axios({
+        method: pType,
+        url:Url
+    }).then(res => res.data)
     
 }
