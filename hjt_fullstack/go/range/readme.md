@@ -1,5 +1,0 @@
-- js是脚本，弱类型语言
-- go 是静态的强类型语言，现代的C语言 
-- main、package模块、import 引入第三方模块
-- _占位使用
-- range 数组 Map 字符串
