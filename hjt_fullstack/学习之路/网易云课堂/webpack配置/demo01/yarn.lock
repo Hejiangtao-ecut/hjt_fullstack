@@ -8947,7 +8947,7 @@ react-dev-utils@^11.0.3:
 
 react-dom@^17.0.2:
   version "17.0.2"
-  resolved "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  resolved "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz?cache=0&sync_timestamp=1622219356422&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-dom%2Fdownload%2Freact-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=
   dependencies:
     loose-envify "^1.1.0"
@@ -10922,7 +10922,7 @@ wbuf@^1.1.0, wbuf@^1.7.3:
 
 web-vitals@^1.0.1:
   version "1.1.2"
-  resolved "https://registry.nlark.com/web-vitals/download/web-vitals-1.1.2.tgz?cache=0&sync_timestamp=1620881602337&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fweb-vitals%2Fdownload%2Fweb-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
+  resolved "https://registry.nlark.com/web-vitals/download/web-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
   integrity sha1-BlNTCBaJhgliOaqEcW5otMaubRw=
 
 webidl-conversions@^5.0.0:
