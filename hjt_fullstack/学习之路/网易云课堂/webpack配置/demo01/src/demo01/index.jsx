@@ -1,6 +1,7 @@
-import './index.css'
+import Css from './index.css'
 export default function Demo01() {
+    console.log(Css);
     return (
-        <div className="box"></div>
+        <div className={Css.box}></div>
     )
 }

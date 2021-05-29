@@ -1,5 +1,5 @@
 import Demo01 from './demo01';
-import './App.css';
+import '../src/assets/css/common/public.css';
 
 function App() {
   return (
