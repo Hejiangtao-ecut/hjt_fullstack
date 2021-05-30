@@ -7,11 +7,24 @@ import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.css';
 // 引入全局样式
 import './assets/css/common/public.css';
+import { Provider } from 'react-redux';
+import { store } from './store/index';
+
+function Index() {
+  return (
+    <React.Fragment>
+      <Provider store={store}>
+        <AppRouter />
+      </Provider>
+      
+    </React.Fragment>
+  )
+}
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRouter />
+    <Index />
   </React.StrictMode>,
   document.getElementById('root')
 );
