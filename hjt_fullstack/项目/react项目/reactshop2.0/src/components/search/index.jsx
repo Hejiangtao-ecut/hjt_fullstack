@@ -6,6 +6,8 @@ import config from '../../assets/js/conf/config';
 // 导入连接器
 import { connect } from 'react-redux';
 import { ADDHISTORYWORDS } from '../../store/actionTypes';
+// redux的子组件没有封装路由，需要手动引入
+import { withRouter } from 'react-router';
 
 function Search(props) {
     // 搜索框关键字
@@ -50,7 +52,6 @@ function Search(props) {
     }
     // 改变输入框的值
     function changeKeyWords(e) {
-        // console.log(e);
         if (e !== '') {
             setKeyWords(e);
         }
@@ -68,6 +69,14 @@ function Search(props) {
         // 清除localStorage里面的history
         localStorage.removeItem('historyKey');
     }
+    // 搜索和点击历史记录跳转
+    function goSearch(Url) {
+        // 添加历史记录
+        addHistoryKey();
+        // 页面跳转
+        props.history.push(config.path+Url);
+        // console.log(props)
+    }
 
     return (
         <div className="page">
@@ -82,7 +91,7 @@ function Search(props) {
                             onChange={(e) => { changeKeyWords(e.target.value)}}
                         />
                     </div>
-                    <button className="btn-icon" onClick={() => { addHistoryKey()}}></button>
+                    <button className="btn-icon" onClick={() => { goSearch('goods/search?keywords='+keyWords)}}></button>
                 </div>
             </div>
             {/* 历史记录 */}
@@ -97,7 +106,8 @@ function Search(props) {
                     {
                         props.state.hk.historyKey.length > 0 && props.state.hk.historyKey.map((item, index) => {
                             return (
-                                <div className="search-keywords" key={index}>{item}</div>
+                                // 每个按钮都要实现页面跳转
+                                <div className="search-keywords" key={index} onClick={() => { goSearch("goods/search?keywords="+item)}}> {item} </div>
                             )
                         })
                     }
@@ -116,7 +126,7 @@ function Search(props) {
                             {
                                 hotSearch.map((item, index) => {
                                     return (
-                                        <div className="search-keywords" key={index}>{item.title}</div>
+                                        <div className="search-keywords" key={index} onClick={() => { props.history.push(config.path+'goods/search?keywords='+item.title)}} >{item.title}</div>
                                     )
                                 })
                             }
@@ -133,4 +143,4 @@ export default connect((state) => {
     return {
         state:state
     }
-})(Search)
+})(withRouter(Search))

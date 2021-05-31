@@ -11,6 +11,7 @@ import config from './assets/js/conf/config';
 // 使用懒加载
 const Index = lazy(() => import('./pages/home/index'));
 const GoodsClassify = lazy(() => import('./pages/home/goods/index'));
+const SearchGoods = lazy(() => import('./pages/home/searchGoods/index'));
 
 export default function AppRouter() {
   return (
@@ -23,8 +24,10 @@ export default function AppRouter() {
             <Suspense fallback={<div>loading...</div>}>
               <Route path={config.path + 'home/'} component={Index} />
               <Route path={config.path + 'goods/classify'} component={GoodsClassify} />
+              <Route path={config.path + 'goods/search'} component={SearchGoods} />
               
               <Redirect to={config.path + 'home/index'} />
+              {/* <Redirect to={config.path + 'goods/search'} /> */}
             </Suspense>
           </Switch>
         </React.Fragment>

@@ -90,6 +90,10 @@
     - 配置css-loader进行CSS模块化，然后将node_module和全局样式剔除出模块化范围
     - 掘金配置记录[点击访问](https://juejin.cn/post/6967621876126318605)
 
+9. 使用redux后发现子组件的history这些路由API不见了
+    - 解决
+        - 引入React-Router-dom的withRouter，然后在底部用withRouter包裹子组件就行了
+
 ## 心得
 1. 写项目要大开大合,不能局限自己在项目中使用的变量和方法
     - 在过去进行导航栏切换思维是固定在点击哪个页面要CSS自动判断
