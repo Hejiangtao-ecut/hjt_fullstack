@@ -23,12 +23,19 @@ function Search(props) {
                     // console.log(res.data);
                     setHotSearch([...res.data]);
             }
-        })
+            })
+        
+        // 初始化历史数据
+        setHistoryKey([...props.state.hk.historyKey]);
+
     }, [])
     
     // 添加历史记录
     function addHistoryKey() {
         let s = historyKey;
+        if (s.length === 9) {
+            s.pop();
+        }
         if (keyWords !== '') {
             s.unshift(keyWords);
             // 利用set实现数组去重并且实现搜索后位置调换
@@ -47,6 +54,19 @@ function Search(props) {
         if (e !== '') {
             setKeyWords(e);
         }
+    }
+    // 删除历史记录
+    function deleteHistory() {
+        let s = [];
+        // 清除historyKey
+        setHistoryKey(s);
+        // 清除store里面的值
+        props.dispatch({
+            type: ADDHISTORYWORDS,
+            value: [...new Set(s)]
+        });
+        // 清除localStorage里面的history
+        localStorage.removeItem('historyKey');
     }
 
     return (
@@ -71,7 +91,7 @@ function Search(props) {
                     <div className="search-title">
                         最近搜索
                     </div>
-                    <div className="delete-icon"></div>
+                    <div className="delete-icon" onClick={()=>{deleteHistory()}}></div>
                 </div>
                 <div className="search-keywords-wrap">
                     {
