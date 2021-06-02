@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>请输入：
+        <input type="text" name="" id="demo1">
+        <span>=</span>
+        <div id="demo2"></div>
+    </div>
+    <button onclick="demo()">计算</button>
+    <script>
+        function demo(){
+            let x = document.getElementById('demo1');
+            // console.log(x);
+            let text = x.value;
+            // console.log(text); l s
+            // 第一个数
+            let num1 = '';
+            // 第二个数
+            let num2 = '';
+            // 符号
+            let a = '';
+            let nums = text.split(/[+|-|*|/]/g);
+            // console.log(nums);
+            num1 = Number.parseInt(nums[0]);
+            num2 = Number.parseInt(nums[1]);
+            a = text.slice(nums[0].length,nums[0].length+1);
+            // console.log(a);
+            
+        }
+        
+    </script>
+</body>
+</html>
