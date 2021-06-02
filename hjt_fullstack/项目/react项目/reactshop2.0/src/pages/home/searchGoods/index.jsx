@@ -14,8 +14,16 @@ export default function SearchGoods(props) {
 
     return (
         <React.Fragment>
-            <div>
-                {keyWords}
+            <div className="searchGoods">
+                {/* 头部 */}
+                <div className="header">
+                    {/* 返回图标 */}
+                    <div className="backIcon"></div>
+                    {/* 搜索框样式 */}
+                    <div className="searchInput"> 商品</div>
+                    {/* 筛选 */}
+                    <div className="classifyIcon">筛选</div>
+                </div>
             </div>
         </React.Fragment>
     )

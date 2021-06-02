@@ -26,8 +26,8 @@ export default function AppRouter() {
               <Route path={config.path + 'goods/classify'} component={GoodsClassify} />
               <Route path={config.path + 'goods/search'} component={SearchGoods} />
               
-              <Redirect to={config.path + 'home/index'} />
-              {/* <Redirect to={config.path + 'goods/search'} /> */}
+              {/* <Redirect to={config.path + 'home/index'} /> */}
+              <Redirect to={config.path + 'goods/search'} />
             </Suspense>
           </Switch>
         </React.Fragment>
