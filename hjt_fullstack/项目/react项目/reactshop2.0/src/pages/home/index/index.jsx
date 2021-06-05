@@ -1,4 +1,4 @@
-import React,{lazy,useState,useEffect} from 'react';
+import React,{lazy,useState} from 'react';
 import {Route,Switch} from 'react-router-dom'
 import '../../../assets/css/home/index.css';
 import config from '../../../assets/js/conf/config';
@@ -18,7 +18,7 @@ export default function Index(props) {
     const [myStyle, setMyStyle] = useState(false);
 
     function goPage(url, num) {
-        let arr = [setHomeStyle, setCartStyle, setMyStyle].forEach((item, index)=> {
+        [setHomeStyle, setCartStyle, setMyStyle].forEach((item, index)=> {
             if (num === index) {
                 item(true);
             } else {

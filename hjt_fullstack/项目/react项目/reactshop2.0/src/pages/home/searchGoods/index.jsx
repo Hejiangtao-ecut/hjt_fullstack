@@ -4,8 +4,6 @@ import '../../../assets/css/home/search.css';
 import Search from '../../../components/search/index';
 import Ajax from '../../../assets/js/axios/axios';
 import config from '../../../assets/js/conf/config';
-// 引入下拉刷新
-import UpRefresh from '../../../assets/js/conf/uprefresh';
 
 
 export default function SearchGoods(props) {
@@ -24,23 +22,9 @@ export default function SearchGoods(props) {
     // 排序方式
     const [otype, setOtype] = useState();
 
-    // 进行分类获取
-    useEffect(() => {
-        // 根据分类方式进行获取
-        let key = props.location.search.split('=')[1];
-        setKeyWords(decodeURIComponent(key));
-        console.log(config.baseUrl + '/api/home/goods/search?kwords=' + keyWords + '&param=&page=1&price1=&price2=&otype=' + otype + '&cid=&token=' + config.token)
-        Ajax(config.baseUrl+'/api/home/goods/search?kwords='+keyWords+'&param=&page=1&price1=&price2=&otype='+otype+'&cid=&token='+config.token)
-            .then(res => {
-                if (res.code === 200) {
-                    setGoodsInfo([...res.data]);
-                }
-            })
-    },[otype])
-
     // 点击返回
     function goBack() {
-        console.log('------')
+        // console.log('------')
         props.history.goBack();
     }
     // 控制搜索组件的出现
@@ -79,12 +63,40 @@ export default function SearchGoods(props) {
         // 关闭排序列表面板
         setIsShow(false);
     }
+    // 在此页面进行搜索
+    function SearchGoods(e) {
+        // 改变keywords
+        setKeyWords(e);
+        // setState是异步的，我们后面用e替代keywords
+        Ajax(config.baseUrl + '/api/home/goods/search?kwords=' + e + '&param=&page=1&price1=&price2=&otype=' + otype + '&cid=&token=' + config.token)
+            .then(res => {
+                if (res.code === 200) {
+                    setGoodsInfo([...res.data]);
+                }
+            })
+        // 关闭搜索组件面板
+        setIsSearch(false);
+    }
+    
+    // 进行分类获取
+    useEffect(() => {
+        // 根据分类方式进行获取
+        let key = props.location.search.split('=')[1];
+        setKeyWords(decodeURIComponent(key));
+        // console.log(config.baseUrl + '/api/home/goods/search?kwords=' + keyWords + '&param=&page=1&price1=&price2=&otype=' + otype + '&cid=&token=' + config.token)
+        Ajax(config.baseUrl + '/api/home/goods/search?kwords=' + keyWords + '&param=&page=1&price1=&price2=&otype=' + otype + '&cid=&token=' + config.token)
+            .then(res => {
+                if (res.code === 200) {
+                    setGoodsInfo([...res.data]);
+                }
+            })
+    }, [otype])
 
     // 初始化获取数据
     useEffect(() => {
         let key = props.location.search.split('=')[1];
         setKeyWords(decodeURIComponent(key));
-        console.log('----' + config.baseUrl + '/api/home/goods/search?kwords=' + key + '&param=&page=1&price1=&price2=&otype=' + otype + '&cid=&token=' + config.token)
+        // console.log('----' + config.baseUrl + '/api/home/goods/search?kwords=' + key + '&param=&page=1&price1=&price2=&otype=' + otype + '&cid=&token=' + config.token)
         Ajax(config.baseUrl + '/api/home/goods/search?kwords=' + key + '&param=&page=1&price1=&price2=&otype=' + otype + '&cid=&token=' + config.token)
             .then(res => {
                 // console.log(res);
@@ -151,7 +163,7 @@ export default function SearchGoods(props) {
 
                 {/* Search组件 */}
                 <div style={isSearch ? { display: "block" } : { display: "none" }}>
-                    <Search changeStyle={setIsSearch}></Search>
+                    <Search changeStyle={setIsSearch} isLocal={true} childKey={(e)=>{ SearchGoods(e)}}></Search>
                 </div>
             </div>
         </React.Fragment>

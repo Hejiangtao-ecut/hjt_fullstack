@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import { ADDHISTORYWORDS } from '../../store/actionTypes';
 // redux的子组件没有封装路由，需要手动引入
 import { withRouter } from 'react-router';
+import { Toast } from 'antd-mobile'
 
 function Search(props) {
     // 搜索框关键字
@@ -33,13 +34,15 @@ function Search(props) {
     }, [])
     
     // 添加历史记录
-    function addHistoryKey() {
+    function addHistoryKey(val='') {
         let s = historyKey;
+        // 解决兼容性问题
+        let key = keyWords || val;
         if (s.length === 9) {
             s.pop();
         }
-        if (keyWords !== '') {
-            s.unshift(keyWords);
+        if (key !== '') {
+            s.unshift(key);
             // 利用set实现数组去重并且实现搜索后位置调换
             setHistoryKey([...new Set(s)]);
         }
@@ -71,11 +74,21 @@ function Search(props) {
     }
     // 搜索和点击历史记录跳转
     function goSearch(Url) {
+        // 没有输入时使用Toast提示
+        if (Url.split('=')[1] === '') {
+            Toast.info("请输入宝贝名称！", 1)
+            return
+        }
         // 添加历史记录
-        addHistoryKey();
+        // 因为调用这个函数的地方有多个，设置兼容性
+        addHistoryKey(Url.split('=')[1]);
         // 页面跳转
-        props.history.push(config.path+Url);
-        // console.log(props)
+        if (props.isLocal) {
+            props.childKey(Url.split('=')[1]);
+            props.history.replace(config.path + Url);
+        } else {
+            props.history.push(config.path + Url);
+        }    
     }
 
     return (
@@ -126,7 +139,7 @@ function Search(props) {
                             {
                                 hotSearch.map((item, index) => {
                                     return (
-                                        <div className="search-keywords" key={index} onClick={() => { props.history.push(config.path+'goods/search?keywords='+item.title)}} >{item.title}</div>
+                                        <div className="search-keywords" key={index} onClick={() => { goSearch('goods/search?keywords='+item.title)}} >{item.title}</div>
                                     )
                                 })
                             }

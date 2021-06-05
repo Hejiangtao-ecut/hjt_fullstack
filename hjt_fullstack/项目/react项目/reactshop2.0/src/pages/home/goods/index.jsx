@@ -5,7 +5,6 @@ import '../../../assets/css/goods/goods.css';
 import config from '../../../assets/js/conf/config';
 import Ajax from '../../../assets/js/axios/axios';
 import Search from '../../../components/search/index';
-import axios from 'axios';
 
 // 懒加载组件
 const Items = React.lazy(() => import('./items'));

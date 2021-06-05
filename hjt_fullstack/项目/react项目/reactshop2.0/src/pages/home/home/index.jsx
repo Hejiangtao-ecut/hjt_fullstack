@@ -1,4 +1,4 @@
-import React, { lazy, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../../assets/css/home/home.css';
 import { Carousel as Swiper } from 'antd';
 // 引入封装的ajax

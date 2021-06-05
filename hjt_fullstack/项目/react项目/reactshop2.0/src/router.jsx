@@ -3,7 +3,7 @@
 import React,{lazy,Suspense} from 'react';
 import { HashRouter as Router, Switch, Route,Redirect} from 'react-router-dom';
 // 引入路由认证模块
-import PrivateRouter from './pages/routes/private';
+// import PrivateRouter from './routes/private';
 import config from './assets/js/conf/config';
 
 
