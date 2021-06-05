@@ -7,7 +7,7 @@ import config from '../../../assets/js/conf/config';
 // 主页
 const HomeIndex = lazy(() => import('../home/index'));
 // 购物车
-const CartIndex = lazy(() => import('../cart'));
+const CartIndex = lazy(() => import('../../cart'));
 // 我的
 const MyIndex = lazy(() => import('../../user/index/index'));
 

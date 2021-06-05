@@ -12,6 +12,7 @@ import config from './assets/js/conf/config';
 const Index = lazy(() => import('./pages/home/index'));
 const GoodsClassify = lazy(() => import('./pages/home/goods/index'));
 const SearchGoods = lazy(() => import('./pages/home/searchGoods/index'));
+const GoodsDetail = lazy(() => import('./pages/home/goodsDetail/index'));
 
 export default function AppRouter() {
   return (
@@ -25,9 +26,10 @@ export default function AppRouter() {
               <Route path={config.path + 'home/'} component={Index} />
               <Route path={config.path + 'goods/classify'} component={GoodsClassify} />
               <Route path={config.path + 'goods/search'} component={SearchGoods} />
+              <Route path={config.path + 'goods/details'} component={GoodsDetail} />
               
-              <Redirect to={config.path + 'home/index'} />
-              {/* <Redirect to={config.path + 'goods/search'} /> */}
+              {/* <Redirect to={config.path + 'home/index'} /> */}
+              <Redirect to={config.path + 'goods/details'} />
             </Suspense>
           </Switch>
         </React.Fragment>
