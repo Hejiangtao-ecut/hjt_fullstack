@@ -9,12 +9,18 @@ const Content = React.lazy(() => import('./content'));
 const Review = React.lazy(() => import('./review'));
 
 export default function GoodsDetail(props) {
+
+    // 返回
+    function goBack() {
+        props.history.go(-1);
+    }
+
     return (
         <React.Fragment>
             {/* 头部 */}
             <div className='details-header'>
                 {/* 返回按钮 */}
-                <div className="backIcon"></div>
+                <div className="backIcon" onClick={()=>{goBack()}}></div>
                 {/* 顶部分类 */}
                 <div className="tab-wrap">
                     <div className="tab-name action">商品</div>
@@ -30,9 +36,10 @@ export default function GoodsDetail(props) {
                 <Switch>
                     <React.Suspense fallback={<div>loading</div>}>
                         <Route path={config.path + "goods/details/item"} component={Item} />
-                        <Route path={config.path + "goods/details/content"} component={Item} />
-                        <Route path={config.path + "goods/details/review"} component={Item} />
-                        <Redirect to={config.path + "goods/details/item"} />
+                        <Route path={config.path + "goods/details/content"} component={Content} />
+                        <Route path={config.path + "goods/details/review"} component={Review} />
+
+                        {/* <Redirect to={config.path + "goods/details/item"} /> */}
                     </React.Suspense>
                     
                 </Switch>

@@ -28,8 +28,8 @@ export default function AppRouter() {
               <Route path={config.path + 'goods/search'} component={SearchGoods} />
               <Route path={config.path + 'goods/details'} component={GoodsDetail} />
               
-              {/* <Redirect to={config.path + 'home/index'} /> */}
-              <Redirect to={config.path + 'goods/details'} />
+              <Redirect to={config.path + 'home/index'} />
+              {/* <Redirect to={config.path + 'goods/details'} /> */}
             </Suspense>
           </Switch>
         </React.Fragment>

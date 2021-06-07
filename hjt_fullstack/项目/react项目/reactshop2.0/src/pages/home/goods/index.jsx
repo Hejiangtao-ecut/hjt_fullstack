@@ -92,7 +92,7 @@ export default function GoodsClassify(props) {
                     <Switch>
                         <React.Suspense fallback={<div>loading</div>}>
                             <Route path={config.path + "goods/classify/items"} component={Items} />
-                            <Redirect to={config.path + "goods/classify/items?cid=492"} />
+                            {/* <Redirect to={config.path + "goods/classify/items?cid="} /> */}
                         </React.Suspense>
                     </Switch>
                 </div>

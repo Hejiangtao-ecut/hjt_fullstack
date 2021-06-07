@@ -136,7 +136,7 @@ export default function HomeIndex(props) {
                 {
                     indexNav.map((item) => {
                         return (
-                            <ul className="item" key={item.cid}>
+                            <ul className="item" key={item.cid} onClick={()=>{pushPage('goods/classify/items?cid='+item.cid)}}>
                                 <li className="item-img">
                                     <img src={item.image} alt={item.title} />
                                 </li>
@@ -161,7 +161,7 @@ export default function HomeIndex(props) {
                                 {/* 第一行商品 */}
                                 <div className="goods-lever1">
                                     {/* 左侧 */}
-                                    <div className="goods-lever1-item1">
+                                    <div className="goods-lever1-item1" onClick={() => { pushPage('goods/details/item?gid=' + item.gid) }}>
                                         <div className="goods-title">{item.items[0].title}</div>
                                         <div className="goods-tip">精品打折</div>
                                         <div className={"goods-price" + index}>12.8元</div>
@@ -175,7 +175,7 @@ export default function HomeIndex(props) {
                                         {
                                             item.items.slice(1, 3).map((item, index) => {
                                                 return (
-                                                    <div className="goods-row" key={index}>
+                                                    <div className="goods-row" key={index} onClick={() => { pushPage('goods/details/item?gid=' + item.gid) }}>
                                                         <div className="goods-title">{item.title}</div>
                                                         <div className="goods-list-tip">品质精挑</div>
                                                         <div className="goods-list-image">
@@ -192,7 +192,7 @@ export default function HomeIndex(props) {
                                     {
                                         item.items.slice(3).map((item, index) => {
                                             return (
-                                                <div className="goods-list" key={index}>
+                                                <div className="goods-list" key={index} onClick={() => { pushPage('goods/details/item?gid=' + item.gid) }}>
                                                     <div className="goods-title">{ item.title }</div>
                                                     <div className="goods-image">
                                                         <img src={ item.image } alt="" />
@@ -221,7 +221,7 @@ export default function HomeIndex(props) {
                                     {
                                         item.items.slice(0, 2).map((item, index) => {
                                             return (
-                                                <div className="goods-lever1-item1" key={index}>
+                                                <div className="goods-lever1-item1" key={index} onClick={() => { pushPage('goods/details/item?gid=' + item.gid) }}>
                                                     <div className="goods-title">{ item.title }</div>
                                                     <div className="goods-tip-1">火爆开售</div>
                                                     <div className="goods-img-1">
@@ -237,7 +237,7 @@ export default function HomeIndex(props) {
                                     {
                                         item.items.slice(2).map((item, index) => {
                                             return (
-                                                <div className="goods-list" key={index}>
+                                                <div className="goods-list" key={index} onClick={() => { pushPage('goods/details/item?gid=' + item.gid) }}>
                                                     <div className="goods-title">{item.title}</div>
                                                     <div className="goods-image">
                                                         <img src={item.image} alt="" />
@@ -269,7 +269,7 @@ export default function HomeIndex(props) {
                 {
                     recommend.map((item) => {
                         return (
-                            <div className="list" key={item.gid}>
+                            <div className="list" key={item.gid} onClick={() => { pushPage('goods/details/item?gid=' + item.gid) }}>
                                 <div className="list-img">
                                     <img src={item.image} alt="" />
                                 </div>
