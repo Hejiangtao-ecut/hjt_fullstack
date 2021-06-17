@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="add">+</button>
+        <h2 v-text="count"></h2>
+        <button @click="sub">-</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count:0
+            },
+            methods: {
+                add:function(){
+                    if(this.count<10){
+                        this.count++;
+                    }else{
+                        alert("已经最大了!")
+                    }
+                },
+                sub: function () {
+                    if (this.count > 0) {
+                        this.count--;
+                    } else {
+                        alert("已经最小了!")
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
