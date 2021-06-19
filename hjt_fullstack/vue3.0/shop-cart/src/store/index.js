@@ -6,8 +6,7 @@ import products from './modules/products';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules: {
-        // 分支
+    modules:{//分支
         cart,
         products
     }

@@ -1,23 +1,22 @@
 <template>
-    <div>
-
-    </div>
+    <ul>
+        <li v-for="product in products" :key="product.id">
+            {{product.title}}-{{product.price}}
+                <br/>
+                <button @click="addProductToCart(product)">
+                    Add to cart
+                </button>
+        </li>
+    </ul>
 </template>
-
 <script>
 // 读状态 products connect
-import { mapState,mapActions } from 'vuex'
-
+// 要有一个方法把product -> cart
+// connect 高阶组件 -> props
+import {mapState,mapActions} from 'vuex'
 export default {
-    // 计算属性
-    // data() { // 不写自身状态了，因为如果有自身状态，就不会被回收
-    //     return {
-            
-    //     }
-    // },
-    // 将中央的属性计算过来
+    // 计算属性 转态的一种 getter
     computed:mapState({
-        // 获取中央的products的所有状态
         products:state=>state.products.all
     }),
     methods:mapActions('cart',[
@@ -25,11 +24,10 @@ export default {
     ]),
     created() {
         this.$store.dispatch('products/getAllProducts');
-
     },
 }
 </script>
+<style scoped>
 
-<style lang="scss" scoped>
-
-</style>
+</style>>
+    

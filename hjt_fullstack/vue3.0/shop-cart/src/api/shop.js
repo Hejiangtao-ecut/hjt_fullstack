@@ -5,7 +5,7 @@ const _products = [
 ]
 
 export default {
-    getProducts(cb) {
-        setTimeout(() => cb(_products),1000)
+    getProducts(cb){
+        setTimeout(()=>cb(_products),1000)
     }
 }
