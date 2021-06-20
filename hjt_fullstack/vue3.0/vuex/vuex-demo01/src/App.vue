@@ -7,6 +7,7 @@
     <h1>异步</h1>
     <async-add></async-add>
     <async-sub></async-sub>
+    <h3>{{ getDbNums }}</h3>
   </div>
 </template>
 
@@ -15,9 +16,13 @@ import AddCount from './components/AddCount.vue'
 import SubCount from './components/SubCount.vue'
 import AsyncAdd from './components/AsyncAdd.vue'
 import AsyncSub from './components/AsyncSub.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'App',
+  computed: {
+    ...mapGetters(['getDbNums'])
+  },
   components: {
     AddCount,
     SubCount,

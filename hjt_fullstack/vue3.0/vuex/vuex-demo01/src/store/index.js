@@ -7,7 +7,11 @@ export default new Vuex.Store({
   state: {
     count: 0
   },
-  getters: {},
+  getters: {
+    getDbNums (state) {
+      return '翻倍后为' + state.count * 2
+    }
+  },
   actions: {
     // 异步操作都放这里
     asyncAdd ({ commit }) {

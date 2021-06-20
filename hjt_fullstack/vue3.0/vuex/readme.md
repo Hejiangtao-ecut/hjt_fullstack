@@ -18,6 +18,11 @@
         - 将全局数据映射为当前数据的计算属性
 ### 2. getter
 1. 基于state，返回里面的属性，丰富状态的读操作
+2. 用于对state数据进行加工处理返回新数据，类似于computed
+3. state的数据变化，getter获取的数据也会响应式改变
+4. 获取方式
+    1. 原生方式
+    2. mapGetter按需加载
 
 ### 3. action
 1. 处理异步操作，必须通过action处理，不可以在mutation里面进行异步操作，然后触发commit 
