@@ -1,4 +1,4 @@
-// 类(包含属性和方法)
+// 类的继承
 class Person{
     // 不加修饰符默认是public 内外部都可以访问
     name: string;
@@ -24,6 +24,18 @@ class Person{
 
 // 创建实例
 const person = new Person('鸡毛', 21, 'man');
-console.log(person);
-person.setAge(22);
-console.log(person);
+console.log(person,'person');
+// person.setAge(22);
+// console.log(person);
+
+// 创建子类
+class Student extends Person{
+    // 继承的子类不可以使用父类私有的，但是可以设置get和set来操纵
+    constructor(name: string, age: number,sex:string) {
+        // 父类构造函数有的子类必须声明
+        super(name,age,sex);
+    }
+}
+
+const jianghe = new Student('jianghe', 21, ',man');
+console.log(jianghe.name, jianghe.sex);
