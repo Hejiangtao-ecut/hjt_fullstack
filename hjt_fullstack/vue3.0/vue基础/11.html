@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model:value="demo1">
+        <p v-text="demo1"></p>
+        <input type="text" v-model:value="demo2">
+        <p v-text="demo2" v-show="demo2"></p>
+        <input type="text" v-model:value="demo3">
+        <p v-text="demo3"></p>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                demo1:'',
+                demo2:'',
+                demo3:''
+                
+            },
+            methods: {
+                
+            },
+        })
+    </script>
+</body>
+
+</html>
