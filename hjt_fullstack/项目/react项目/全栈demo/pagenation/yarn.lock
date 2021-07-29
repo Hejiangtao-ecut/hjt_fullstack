@@ -1606,7 +1606,7 @@
 
 "@testing-library/jest-dom@^5.11.4":
   version "5.14.1"
-  resolved "https://registry.nlark.com/@testing-library/jest-dom/download/@testing-library/jest-dom-5.14.1.tgz#8501e16f1e55a55d675fe73eecee32cdaddb9766"
+  resolved "https://registry.nlark.com/@testing-library/jest-dom/download/@testing-library/jest-dom-5.14.1.tgz?cache=0&sync_timestamp=1623430692763&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40testing-library%2Fjest-dom%2Fdownload%2F%40testing-library%2Fjest-dom-5.14.1.tgz#8501e16f1e55a55d675fe73eecee32cdaddb9766"
   integrity sha1-hQHhbx5VpV1nX+c+7O4yza3bl2Y=
   dependencies:
     "@babel/runtime" "^7.9.2"
@@ -1621,7 +1621,7 @@
 
 "@testing-library/react@^11.1.0":
   version "11.2.7"
-  resolved "https://registry.nlark.com/@testing-library/react/download/@testing-library/react-11.2.7.tgz#b29e2e95c6765c815786c0bc1d5aed9cb2bf7818"
+  resolved "https://registry.nlark.com/@testing-library/react/download/@testing-library/react-11.2.7.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-11.2.7.tgz#b29e2e95c6765c815786c0bc1d5aed9cb2bf7818"
   integrity sha1-sp4ulcZ2XIFXhsC8HVrtnLK/eBg=
   dependencies:
     "@babel/runtime" "^7.12.5"
@@ -1629,7 +1629,7 @@
 
 "@testing-library/user-event@^12.1.10":
   version "12.8.3"
-  resolved "https://registry.nlark.com/@testing-library/user-event/download/@testing-library/user-event-12.8.3.tgz#1aa3ed4b9f79340a1e1836bc7f57c501e838704a"
+  resolved "https://registry.nlark.com/@testing-library/user-event/download/@testing-library/user-event-12.8.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40testing-library%2Fuser-event%2Fdownload%2F%40testing-library%2Fuser-event-12.8.3.tgz#1aa3ed4b9f79340a1e1836bc7f57c501e838704a"
   integrity sha1-GqPtS595NAoeGDa8f1fFAeg4cEo=
   dependencies:
     "@babel/runtime" "^7.12.5"
@@ -1736,7 +1736,7 @@
 
 "@types/jest@*":
   version "26.0.24"
-  resolved "https://registry.nlark.com/@types/jest/download/@types/jest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
+  resolved "https://registry.nlark.com/@types/jest/download/@types/jest-26.0.24.tgz?cache=0&sync_timestamp=1625608530245&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
   integrity sha1-lD0Rl2sWc5GFkToZNuDeDEp9WVo=
   dependencies:
     jest-diff "^26.0.0"
@@ -3104,7 +3104,7 @@ chalk@2.4.2, chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
 
 chalk@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.nlark.com/chalk/download/chalk-3.0.0.tgz#3f73c2bf526591f574cc492c51e2456349f844e4"
+  resolved "https://registry.nlark.com/chalk/download/chalk-3.0.0.tgz?cache=0&sync_timestamp=1618995384030&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fchalk%2Fdownload%2Fchalk-3.0.0.tgz#3f73c2bf526591f574cc492c51e2456349f844e4"
   integrity sha1-P3PCv1JlkfV0zEksUeJFY0n4ROQ=
   dependencies:
     ansi-styles "^4.1.0"
@@ -3120,7 +3120,7 @@ chalk@^4.0.0:
 
 chalk@^4.1.0:
   version "4.1.1"
-  resolved "https://registry.nlark.com/chalk/download/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
+  resolved "https://registry.nlark.com/chalk/download/chalk-4.1.1.tgz?cache=0&sync_timestamp=1618995384030&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fchalk%2Fdownload%2Fchalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
   integrity sha1-yAs/qyi/Y3HmhjMl7uZ+YYt35q0=
   dependencies:
     ansi-styles "^4.1.0"
@@ -3691,7 +3691,7 @@ css-what@^3.2.1:
 
 css.escape@^1.5.1:
   version "1.5.1"
-  resolved "https://registry.npm.taobao.org/css.escape/download/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
+  resolved "https://registry.nlark.com/css.escape/download/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
   integrity sha1-QuJ9T6BK4y+TGktNQZH6nN3ul8s=
 
 css@^2.0.0:
@@ -4073,7 +4073,7 @@ doctrine@^3.0.0:
 
 dom-accessibility-api@^0.5.6:
   version "0.5.6"
-  resolved "https://registry.nlark.com/dom-accessibility-api/download/dom-accessibility-api-0.5.6.tgz#3f5d43b52c7a3bd68b5fb63fa47b4e4c1fdf65a9"
+  resolved "https://registry.nlark.com/dom-accessibility-api/download/dom-accessibility-api-0.5.6.tgz?cache=0&sync_timestamp=1622711882166&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdom-accessibility-api%2Fdownload%2Fdom-accessibility-api-0.5.6.tgz#3f5d43b52c7a3bd68b5fb63fa47b4e4c1fdf65a9"
   integrity sha1-P11DtSx6O9aLX7Y/pHtOTB/fZak=
 
 dom-converter@^0.2:
@@ -5619,7 +5619,7 @@ ignore@^5.1.4:
 
 immer@8.0.1:
   version "8.0.1"
-  resolved "https://registry.nlark.com/immer/download/immer-8.0.1.tgz?cache=0&sync_timestamp=1625499565087&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fimmer%2Fdownload%2Fimmer-8.0.1.tgz#9c73db683e2b3975c424fb0572af5889877ae656"
+  resolved "https://registry.nlark.com/immer/download/immer-8.0.1.tgz#9c73db683e2b3975c424fb0572af5889877ae656"
   integrity sha1-nHPbaD4rOXXEJPsFcq9YiYd65lY=
 
 import-cwd@^2.0.0:
@@ -6922,7 +6922,7 @@ loglevel@^1.6.8:
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
-  resolved "https://registry.npm.taobao.org/loose-envify/download/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
+  resolved "https://registry.nlark.com/loose-envify/download/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
@@ -8918,7 +8918,7 @@ react-app-polyfill@^2.0.0:
 
 react-dev-utils@^11.0.3:
   version "11.0.4"
-  resolved "https://registry.npm.taobao.org/react-dev-utils/download/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"
+  resolved "https://registry.npm.taobao.org/react-dev-utils/download/react-dev-utils-11.0.4.tgz?cache=0&sync_timestamp=1615231803696&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dev-utils%2Fdownload%2Freact-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"
   integrity sha1-p8y2Alehyi4O/nqD445nANF6o3o=
   dependencies:
     "@babel/code-frame" "7.10.4"
@@ -8948,7 +8948,7 @@ react-dev-utils@^11.0.3:
 
 react-dom@^17.0.2:
   version "17.0.2"
-  resolved "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz?cache=0&sync_timestamp=1627056987071&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-dom%2Fdownload%2Freact-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  resolved "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=
   dependencies:
     loose-envify "^1.1.0"
@@ -8977,7 +8977,7 @@ react-refresh@^0.8.3:
 
 react-scripts@4.0.3:
   version "4.0.3"
-  resolved "https://registry.npm.taobao.org/react-scripts/download/react-scripts-4.0.3.tgz?cache=0&sync_timestamp=1614018572465&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-scripts%2Fdownload%2Freact-scripts-4.0.3.tgz#b1cafed7c3fa603e7628ba0f187787964cb5d345"
+  resolved "https://registry.npm.taobao.org/react-scripts/download/react-scripts-4.0.3.tgz#b1cafed7c3fa603e7628ba0f187787964cb5d345"
   integrity sha1-scr+18P6YD52KLoPGHeHlky100U=
   dependencies:
     "@babel/core" "7.12.3"
@@ -9132,7 +9132,7 @@ recursive-readdir@2.2.2:
 
 redent@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.nlark.com/redent/download/redent-3.0.0.tgz?cache=0&sync_timestamp=1620070119923&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fredent%2Fdownload%2Fredent-3.0.0.tgz#e557b7998316bb53c9f1f56fa626352c6963059f"
+  resolved "https://registry.nlark.com/redent/download/redent-3.0.0.tgz?cache=0&sync_timestamp=1620069780522&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fredent%2Fdownload%2Fredent-3.0.0.tgz#e557b7998316bb53c9f1f56fa626352c6963059f"
   integrity sha1-5Ve3mYMWu1PJ8fVvpiY1LGljBZ8=
   dependencies:
     indent-string "^4.0.0"
@@ -9557,7 +9557,7 @@ saxes@^5.0.0:
 
 scheduler@^0.20.2:
   version "0.20.2"
-  resolved "https://registry.nlark.com/scheduler/download/scheduler-0.20.2.tgz?cache=0&sync_timestamp=1627057232536&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fscheduler%2Fdownload%2Fscheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  resolved "https://registry.nlark.com/scheduler/download/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
   integrity sha1-S67jlDbjSqk7SHS93L8P6Li1DpE=
   dependencies:
     loose-envify "^1.1.0"
@@ -9873,7 +9873,7 @@ source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
 
 source-map-resolve@^0.6.0:
   version "0.6.0"
-  resolved "https://registry.npm.taobao.org/source-map-resolve/download/source-map-resolve-0.6.0.tgz#3d9df87e236b53f16d01e58150fc7711138e5ed2"
+  resolved "https://registry.nlark.com/source-map-resolve/download/source-map-resolve-0.6.0.tgz#3d9df87e236b53f16d01e58150fc7711138e5ed2"
   integrity sha1-PZ34fiNrU/FtAeWBUPx3EROOXtI=
   dependencies:
     atob "^2.1.2"
@@ -10208,7 +10208,7 @@ strip-final-newline@^2.0.0:
 
 strip-indent@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.nlark.com/strip-indent/download/strip-indent-3.0.0.tgz?cache=0&sync_timestamp=1620053263051&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fstrip-indent%2Fdownload%2Fstrip-indent-3.0.0.tgz#c32e1cee940b6b3432c771bc2c54bcce73cd3001"
+  resolved "https://registry.nlark.com/strip-indent/download/strip-indent-3.0.0.tgz#c32e1cee940b6b3432c771bc2c54bcce73cd3001"
   integrity sha1-wy4c7pQLazQyx3G8LFS8znPNMAE=
   dependencies:
     min-indent "^1.0.0"
@@ -10923,7 +10923,7 @@ wbuf@^1.1.0, wbuf@^1.7.3:
 
 web-vitals@^1.0.1:
   version "1.1.2"
-  resolved "https://registry.nlark.com/web-vitals/download/web-vitals-1.1.2.tgz?cache=0&sync_timestamp=1625182194109&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fweb-vitals%2Fdownload%2Fweb-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
+  resolved "https://registry.nlark.com/web-vitals/download/web-vitals-1.1.2.tgz?cache=0&sync_timestamp=1625185436585&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fweb-vitals%2Fdownload%2Fweb-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
   integrity sha1-BlNTCBaJhgliOaqEcW5otMaubRw=
 
 webidl-conversions@^5.0.0:

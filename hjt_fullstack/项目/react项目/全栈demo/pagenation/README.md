@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# 全栈分页
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## FE react hooks
 
-## Available Scripts
+#### 页面布局
+整个页面拆分为2个组件，一个是文章部分，一个是下面的分页
 
-In the project directory, you can run:
+#### 组件划分
 
-### `yarn start`
+1. posts
+    - 里面进行文章内容渲染，将当前页面的文章进行渲染到组件中，然后挂载到App上产生视觉效果
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. pageNation
+    - 文章下面的分页，这里从父组件拿到请求页面数据的方法，然后在这里页码被点击的时候进行调用，请求对应页码的数据渲染到页面上
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    - 底部安秀样式的变化是根据当前页码进行一个调整，具有多重形态
 
-### `yarn test`
+## RD express
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 1. 服务启动
+在server里面直接`nodemon`启动服务
 
-### `yarn build`
+#### 2. 为什么使用nodemon而不是使用node
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+nodemon在监听文件修改后可以自动进行刷新，更适合开发
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 3. 跨域
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+因为这是自己启动的一个服务，所以需要自己进行配制跨域，否则前端是获取不到数据的
 
-### `yarn eject`
+#### 服务异常
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+因为mac结束一个进程会结束不完整，导致后台端口仍然被占用，这时候需要自己手动kill进程
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+lsof -i:port  查看port的进程
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+kill pid 结束这个进程
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## 项目说明
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+使用React + Express 开发的一个全栈小demo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+主要用于加深React Hooks的理解和尝试自己搭建后端服务，实现一个小小的完整前后端项目
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+因为是一个小demo，所以直接把RD部分集成在FE里面
