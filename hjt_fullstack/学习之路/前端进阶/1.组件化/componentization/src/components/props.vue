@@ -2,15 +2,23 @@
   <div class="hello">
     <h1>1. props通信</h1>
     <h1>{{ msg }}</h1>
+    <h1>{{ value }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'props',
+  data() {
+    return {
+      value: 'self'
+    }
+  },
   props: {
-    msg: String
-  }
+    msg: String,
+  },
+  mounted() {
+  },
 }
 </script>
 
