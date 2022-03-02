@@ -12,3 +12,10 @@ gulp.task('js', function (done) {
         .pipe(gulp.dest('dest/'));
     done();
 })
+
+// css 任务
+gulp.task('css', function (done) {
+    gulp.src('js/*.css')
+        .pipe(gulp.dest('dest/'));
+    done();
+})
